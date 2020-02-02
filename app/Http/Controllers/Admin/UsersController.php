@@ -25,6 +25,11 @@ class UsersController extends Controller
     public function index()
     {
         $users = User::all();
+   
+
+
+
+
         return view('admin.users.index')->with('users', $users);
     }
 
@@ -69,7 +74,7 @@ class UsersController extends Controller
     public function edit(User $user)
     {
 
-if(Gate::denies('edit-users')){
+if(Gate::denies('admin-user')){
     return redirect(route('admin.users.index'));
 }
 
@@ -90,7 +95,7 @@ if(Gate::denies('edit-users')){
      */
     public function update(Request $request, User $user)
     {
-        $user->roles()->sync($request->roles);
+        // $user->roles()->sync($request->roles);
         $user->name = $request->name;
         $user->email = $request->email;
         
@@ -111,7 +116,7 @@ if(Gate::denies('edit-users')){
      */
     public function destroy(User $user)
     {
-        if(Gate::denies('delete-users')){
+        if(Gate::denies('admin-user')){
     return redirect(route('admin.users.index'));
 }
         $user->roles()->detach();

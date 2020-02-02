@@ -47,7 +47,7 @@
 
                   @csrf
                   {{ method_field('PUT')}}
-                  <div class="form-group row">
+{{--                   <div class="form-group row">
                   <label for="roles" class="col-md-2 col-form-label text-md-right">Roles</label>
                   <div class="col-md-6">
                   @foreach($roles as $role)
@@ -59,7 +59,7 @@
                   </div>
                   @endforeach
                 </div>
-              </div>
+              </div> --}}
                   <button type="submit" class="btn btn-primary">update</button>
                 </form>
 
