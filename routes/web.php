@@ -12,7 +12,11 @@
 */
 
 Route::get('/', function () {
+	if(Gate::allows('admin-user')){
+    return redirect(route('home'));
+}else{
     return view('auth.login');
+}
 });
 
 // Auth::routes(['verify' => true]);
@@ -23,4 +27,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:admin-user')->group(function(){
 	Route::resource('/users','UsersController', ['except' =>['show', 'create', 'store']]);
+});
+
+Route::get('/test', function () {
+    return view('layouts.test');
 });
