@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Simple Sidebar - Start Bootstrap Template</title>
+  <title>PAASCUAS</title>
 
   <!-- Bootstrap core CSS -->
 <!--   <link href="sidenav/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
@@ -33,17 +33,17 @@
     <div class="bg-light border-right" id="sidebar-wrapper">
       <div class="sidebar-heading"><img src="{{ asset('img/paasculogo.png') }}"> Paascu Accouting System</div>
       <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/home.svg') }}"> Dashboard</a>
-        <a href="#usedrop" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle list-group-item list-group-item-action bg-light">User Managment</a>
+        <a href="{{ route('home') }}" class="list-group-item list-group-item-action bg-light"> Dashboard</a>
+        <a href="#usedrop" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle list-group-item list-group-item-action bg-light dropdown-show">User Managment</a>
         <ul class="collapse list-group-item list-group-item-action bg-light" id="usedrop">
-            <a href="#" class="list-group-item list-group-item-action bg-light">Register Users</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">Manage Users</a>
+            <a href="{{ route('register') }}" class="list-group-item list-group-item-action bg-light">Register Users</a>
+            <a href="{{ route('admin.users.index') }}" class="list-group-item list-group-item-action bg-light">Manage Users</a>
         </ul>
-        <a href="#memdrop" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle list-group-item list-group-item-action bg-light">Manage Members</a>
+
+        <a href="#memdrop" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle list-group-item list-group-item-action bg-light">Members Management</a>
         <ul class="collapse list-group-item list-group-item-action bg-light" id="memdrop">
-            <a href="#" class="list-group-item list-group-item-action bg-light">module 1</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">module 2</a>
-            <a href="#" class="list-group-item list-group-item-action bg-light">module 3</a>
+            <a href="{{ route('admin.members.index') }}" class="list-group-item list-group-item-action bg-light">Manage Members</a>
+
         </ul>
       </div>
     </div>
@@ -87,11 +87,11 @@
                                         {{ __('Logout') }}
                                     </a>
 
-                            @can('admin-user')
+{{--                             @can('admin-user')
 
                                     <a class=" dropdown-item" href="{{ route('register') }}">{{ __('Register') }}</a>
                                     <a class=" dropdown-item" href="{{ route('admin.users.index') }}">{{ __('User Management') }}</a>
-                                    @endcan
+                                    @endcan --}}
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
@@ -120,6 +120,7 @@
 
   <!-- Menu Toggle Script -->
   <script>
+
     $("#menu-toggle").click(function(e) {
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
@@ -131,6 +132,8 @@
        var swap = _this.attr("data-swap");     
      _this.attr('src', swap).attr("data-swap",current);   
 });  
+
+
   </script>
 
 </body>

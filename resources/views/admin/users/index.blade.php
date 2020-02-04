@@ -3,9 +3,9 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
-                <div class="card-header">User Management</div>
+                <div class="card-header">User Management<button type="submit" class="btn btn-outline-success float-right">+ Add User</button></div>
 
                 <div class="card-body">
                 </div>
@@ -29,13 +29,13 @@
       <td>{{implode( ',',$user->roles()->get()->pluck('name')->toArray()) }}</td>
       <td>
         @can('admin-user')
-        <a href="{{route('admin.users.edit', $user->id)}}"><button type="button" class="btn btn-primary float-left">Edit</button></a>
+        <a href="{{route('admin.users.edit', $user->id)}}"><button type="button" class="btn btn-outline-primary float-left">Edit</button></a>
         @endcan
         @can('admin-user')
 <form action="{{ route('admin.users.destroy', $user)}}" method="POST" class="float-left">
   @csrf
   {{ method_field('delete')}}
-&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-danger">Delete</button>
+&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-outline-danger">Delete</button>
 </form>
         @endcan
         
