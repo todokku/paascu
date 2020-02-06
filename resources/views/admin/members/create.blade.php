@@ -1,4 +1,4 @@
-{{-- @extends('layouts.test')
+@extends('layouts.test')
 
 @section('content')
 <div class="container">
@@ -10,7 +10,7 @@
                 <div class="card-body">
 
                 <form action="{{ route('admin.members.store')}}" method="POST">
-
+                  @csrf
                         <div class="form-group row">
                             <label for="institution" class="col-md-2 col-form-label text-md-right">Institution</label>
 
@@ -85,10 +85,10 @@
 
 
 
-                  @csrf
-{{--                   {{ method_field('PUT')}} --}}
+
+                   {{-- {{ method_field('PUT')}} --}}
                   
-                  <button type="submit" class="btn btn-success float-right">Submit</button>
+                   <button type="submit" class="btn btn-success float-right">Submit</button>
                 </form>
 
 
@@ -100,4 +100,3 @@
     </div>
 </div>
 @endsection
- --}}

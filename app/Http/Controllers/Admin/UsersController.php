@@ -98,6 +98,7 @@ if(Gate::denies('admin-user')){
         // $user->roles()->sync($request->roles);
         $user->name = $request->name;
         $user->email = $request->email;
+        $user->status = $request->status;
         
         if($user->save()){
 

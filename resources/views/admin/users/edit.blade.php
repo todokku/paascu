@@ -3,14 +3,27 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">Edit Users {{ $user->name }}</div>
 
                 <div class="card-body">
 
                 <form action="{{ route('admin.users.update', $user)}}" method="POST">
+                <div class="form-group row">
+                <div class="col-md-6 offset-sm-2">
+<div class=" custom-control custom-radio custom-control-inline">
 
+  <input type="radio" id="customRadioInline1" name="status" class="custom-control-input" value="active" {{ ($user->status == 'active')? "checked" : "" }}>
+
+  <label class=" custom-control-label" for="customRadioInline1">Activate</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline2" name="status" class="custom-control-input" value="deactive" {{ ($user->status == 'deactive')? "checked" : "" }}>
+  <label class="custom-control-label" for="customRadioInline2">Deactivate</label>
+</div>
+</div>
+                </div>
 
 
                         <div class="form-group row">
@@ -60,7 +73,7 @@
                   @endforeach
                 </div>
               </div> --}}
-                  <button type="submit" class="btn btn-primary">update</button>
+                  <button type="submit" class="btn btn-primary float-right">update</button>
                 </form>
 
                 </div>
@@ -70,4 +83,5 @@
         </div>
     </div>
 </div>
+
 @endsection

@@ -29,7 +29,7 @@ class MembersController extends Controller
      */
     public function create()
     {
-        // return view('admin.members.create');
+        return view('admin.members.create');
     }
 
     /**
@@ -40,16 +40,22 @@ class MembersController extends Controller
      */
     public function store(Request $request)
     {
-                //Persist the employee in the database
-        //form data is available in the request object
-        // $employee = new Employee();
-        //input method is used to get the value of input with its
-        //name specified
-        // $employee->firstname = $request->input('firstname');
-        // $employee->lastname = $request->input('lastname');
-        // $employee->department = $request->input('department');
-        // $employee->phone = $request->input('phone');
-        // $employee->save(); 
+
+        $member = new Member();
+        $member->institution = $request->input('institution');
+        $member->address = $request->input('address');
+        $member->program = $request->input('program');
+        $member->level = $request->input('level');
+        $member->valid = $request->input('valid');
+
+        if($member->save()){
+
+        $request->session()->flash('success', 'Member has been Added');
+        }else{
+        $request->session()->flash('error', 'Error in Member Registration');
+        }
+        return redirect()->route('admin.members.index');
+
     }
 
     /**
@@ -108,7 +114,6 @@ class MembersController extends Controller
         $member->level = $request->input('level');
         $member->valid = $request->input('valid');
 
-        
         if($member->save()){
 
         $request->session()->flash('success', 'Member has been Updated');

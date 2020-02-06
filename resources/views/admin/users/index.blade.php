@@ -5,10 +5,8 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">User Management<button type="submit" class="btn btn-outline-success float-right">+ Add User</button></div>
 
-                <div class="card-body">
-                </div>
+                <div class="card-header">User Management<a href="{{ route('register') }}"><button type="button" class="btn btn-outline-success float-right">+ Add User</button></a></div>
 
                 <table class="table">
   <thead>
@@ -17,6 +15,7 @@
       <th scope="col">Name</th>
       <th scope="col">Email</th>
       <th scope="col">Roles</th>
+      <th scope="col">Status</th>
       <th scope="col">Actions</th>
     </tr>
   </thead>
@@ -27,6 +26,15 @@
       <td>{{$user->name}}</td>
       <td>{{$user->email}}</td>
       <td>{{implode( ',',$user->roles()->get()->pluck('name')->toArray()) }}</td>
+      <td>
+@if ($user->status == 'active')
+    <span class="badge badge-success">Active</span>
+@elseif ($user->status == 'deactive')
+    <span class="badge badge-secondary">Deactive</span>
+@else
+    <span class="badge badge-danger">Error</span>
+@endif
+      </td>
       <td>
         @can('admin-user')
         <a href="{{route('admin.users.edit', $user->id)}}"><button type="button" class="btn btn-outline-primary float-left">Edit</button></a>

@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Member Management<button href="#" type="submit" class="btn btn-outline-success float-right">+ Add Member</button></div>
+                <div class="card-header">Member Management<a href="{{route('admin.members.create')}}"><button type="button" class="btn btn-outline-success float-right">+ Add Member</button></a></div>
 
                 <div class="card-body">
 
