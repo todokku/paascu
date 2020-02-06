@@ -33,20 +33,23 @@
     <div class="bg-light border-right" id="sidebar-wrapper">
       <div class="sidebar-heading"><img src="{{ asset('img/paasculogo.png') }}"> Paascu Accouting System</div>
       <div class="list-group list-group-flush">
-        <a href="{{ route('home') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/home.png') }}"> Dashboard</a>
+        <a href="{{ route('home') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/home.png') }}">  Dashboard</a>
 {{--         <a href="#usedrop" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle list-group-item list-group-item-action bg-light dropdown-show">User Managment</a>
 
                 <li class="collapse list-group-item list-group-item-action bg-light" id="usedrop">
             <a href="{{ route('register') }}" class="list-group-item list-group-item-action bg-light">Register Users</a>
             <a href="{{ route('admin.users.index') }}" class="list-group-item list-group-item-action bg-light">Manage Users</a>
         </li> --}}
-        <a href="{{ route('admin.users.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/account.png') }}"> User Accounts</a>
+        <a href="{{ route('admin.users.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/account.png') }}">  User Accounts</a>
 {{--         <a href="#memdrop" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle list-group-item list-group-item-action bg-light">Members Management</a>
         <ul class="collapse list-group-item list-group-item-action bg-light" id="memdrop">
             <a href="{{ route('admin.members.index') }}" class="list-group-item list-group-item-action bg-light">Manage Members</a>
 
         </ul> --}}
-        <a href="{{ route('admin.members.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/member.png') }}"> Manage Members</a>
+        <a href="{{ route('admin.members.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/member.png') }}">  Manage Members</a>
+        {{-- {{ route('admin.programs.index') }} --}}
+        <a href="#" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/program.png') }}">  Manage Programs</a>
+
       </div>
     </div>
     <!-- /#sidebar-wrapper -->

@@ -17,6 +17,7 @@ class MembersTableSeeder extends Seeder
         'program'=> 'Information Technology Specialization in Web, Mobile Applications',
         'level'=> 'III',
         'valid' => 'April 2020',
+        'status' => 'active'
         ]);
 
         Member::create([
@@ -25,6 +26,7 @@ class MembersTableSeeder extends Seeder
         'program'=> 'Business Administration',
         'level'=> 'III',
         'valid' => 'March 2020',
+        'status' => 'active'
         ]);
     }
 }

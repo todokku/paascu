@@ -37,6 +37,9 @@ $i = 0;
 
     <div id="collapseOne{{$i}}" class="collapse" aria-labelledby="headingOne{{$i}}" data-parent="#accordion">
       <div class="card-body">
+      <b>Member Status</b> : @if ($member->status == 'active')
+    <span class="badge badge-success">Active</span>@elseif ($member->status == 'deactive')<span class="badge badge-secondary">Deactive</span>@else<span class="badge badge-danger">Error</span>@endif </BR></BR>
+    <hr>       
       	<b>Address</b> : {{$member->address}}</BR></BR>
     <hr>
         <b>Programs</b> : {{$member->program}}</BR></BR>

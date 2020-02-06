@@ -14,6 +14,22 @@
 <div class="form-group row">
         <input type="hidden" name="id" value = "{{$member->id}}">
  </div>
+
+                <div class="form-group row">
+                <div class="col-md-6 offset-sm-2">
+<div class=" custom-control custom-radio custom-control-inline">
+
+  <input type="radio" id="customRadioInline1" name="status" class="custom-control-input" value="active" {{ ($member->status == 'active')? "checked" : "" }}>
+
+  <label class=" custom-control-label" for="customRadioInline1">Activate</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline2" name="status" class="custom-control-input" value="deactive" {{ ($member->status == 'deactive')? "checked" : "" }}>
+  <label class="custom-control-label" for="customRadioInline2">Deactivate</label>
+</div>
+</div>
+                </div>
+ 
                         <div class="form-group row">
                             <label for="institution" class="col-md-2 col-form-label text-md-right">Institution</label>
 

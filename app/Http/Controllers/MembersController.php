@@ -47,6 +47,7 @@ class MembersController extends Controller
         $member->program = $request->input('program');
         $member->level = $request->input('level');
         $member->valid = $request->input('valid');
+        $member->status = 'active';
 
         if($member->save()){
 
@@ -113,6 +114,7 @@ class MembersController extends Controller
         $member->program = $request->input('program');
         $member->level = $request->input('level');
         $member->valid = $request->input('valid');
+        $member->status = $request->input('status');
 
         if($member->save()){
 

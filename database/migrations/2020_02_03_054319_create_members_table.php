@@ -20,6 +20,7 @@ class CreateMembersTable extends Migration
             $table->string('program');
             $table->string('level');
             $table->string('valid');
+            $table->string('status');
             $table->timestamps();
         });
     }
