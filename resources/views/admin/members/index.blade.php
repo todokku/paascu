@@ -20,9 +20,7 @@ $i = 0;
     <div class="card-header" id="headingOne{{$i}}">
       <h5 class="mb-0">
         <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne{{$i}}" aria-expanded="true" aria-controls="collapseOne{{$i}}">
-          {{ $member->institution }} 
-
-
+          {{ $member->school }} 
         @can('admin-user')
         <a href="{{route('admin.members.edit',['id'=>$member->id])}}"><button type="button" class="btn btn-outline-primary float-right">Edit</button></a>
         @endcan
@@ -42,11 +40,36 @@ $i = 0;
     <hr>       
       	<b>Address</b> : {{$member->address}}</BR></BR>
     <hr>
-        <b>Programs</b> : {{$member->program}}</BR></BR>
-    <hr>
-        <b>Level Status</b> : {{$member->level}}</BR></BR>
-            <hr>
-        <b>Valid Until</b> : {{$member->valid}}</BR></BR>
+{{--   <b>Programs</b> :   --}}
+
+{{--   <div class="col-md-6 offset-sm-1"> --}}
+
+ <table class="table">
+  <thead>
+    <tr>
+
+      <th scope="col">Program</th>
+      <th scope="col">Level</th>
+      <th scope="col">Valid Through</th>
+    </tr>
+  </thead>
+  <tbody>
+
+            @foreach($member->programs as $xmember)
+    <tr>
+
+      <td>{{$xmember->program}}</td>
+      <td>{{$xmember->level}}</td>
+      <td>{{$xmember->valid}}</td>
+    </tr>
+
+            @endforeach
+  </tbody>
+</table>
+{{--   {{$xmember->program}}</BR></BR><b>Level Status</b> : {{$xmember->level}}</BR></BR><b>Valid Until</b> : {{$xmember->valid}}</BR></BR> --}}
+
+{{-- </div> --}}
+
 
       </div>
     </div>

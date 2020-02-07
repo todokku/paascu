@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Member;
+use App\Members;
+use App\Programs;
 use Illuminate\Http\Request;
 use Gate;
 use DB;
@@ -17,9 +18,15 @@ class MembersController extends Controller
      */
     public function index()
     {
-        $members = Member::all();
-        // return view('admin.users.index')->with('users', $users);
-        return view('admin.members.index')->with('members', $members);
+ 
+        $members = Members::orderBy('school','asc')->get();
+
+        $programs = Programs::all();
+
+        // $members = Members::all();
+
+
+        return view('admin.members.index')->with('members', $members)->with('programs', $programs);
     }
 
     /**
@@ -41,12 +48,12 @@ class MembersController extends Controller
     public function store(Request $request)
     {
 
-        $member = new Member();
-        $member->institution = $request->input('institution');
+        $member = new Members();
+        $member->school = $request->input('school');
         $member->address = $request->input('address');
-        $member->program = $request->input('program');
-        $member->level = $request->input('level');
-        $member->valid = $request->input('valid');
+        // $member->program = $request->input('program');
+        // $member->level = $request->input('level');
+        // $member->valid = $request->input('valid');
         $member->status = 'active';
 
         if($member->save()){
@@ -83,7 +90,7 @@ class MembersController extends Controller
         // return view('admin.members.edit')->with('members',$members);
         // return view('admin.members.edit')->with('members',$members);
         //Find the employee
-        $member = Member::find($id);
+        $member = Members::find($id);
         return view('admin.members.edit')->with('member',$member);
 
         // $members = Member::all();
@@ -108,12 +115,12 @@ class MembersController extends Controller
         // $member->level = $request->level;
         // $member->valid = $request->valid;
 
-        $member = Member::find($request->input('id'));
-        $member->institution = $request->input('institution');
+        $member = Members::find($request->input('id'));
+        $member->school = $request->input('school');
         $member->address = $request->input('address');
-        $member->program = $request->input('program');
-        $member->level = $request->input('level');
-        $member->valid = $request->input('valid');
+        // $member->program = $request->input('program');
+        // $member->level = $request->input('level');
+        // $member->valid = $request->input('valid');
         $member->status = $request->input('status');
 
         if($member->save()){
@@ -132,10 +139,12 @@ class MembersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request,$id)
     {
-        $member = Member::find($id);
-        $member->delete();
+        $member = Members::find($id);
+        if($member->delete()){
+        $request->session()->flash('error', 'Member has been deleted!');
+        }
         return redirect()->route('admin.members.index');
     }
 }

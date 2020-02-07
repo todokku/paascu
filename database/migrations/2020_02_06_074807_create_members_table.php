@@ -15,11 +15,8 @@ class CreateMembersTable extends Migration
     {
         Schema::create('members', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('institution');
+            $table->string('school');
             $table->string('address');
-            $table->string('program');
-            $table->string('level');
-            $table->string('valid');
             $table->string('status');
             $table->timestamps();
         });

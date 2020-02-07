@@ -12,12 +12,12 @@
                 <form action="{{ route('admin.members.store')}}" method="POST">
                   @csrf
                         <div class="form-group row">
-                            <label for="institution" class="col-md-2 col-form-label text-md-right">Institution</label>
+                            <label for="school" class="col-md-2 col-form-label text-md-right">School</label>
 
                             <div class="col-md-10">
-                                <input id="institution" type="text" class="form-control @error('institution') is-invalid @enderror" name="institution" value="" required autocomplete="institution" autofocus>
+                                <input id="school" type="text" class="form-control @error('school') is-invalid @enderror" name="school" value="" required autocomplete="school" autofocus>
 
-                                @error('institution')
+                                @error('school')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -41,7 +41,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+{{--                         <div class="form-group row">
                             <label for="program" class="col-md-2 col-form-label text-md-right">Program</label>
 
                             <div class="col-md-10">
@@ -81,7 +81,7 @@
                                     </span>
                                 @enderror
                             </div>
-                        </div>
+                        </div> --}}
 
 
 

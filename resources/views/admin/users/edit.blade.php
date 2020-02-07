@@ -16,11 +16,11 @@
 
   <input type="radio" id="customRadioInline1" name="status" class="custom-control-input" value="active" {{ ($user->status == 'active')? "checked" : "" }}>
 
-  <label class=" custom-control-label" for="customRadioInline1">Activate</label>
+  <label class=" custom-control-label" for="customRadioInline1">Active</label>
 </div>
 <div class="custom-control custom-radio custom-control-inline">
   <input type="radio" id="customRadioInline2" name="status" class="custom-control-input" value="deactive" {{ ($user->status == 'deactive')? "checked" : "" }}>
-  <label class="custom-control-label" for="customRadioInline2">Deactivate</label>
+  <label class="custom-control-label" for="customRadioInline2">Deactive</label>
 </div>
 </div>
                 </div>

@@ -21,22 +21,22 @@
 
   <input type="radio" id="customRadioInline1" name="status" class="custom-control-input" value="active" {{ ($member->status == 'active')? "checked" : "" }}>
 
-  <label class=" custom-control-label" for="customRadioInline1">Activate</label>
+  <label class=" custom-control-label" for="customRadioInline1">Active</label>
 </div>
 <div class="custom-control custom-radio custom-control-inline">
   <input type="radio" id="customRadioInline2" name="status" class="custom-control-input" value="deactive" {{ ($member->status == 'deactive')? "checked" : "" }}>
-  <label class="custom-control-label" for="customRadioInline2">Deactivate</label>
+  <label class="custom-control-label" for="customRadioInline2">Deactive</label>
 </div>
 </div>
                 </div>
  
                         <div class="form-group row">
-                            <label for="institution" class="col-md-2 col-form-label text-md-right">Institution</label>
+                            <label for="school" class="col-md-2 col-form-label text-md-right">School</label>
 
                             <div class="col-md-10">
-                                <input id="institution" type="text" class="form-control @error('institution') is-invalid @enderror" name="institution" value="{{$member->institution }}" required autocomplete="institution" autofocus>
+                                <input id="school" type="text" class="form-control @error('school') is-invalid @enderror" name="school" value="{{ $member->school }}" required autocomplete="school" autofocus>
 
-                                @error('institution')
+                                @error('school')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -60,7 +60,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+{{--                         <div class="form-group row">
                             <label for="program" class="col-md-2 col-form-label text-md-right">Program</label>
 
                             <div class="col-md-10">
@@ -100,7 +100,7 @@
                                     </span>
                                 @enderror
                             </div>
-                        </div>
+                        </div> --}}
 
 
 

@@ -23,7 +23,8 @@ Route::get('/', function () {
 Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 Route::get('/home', 'HomeController@index')->name('home');
-// Route::get('/register', 'HomeController@index')->name('home');
+// Route::get('/register', 'HomeController@index')->name('home');	
+
 Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:admin-user')->group(function(){
 	//hide routes ? idk
 	Route::resource('/users','UsersController', ['except' =>['show', 'create', 'store']]);
