@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProgramsTable extends Migration
+class CreateHsMembershipsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreateProgramsTable extends Migration
      */
     public function up()
     {
-        Schema::create('programs', function (Blueprint $table) {
+        Schema::create('hs_memberships', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('member_id');
-            $table->foreign('member_id')->references('id')->on('Members')->onDelete('cascade');
-            $table->string('program');
-            $table->string('level');
-            $table->string('ed_level')->nullable();           
-            $table->string('valid');
+            $table->foreign('member_id')->references('id')->on('Members');
+            $table->decimal('te', 13, 2);
+            $table->decimal('atf', 13, 2);
+            $table->decimal('gtr', 13, 2);
             $table->timestamps();
         });
     }
@@ -32,6 +31,6 @@ class CreateProgramsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('programs');
+        Schema::dropIfExists('hs_memberships');
     }
 }

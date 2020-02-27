@@ -34,21 +34,63 @@
       <div class="sidebar-heading"><img src="{{ asset('img/paasculogo.png') }}"> Paascu Accouting System</div>
       <div class="list-group list-group-flush">
         <a href="{{ route('home') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/home.png') }}">  Dashboard</a>
-{{--         <a href="#usedrop" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle list-group-item list-group-item-action bg-light dropdown-show">User Managment</a>
 
-                <li class="collapse list-group-item list-group-item-action bg-light" id="usedrop">
-            <a href="{{ route('register') }}" class="list-group-item list-group-item-action bg-light">Register Users</a>
-            <a href="{{ route('admin.users.index') }}" class="list-group-item list-group-item-action bg-light">Manage Users</a>
-        </li> --}}
         <a href="{{ route('admin.users.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/account.png') }}">  User Accounts</a>
-{{--         <a href="#memdrop" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle list-group-item list-group-item-action bg-light">Members Management</a>
-        <ul class="collapse list-group-item list-group-item-action bg-light" id="memdrop">
-            <a href="{{ route('admin.members.index') }}" class="list-group-item list-group-item-action bg-light">Manage Members</a>
 
-        </ul> --}}
         <a href="{{ route('admin.members.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/member.png') }}">  Manage Members</a>
-        {{-- {{ route('admin.programs.index') }} --}}
-        <a href="#" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/program.png') }}">  Manage Programs</a>
+
+        <a href="{{ route('admin.programs.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/program.png') }}">  Manage Programs</a>
+
+        <a href="{{ route('admin.schedulemembership.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/table.png') }}">  Manage Schedule Membership</a>
+
+        <a href="{{ route('enrollmembership.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/enroll.png') }}">  Enroll Membership Fee</a>
+
+        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown list-group-item list-group-item-action bg-light"><img src="{{ asset('img/money.png') }}">  Manage Membership Fee <img src="{{ asset('img/arrowdown.png') }}" class="float-right"></a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                                <a href="{{ route('gsmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  GS Membership Fee</a>
+                    </li>
+                    <li>
+                                <a href="{{ route('hsmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  HS Membership Fee</a>
+                    </li>
+                    <li>
+                                <a href="#" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  BED Membership Fee</a>
+                    </li>
+                    <li>
+                                <a href="#" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  College Membership Fee</a>
+                    </li>
+                    <li>
+                                <a href="#" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  GED Membership Fee</a>
+                    </li>
+                </ul>
+
+        <a href="{{ route('admin.membershipformula.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/formula.png') }}">  Manage Membership Formulas</a>
+
+
+
+
+{{--         <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown list-group-item list-group-item-action bg-light"><img src="{{ asset('img/formula.png') }}">  Manage Membership Formula <img src="{{ asset('img/arrowdown.png') }}" class="float-right"></a>
+                <ul class="collapse list-unstyled" id="pageSubmenu2">
+                    <li>
+                                <a href="{{ route('admin.membershipformula.gshsformula') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  GS & HS Membership Formula</a>
+                    </li> --}}
+{{--                     <li>
+                                <a href="#" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  BED Membership Formula</a>
+                    </li>
+                    <li>
+                                <a href="#" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  College Membership Formula</a>
+                    </li>
+                    <li>
+                                <a href="#" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  GED Membership Formula</a>
+                    </li> --}}
+                </ul>
+
+
+
+
+
+
+
 
       </div>
     </div>

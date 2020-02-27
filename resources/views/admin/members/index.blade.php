@@ -5,83 +5,53 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
+
                 <div class="card-header">Member Management<a href="{{route('admin.members.create')}}"><button type="button" class="btn btn-outline-success float-right">+ Add Member</button></a></div>
 
-                <div class="card-body">
-
-
-
-<div id="accordion">
-<?php 
-$i = 0;
-?>
-	@foreach($members as $member)
-	  <div class="card">
-    <div class="card-header" id="headingOne{{$i}}">
-      <h5 class="mb-0">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne{{$i}}" aria-expanded="true" aria-controls="collapseOne{{$i}}">
-          {{ $member->school }} 
-        @can('admin-user')
-        <a href="{{route('admin.members.edit',['id'=>$member->id])}}"><button type="button" class="btn btn-outline-primary float-right">Edit</button></a>
-        @endcan
-          <a href="{{route('admin.members.destroy',['id'=>$member->id])}}"><button style="margin-right: 5px;" type="button" class="btn btn-outline-danger float-right">Delete</button></a>
-
-
-          &nbsp;&nbsp;&nbsp;
-        </button>
-
-      </h5>
-    </div>
-
-    <div id="collapseOne{{$i}}" class="collapse" aria-labelledby="headingOne{{$i}}" data-parent="#accordion">
-      <div class="card-body">
-      <b>Member Status</b> : @if ($member->status == 'active')
-    <span class="badge badge-success">Active</span>@elseif ($member->status == 'deactive')<span class="badge badge-secondary">Deactive</span>@else<span class="badge badge-danger">Error</span>@endif </BR></BR>
-    <hr>       
-      	<b>Address</b> : {{$member->address}}</BR></BR>
-    <hr>
-{{--   <b>Programs</b> :   --}}
-
-{{--   <div class="col-md-6 offset-sm-1"> --}}
-
- <table class="table">
+                <table class="table">
   <thead>
     <tr>
-
-      <th scope="col">Program</th>
-      <th scope="col">Level</th>
-      <th scope="col">Valid Through</th>
+      <th scope="col" style="width: 30%">School</th>
+      <th scope="col" style="width: 35%">Address</th>
+      <th scope="col" style="width: 10%">Status</th>
+      <th scope="col" style="width: 25%";>Action</th>
     </tr>
   </thead>
   <tbody>
-
-            @foreach($member->programs as $xmember)
+  @foreach($members as $member)
     <tr>
+      <th scope="row">{{$member->school}}</th>
+      <td>{{$member->address}}</td>
+      <td>
+@if ($member->status == 'active')
+    <span class="badge badge-success">Active</span>
+@elseif ($member->status == 'deactive')
+    <span class="badge badge-secondary">Deactive</span>
+@else
+    <span class="badge badge-danger">Error</span>
+@endif
+      </td>
+      <td>
+        @can('admin-user')
+        <a href="{{route('admin.members.edit',['id'=>$member->id])}}"><button type="button" class="btn btn-outline-primary float-left">Edit</button></a>
+        @endcan
+        @can('admin-user')
+<form action="{{route('admin.members.destroy',['id'=>$member->id])}}" method="POST" class="float-left">
+  @csrf
+  {{ method_field('delete')}}
+&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-outline-danger">Delete</button>
+</form>
+        @endcan
+        
 
-      <td>{{$xmember->program}}</td>
-      <td>{{$xmember->level}}</td>
-      <td>{{$xmember->valid}}</td>
+
+      </td>
     </tr>
+    @endforeach
 
-            @endforeach
   </tbody>
 </table>
-{{--   {{$xmember->program}}</BR></BR><b>Level Status</b> : {{$xmember->level}}</BR></BR><b>Valid Until</b> : {{$xmember->valid}}</BR></BR> --}}
 
-{{-- </div> --}}
-
-
-      </div>
-    </div>
-  </div>
-</BR>
-<?php 
-$i++
-?>
-  @endforeach
-</div>
-
-                </div>
             </div>
         </div>
     </div>
