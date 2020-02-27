@@ -69,6 +69,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:admi
 	Route::resource('/enrollmembership','Memberships\EnrollController', ['except' =>['show', 'create', 'store']]);
 	Route::post('/enrollmembership/gs','Memberships\EnrollController@storegs')->name('enrollmembership.gs');
 	Route::post('/enrollmembership/hs','Memberships\EnrollController@storehs')->name('enrollmembership.hs');
+	Route::post('/enrollmembership/bed','Memberships\EnrollController@storebed')->name('enrollmembership.bed');
 
 
  	Route::resource('/gsmembership','Memberships\GsMembershipController', ['except' =>['show', 'create', 'store']]);

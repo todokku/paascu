@@ -19,7 +19,7 @@ class MembersController extends Controller
     public function index()
     {
  
-        $members = Members::orderBy('school','asc')->get();
+        $members = Members::orderBy('school','asc')->paginate(10);
 
         $programs = Programs::all();
 

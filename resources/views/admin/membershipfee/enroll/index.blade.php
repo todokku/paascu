@@ -114,8 +114,10 @@
 </form>
 
 
-<form id="formBED" name="formBED" style="display:none">
+<form id="formBED" name="formBED" style="display:none" action="{{ route('enrollmembership.bed')}}" method="POST">
+  @csrf
 {{-- BED GS TOTAL ENROLLMENT --}}
+<input type="hidden" id="bedname" name="bedname">
 <div class="form-group row">
     <label for="bedgste" class="col-md-2 col-form-label text-md-right">Grade School Total Enrollment</label>
 
@@ -131,7 +133,7 @@
 </div>
 
 {{-- BED GS ANNUAL TUITION FEE --}}
-<div class="form-group row">
+{{-- <div class="form-group row">
     <label for="bedgsatf" class="col-md-2 col-form-label text-md-right">Grade School Annual Tuition Fee</label>
 
     <div class="col-md-8">
@@ -143,7 +145,7 @@
             </span>
         @enderror
     </div>
-</div>
+</div> --}}
 {{-- BED HS TOTAL ENROLLMENT --}}
 <div class="form-group row">
     <label for="bedhste" class="col-md-2 col-form-label text-md-right">High School Total Enrollment</label>
@@ -161,12 +163,12 @@
 
 {{-- BED HS ANNUAL TUITION FEE --}}
 <div class="form-group row">
-    <label for="bedhsatf" class="col-md-2 col-form-label text-md-right">High School Annual Tuition Fee</label>
+    <label for="bedatf" class="col-md-2 col-form-label text-md-right">High School Annual Tuition Fee</label>
 
     <div class="col-md-8">
-        <input id="bedhsatf" type="text" class="form-control @error('bedhsatf') is-invalid @enderror" name="bedhsatf" required>
+        <input id="bedatf" type="text" class="form-control @error('bedatf') is-invalid @enderror" name="bedatf" required>
 
-        @error('bedhsatf')
+        @error('bedatf')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
@@ -375,6 +377,7 @@ $(document).ready(function() {
 
       $('#formHS').show();
     }else if($(this).val() == "BED"){
+    $('#bedname').val($('#school').val());
     console.log('bed');
     $('#formCOL').hide();
     $('#formGS').hide();

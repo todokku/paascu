@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class BedMembership extends Model
 {
     protected $fillable = [
-        'gste', 'gsatf', 'hste', 'hsatf', 'gtr', 'member_id',
+        'gste', 'hste', 'te', 'atf', 'gtr', 'member_id',
     ];
 
         public function members(){

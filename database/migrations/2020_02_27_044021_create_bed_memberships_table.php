@@ -18,9 +18,9 @@ class CreateBedMembershipsTable extends Migration
             $table->unsignedBigInteger('member_id');
             $table->foreign('member_id')->references('id')->on('Members');
             $table->decimal('gste', 13, 2);
-            $table->decimal('gsatf', 13, 2);
             $table->decimal('hste', 13, 2);
-            $table->decimal('hsatf', 13, 2);
+            $table->decimal('te', 13, 2);    
+            $table->decimal('atf', 13, 2);        
             $table->decimal('gtr', 13, 2);
             $table->timestamps();
         });

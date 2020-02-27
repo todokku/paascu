@@ -56,4 +56,7 @@
         </div>
     </div>
 </div>
+
+{{ $members->links() }}
+
 @endsection

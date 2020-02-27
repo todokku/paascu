@@ -9,6 +9,7 @@ use App\AccreditedCollegeProgram;
 use App\AccreditedGraduateProgram;
 use App\GsMembership;
 use App\HsMembership;
+use App\BedMembership;
 class EnrollController extends Controller
 {
     /**
@@ -115,6 +116,29 @@ class EnrollController extends Controller
         $hs->gtr = 404;
  
         if($hs->save()){
+
+        $request->session()->flash('success', 'High School Membership has been Added');
+        }else{
+        $request->session()->flash('error', 'Error in High School Membership Registration');
+        }
+        return redirect()->route('enrollmembership.index');
+  
+    }
+        public function storebed(Request $request){
+
+        $bed = new BedMembership();
+        $gs = $request->input('bedgste');
+        $hs = $request->input('bedhste');
+
+        $bed->gste = $request->input('bedgste');
+        $bed->hste = $request->input('bedhste');
+
+        $bed->te = $gs*$hs; 
+        $bed->atf = $request->input('bedatf');
+        $bed->member_id = $request->input('bedname');
+        $bed->gtr = 404;
+ 
+        if($bed->save()){
 
         $request->session()->flash('success', 'High School Membership has been Added');
         }else{

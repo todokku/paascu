@@ -4,8 +4,7 @@ namespace App\Http\Controllers\Memberships;
 
 use App\BedMembership;
 use Illuminate\Http\Request;
-use App\BedMembership;
-
+use App\Http\Controllers\Controller;
 class BedMembershipController extends Controller
 {
     /**
