@@ -207,7 +207,7 @@
   <div class="form-group">
     <div class="col-md-8 offset-sm-2">
     <label for="exampleFormControlSelect1">Accredited College Programs</label>
-    <select multiple class="form-control" id="exampleFormControlSelect1" size="41">
+    <select multiple class="form-control selectpicker" id="exampleFormControlSelect1" size="41">
       @foreach($acp as $pca)
       <option>{{$pca->program}}</option>
       @endforeach
