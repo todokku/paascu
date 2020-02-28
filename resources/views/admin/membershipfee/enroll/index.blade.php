@@ -39,6 +39,41 @@
     </select>
   </div>
 </div>
+
+<div class="form-group row" id="colradiobutton" style="display:none">
+<div class="col-md-6 offset-sm-2">
+<div class=" custom-control custom-radio custom-control-inline">
+
+  <input type="radio" id="colsemester" name="colester" class="custom-control-input" value="SEMCOL">
+
+  <label class=" custom-control-label" for="colsemester" required>Semester</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="coltrimester" name="colester" class="custom-control-input" value="TRICOL">
+  <label class="custom-control-label" for="coltrimester">Trimester</label>
+</div>
+</div>
+</div>
+
+
+
+<div class="form-group row" id="gedradiobutton" style="display:none">
+<div class="col-md-6 offset-sm-2">
+<div class=" custom-control custom-radio custom-control-inline">
+
+  <input type="radio" id="gedsemester" name="gedester" class="custom-control-input" value="SEMGED">
+
+  <label class=" custom-control-label" for="gedsemester" required>Semester</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="gedtrimester" name="gedester" class="custom-control-input" value="TRIGED">
+  <label class="custom-control-label" for="gedtrimester">Trimester</label>
+</div>
+</div>
+</div>
+
+
+
 </form>
 <form id="formGS" name="formGS" style="display:none" action="{{ route('enrollmembership.gs')}}" method="POST">
 @csrf
@@ -181,35 +216,16 @@
 </form>
 
 
-
-
-<form id="formCOL" name="formCOL" style="display:none">
+<form id="formSEMCOL" name="formSEMCOL" style="display:none">
 {{-- COLL SEMESTER || TRISEMESTER --}}
-<div class="form-group row">
-<div class="col-md-6 offset-sm-2">
-<div class=" custom-control custom-radio custom-control-inline">
-
-  <input type="radio" id="colsemester" name="colester" class="custom-control-input" value="SEMCOL">
-
-  <label class=" custom-control-label" for="colsemester" required>Semester</label>
-</div>
-<div class="custom-control custom-radio custom-control-inline">
-  <input type="radio" id="coltrimester" name="colester" class="custom-control-input" value="TRICOL">
-  <label class="custom-control-label" for="coltrimester">Trimester</label>
-</div>
-</div>
-</div>
-
-
-
+<input type="hidden" id="semcolname" name="semcolname">
 {{-- ACP --}}
-
-  <div class="form-group">
-    <div class="col-md-8 offset-sm-2">
-    <label for="exampleFormControlSelect1">Accredited College Programs</label>
-    <select multiple class="form-control selectpicker" id="exampleFormControlSelect1" size="41">
+<div class="form-group">
+  <div class="col-md-8 offset-sm-2">
+  <label for="semcolacp" >Accredited College Programs</label>
+    <select class="form-control selectpicker " data-style="btn-info" data-live-search="true" multiple title="Check all that apply..." id="semcolacp">
       @foreach($acp as $pca)
-      <option>{{$pca->program}}</option>
+        <option>{{$pca->program}}</option>
       @endforeach
     </select>
   </div>
@@ -217,7 +233,7 @@
 
 {{-- COL SEMESTER || TRISEMESTER  ENROLLMENT TABLE--}}
 <div class="col-md-8 offset-sm-2">
-<table id="coltable" class="table table-dark" >
+<table id="semcoltable" class="table table-dark" >
   <thead>
     <tr>
       <th scope="col">Programs</th>
@@ -240,7 +256,6 @@
 {{-- COL SEMESTER || TRISEMESTER  INPUT TO TABLE--}}
 <div class="col-md-8 offset-sm-2">
   <div class="row">
-
     <div class="col">
       <input type="text" class="form-control" placeholder="Programs">
     </div>
@@ -250,47 +265,86 @@
     <div class="col">
       <input type="number" step=".01" min="0" class="form-control" placeholder="2nd Semester">
     </div>
-
   </div>
-
 </br>
-  <button id="submitCOL" name="submitCOL" type="submit" class="btn btn-primary btn-block">Submit</button>
-  </div>
+  <button id="submitSEMCOL" name="submitSEMCOL" type="submit" class="btn btn-primary btn-block">Submit</button>
+</div>
 </form>
-<form id="formGED" name="formGED" style="display:none">
+
+<form id="formTRICOL" name="formTRICOL" style="display:none">
+{{-- COLL SEMESTER || TRISEMESTER --}}
+<input type="hidden" id="tricolname" name="tricolname">
+{{-- ACP --}}
+<div class="form-group">
+  <div class="col-md-8 offset-sm-2">
+  <label for="tricolacp" >Accredited College Programs</label>
+    <select class="form-control selectpicker " data-style="btn-info" data-live-search="true" multiple title="Check all that apply..." id="tricolacp">
+      @foreach($acp as $pca)
+        <option>{{$pca->program}}</option>
+      @endforeach
+    </select>
+  </div>
+</div>
+
+{{-- COL SEMESTER || TRISEMESTER  ENROLLMENT TABLE--}}
+<div class="col-md-8 offset-sm-2">
+<table id="tricoltable" class="table table-dark" >
+  <thead>
+    <tr>
+      <th scope="col">Programs</th>
+      <th scope="col">1st Semester Enrollment</th>
+      <th scope="col">2nd Semester Enrollment</th>
+      <th scope="col">3rd Semester Enrollment</th>
+      <th scope="col">Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>datainput1</th>
+      <td>datainput2</td>
+      <td>datainput3</td>
+      <th>datainput4</th>
+      <th>datainput5</th>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+{{-- COL SEMESTER || TRISEMESTER  INPUT TO TABLE--}}
+<div class="col-md-8 offset-sm-2">
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Programs">
+    </div>
+    <div class="col">
+      <input type="number" step=".01" min="0" class="form-control" placeholder="1st Semester">
+    </div>
+    <div class="col">
+      <input type="number" step=".01" min="0" class="form-control" placeholder="2nd Semester">
+    </div>
+    <div class="col">
+      <input type="number" step=".01" min="0" class="form-control" placeholder="3rd Semester">
+    </div>
+  </div>
+</br>
+  <button id="submitTRICOL" name="submitTRICOL" type="submit" class="btn btn-primary btn-block">Submit</button>
+</div>
+</form>
+
+<form id="formSEMGED" name="formSEMGED" style="display:none">
 {{-- GED SEMESTER || TRISEMESTER --}}
-<div class="form-group row">
-<div class="col-md-6 offset-sm-2">
-<div class=" custom-control custom-radio custom-control-inline">
-
-  <input type="radio" id="gedsemester" name="gedester" class="custom-control-input" value="SEMGED">
-
-  <label class=" custom-control-label" for="gedsemester" required>Semester</label>
-</div>
-<div class="custom-control custom-radio custom-control-inline">
-  <input type="radio" id="gedtrimester" name="gedester" class="custom-control-input" value="TRIGED">
-  <label class="custom-control-label" for="gedtrimester">Trimester</label>
-</div>
-</div>
-</div>
-
-
-
+<input type="hidden" id="semgedname" name="semgedname">
 {{-- AGP --}}
-
   <div class="form-group">
     <div class="col-md-8 offset-sm-2">
-    <label for="exampleFormControlSelect2">Accredited Graduate Programs</label>
-    <select multiple class="form-control" id="exampleFormControlSelect2" size="6">
+    <label for="semgedacp">Accredited Graduate Programs</label>
+    <select multiple class="form-control" id="semgedacp" size="6">
       @foreach($agp as $pga)
       <option>{{$pga->program}}</option>
       @endforeach
     </select>
   </div>
 </div>
-
-
-
 {{-- GED SEMESTER || TRISEMESTER  ENROLLMENT TABLE--}}
 <div class="col-md-8 offset-sm-2">
 <table id="gedtable" class="table table-dark" >
@@ -312,11 +366,9 @@
   </tbody>
 </table>
 </div>
-
 {{-- GED SEMESTER || TRISEMESTER  INPUT TO TABLE--}}
 <div class="col-md-8 offset-sm-2">
   <div class="row">
-
     <div class="col">
       <input type="text" class="form-control" placeholder="Programs">
     </div>
@@ -326,12 +378,69 @@
     <div class="col">
       <input type="number" step=".01" min="0" class="form-control" placeholder="2nd Semester">
     </div>
-
   </div>
-
 </br>
-  <button id="submitGED" name="submitGED" type="submit" class="btn btn-primary btn-block">Submit</button>
+  <button id="submitSEMGED" name="submitSEMGED" type="submit" class="btn btn-primary btn-block">Submit</button>
+</div>
+</form>
 
+
+
+
+
+<form id="formTRIGED" name="formTRIGED" style="display:none">
+{{-- GED SEMESTER || TRISEMESTER --}}
+<input type="hidden" id="trigedname" name="trigedname">
+{{-- AGP --}}
+  <div class="form-group">
+    <div class="col-md-8 offset-sm-2">
+    <label for="trigedacp">Accredited Graduate Programs</label>
+    <select multiple class="form-control" id="trigedacp" size="6">
+      @foreach($agp as $pga)
+      <option>{{$pga->program}}</option>
+      @endforeach
+    </select>
+  </div>
+</div>
+{{-- GED SEMESTER || TRISEMESTER  ENROLLMENT TABLE--}}
+<div class="col-md-8 offset-sm-2">
+<table id="gedtable" class="table table-dark" >
+  <thead>
+    <tr>
+      <th scope="col">Programs</th>
+      <th scope="col">1st Semester Enrollment</th>
+      <th scope="col">2nd Semester Enrollment</th>
+      <th scope="col">3rd Semester Enrollment</th>
+      <th scope="col">Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>datainput1</th>
+      <td>datainput2</td>
+      <td>datainput3</td>
+      <th>datainput4</th>
+      <th>datainput5</th>
+    </tr>
+  </tbody>
+</table>
+</div>
+{{-- GED SEMESTER || TRISEMESTER  INPUT TO TABLE--}}
+<div class="col-md-8 offset-sm-2">
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Programs">
+    </div>
+    <div class="col">
+      <input type="number" step=".01" min="0" class="form-control" placeholder="1st Semester">
+    </div>
+    <div class="col">
+      <input type="number" step=".01" min="0" class="form-control" placeholder="2nd Semester">
+    </div>
+  </div>
+</br>
+  <button id="submitTRIGED" name="submitTRIGED" type="submit" class="btn btn-primary btn-block">Submit</button>
+</div>
 </form>
 
 </br>
@@ -351,29 +460,48 @@ $(document).ready(function() {
   $("#ed_level").change(function() {
 
     if ($(this).val() == "COL") {
+    $('#semcolname').val($('#school').val());
     console.log('col');
     $("#formGS").hide();
     $("#formHS").hide();
     $("#formBED").hide();
     $("#formGED").hide();
-
+    $("#gedradiobutton").hide();
+    $("#colradiobutton").show();
+    $("#formSEMGED").hide();
+    $("#formTRIGED").hide();
+    $("#formSEMCOL").hide();
+    $("#formTRICOL").hide();
+    
     $("#formCOL").show();
     }else if($(this).val() == "GS"){
     $('#gsname').val($('#school').val());
     // console.log();
-    $('#formCOL').hide();
+    // $('#formCOL').hide();
     $('#formHS').hide();
     $('#formBED').hide();
-    $('#formGED').hide();
+    // $('#formGED').hide();
+    $("#colradiobutton").hide();
+    $("#gedradiobutton").hide();
+    $("#formSEMGED").hide();
+    $("#formTRIGED").hide();
+    $("#formSEMCOL").hide();
+    $("#formTRICOL").hide();
 
     $('#formGS').show();
     }else if($(this).val() == "HS"){
     $('#hsname').val($('#school').val());
     console.log('hs');
-    $('#formCOL').hide();
+    // $('#formCOL').hide();
     $('#formGS').hide();
     $('#formBED').hide();
-    $('#formGED').hide();
+    // $('#formGED').hide();
+    $("#colradiobutton").hide();
+    $("#gedradiobutton").hide();
+    $("#formSEMGED").hide();
+    $("#formTRIGED").hide();
+    $("#formSEMCOL").hide();
+    $("#formTRICOL").hide();
 
       $('#formHS').show();
     }else if($(this).val() == "BED"){
@@ -382,24 +510,42 @@ $(document).ready(function() {
     $('#formCOL').hide();
     $('#formGS').hide();
     $('#formHS').hide();
-    $('#formGED').hide();
+    // $('#formGED').hide();
+    $("#colradiobutton").hide();
+    $("#gedradiobutton").hide();
+    $("#formSEMGED").hide();
+    $("#formTRIGED").hide();
+    $("#formSEMCOL").hide();
+    $("#formTRICOL").hide();
 
     $('#formBED').show();
     }else if($(this).val() == "GED"){
     console.log('ged');
-    $('#formCOL').hide();
+    // $('#formCOL').hide();
     $('#formGS').hide();
     $('#formHS').hide();
     $('#formBED').hide();
+    $("#colradiobutton").hide();
+    $("#formSEMGED").hide();
+    $("#formTRIGED").hide();
+    $("#formSEMCOL").hide();
+    $("#formTRICOL").hide();
+    $("#gedradiobutton").show();
 
-    $('#formGED').show();
+    // $('#formGED').show();
     }else {
     console.log('elsu');
-    $('#formCOL').hide();
+    // $('#formCOL').hide();
     $('#formGS').hide();
     $('#formHS').hide();
     $('#formBED').hide();
-    $('#formGED').hide();
+    // $('#formGED').hide();
+    $("#colradiobutton").hide();
+    $("#gedradiobutton").hide();
+          $("#formSEMGED").hide();
+          $("#formTRIGED").hide();
+          $("#formSEMCOL").hide();
+          $("#formTRICOL").hide();
     }
   });
 
@@ -408,10 +554,83 @@ $(document).ready(function() {
 //     alert( this.value );
 // });
 
-
-
 });
 
+
+$('#colsemester, #coltrimester').change(function(){
+    switch($(this).val()) {
+    case 'SEMCOL':
+      // alert("semcol");
+          $("#formTRICOL").hide();
+          $("#formSEMCOL").show();
+    break;
+    case 'TRICOL':
+      // alert("tricol");
+          $("#formSEMCOL").hide();
+          $("#formTRICOL").show();
+    break;
+    default:
+      alert("error");
+  }  
+  })
+
+$('#colsemester, #coltrimester').change(function(){
+    switch($(this).val()) {
+    case 'SEMCOL':
+      // alert("semcol");
+          $("#formSEMGED").hide();
+          $("#formTRIGED").hide();
+
+          $("#formTRICOL").hide();
+          $("#formSEMCOL").show();
+    break;
+    case 'TRICOL':
+      // alert("tricol");
+          $("#formSEMGED").hide();
+          $("#formTRIGED").hide();
+
+          $("#formSEMCOL").hide();
+          $("#formTRICOL").show();
+    break;
+    default:
+      alert("error");
+  }  
+  })
+
+$('#gedsemester, #gedtrimester').change(function(){
+    switch($(this).val()) {
+    case 'SEMGED':
+      // alert("semged");
+          $("#formSEMCOL").hide();
+          $("#formTRICOL").hide();
+
+          $("#formTRIGED").hide();
+          $("#formSEMGED").show();
+    break;
+    case 'TRIGED':
+      // alert("triged");
+          $("#formSEMCOL").hide();
+          $("#formTRICOL").hide();
+
+          $("#formSEMGED").hide();
+          $("#formTRIGED").show();
+    break;
+    default:
+      alert("error");
+  }  
+  })
+
+
+
+ $('#exampleFormControlSelect1').change(function () {
+        var selectedItem = $('.selectpicker').val();
+        alert(selectedItem);
+    });
+
+  // $('#exampleFormControlSelect2').change(function () {
+  //       var selectedItem = $('#exampleFormControlSelect2').val();
+  //       alert(selectedItem);
+  //   });
 
 $('table').each(function() {
     if($(this).find('tr').children("td").length < 1) {
