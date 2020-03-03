@@ -18,6 +18,7 @@ class CreateMembersTable extends Migration
             $table->string('school');
             $table->string('address');
             $table->string('status');
+            $table->string('logo');
             $table->timestamps();
         });
     }
