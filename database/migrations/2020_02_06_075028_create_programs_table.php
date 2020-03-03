@@ -21,6 +21,7 @@ class CreateProgramsTable extends Migration
             $table->string('level');
             $table->string('ed_level')->nullable();           
             $table->string('valid');
+            $table->string('status');
             $table->timestamps();
         });
     }
