@@ -21,6 +21,15 @@ class CreateHsMembershipsTable extends Migration
             $table->decimal('atf', 13, 2);
             $table->decimal('gtr', 13, 2);
             $table->timestamps();
+
+            // $table->bigIncrements('id');
+            // $table->unsignedBigInteger('member_id');
+            // $table->foreign('member_id')->references('id')->on('Members');
+            // $table->string('title');
+            // $table->decimal('content', 13, 2);
+            // $table->integer('position');
+            // $table->decimal('gtr', 13, 2);
+            // $table->timestamps();
         });
     }
 

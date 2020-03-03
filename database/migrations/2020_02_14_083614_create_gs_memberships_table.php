@@ -15,8 +15,13 @@ class CreateGsMembershipsTable extends Migration
     {
         Schema::create('gs_memberships', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->decimal('te', 13, 2);
-            $table->decimal('atf', 13, 2);
+            $table->unsignedBigInteger('member_id');
+            $table->foreign('member_id')->references('id')->on('Members');
+            // $table->decimal('te', 13, 2);
+            // $table->decimal('atf', 13, 2);
+            $table->string('title');
+            $table->decimal('content', 13, 2);
+            $table->integer('position');
             $table->decimal('gtr', 13, 2);
             $table->timestamps();
         });

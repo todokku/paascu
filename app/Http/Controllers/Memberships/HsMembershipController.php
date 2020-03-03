@@ -14,9 +14,16 @@ class HsMembershipController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {   //old
         $membership = HsMembership::all();
         return view('admin.membershipfee.hs.index')->with('membership', $membership);
+
+        //new
+        // $formula = MembershipFormula::where('ed_type','High School')->first();
+        // $pieces = explode(" ", $formula->variable);
+        // $membership = HsMembership::select('id', 'member_id', 'title', 'content', 'position', 'gtr')->groupBy('member_id')->get();
+        // $sm = ScheduleMembership::all();
+        // return view('admin.membershipfee.hs.index')->with('membership', $membership)->with('formula', $formula)->with('pieces', $pieces)->with( 'sm' , $sm );
     }
 
     /**

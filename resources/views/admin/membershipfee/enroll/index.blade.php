@@ -16,7 +16,7 @@
 <div class="form-group row">
 	<label for="school" class="col-md-2 col-form-label text-md-right">School</label>
     	<div class="col-md-8">
-		<select class="form-control" id="school" name="school">
+		<select class="form-control selectpicker" id="school" name="school" data-live-search="true" data-style="btn-info" title="Select School...">
 			<option value=""> </option>
 				@foreach($members as $member)
 			<option value="{{$member->id}}">{{$member->school}}</option>
@@ -75,26 +75,35 @@
 
 
 </form>
+
+
+
+
 <form id="formGS" name="formGS" style="display:none" action="{{ route('enrollmembership.gs')}}" method="POST">
 @csrf
 {{-- GS TOTAL ENROLLMENT --}}
 <input type="hidden" id="gsname" name="gsname">
+@foreach($gspieces as $seceipsg)
+@if(strlen($seceipsg)>1)
+<input type="hidden" id="title{{$seceipsg}}" name="title{{$seceipsg}}" value="{{$seceipsg}}">
 <div class="form-group row">
-    <label for="gste" class="col-md-2 col-form-label text-md-right">Grade School Total Enrollment</label>
+    <label for="gste" class="col-md-2 col-form-label text-md-right">{{$seceipsg}}</label>
 
     <div class="col-md-8">
-        <input id="gste" type="text" class="form-control @error('gste') is-invalid @enderror" name="gste" required>
+        <input id="{{$seceipsg}}" type="number" step=".01" min="0" class="form-control @error($seceipsg) is-invalid @enderror" name="{{$seceipsg}}" required>
 
-        @error('gste')
+        @error($seceipsg)
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
         @enderror
     </div>
 </div>
+@endif
+@endforeach
 
 {{-- GS ANNUAL TUITION FEE --}}
-<div class="form-group row">
+{{-- <div class="form-group row">
     <label for="gsatf" class="col-md-2 col-form-label text-md-right">Grade School Annual Tuition Fee</label>
 
     <div class="col-md-8">
@@ -109,8 +118,15 @@
 </div>
 <div class="col-md-8 offset-sm-2">
   <button id="submitGS" name="submitGS" type="submit" class="btn btn-primary btn-block">Submit</button>
+</div> --}}
+<div class="col-md-8 offset-sm-2">
+  <button id="submitGS" name="submitGS" type="submit" class="btn btn-primary btn-block">Submit</button>
 </div>
 </form>
+
+
+
+
 <form id="formHS" name="formHS" style="display:none" action="{{ route('enrollmembership.hs')}}" method="POST">
 @csrf
 {{-- HS TOTAL ENROLLMENT --}}

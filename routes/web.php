@@ -34,7 +34,11 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:admi
  	// Route::resource('/membershipformula','MembershipFormulaController', ['except' =>['show', 'create', 'store']]);
  	Route::resource('/membershipformula','MembershipFormulaController', ['except' =>['show', 'create', 'store']]);
 
-	//member CRUD
+ 	// Route::post('/membershipformula/update/{id}', 'MembershipFormulaController@update');
+ 	Route::get('/membershipformula/{id}/edit','MembershipFormulaController@edit')->name('membershipformula.edit');
+	Route::post('/membershipformula/update','MembershipFormulaController@update')->name('membershipformula.update');
+
+	
 	Route::get('/members/{id}/edit','MembersController@edit')->name('members.edit');
 	Route::post('/members/update','MembersController@update')->name('members.update');
 	Route::get('/members/{id}/delete','MembersController@destroy')->name('members.destroy');
@@ -74,7 +78,8 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:admi
 
  	Route::resource('/gsmembership','Memberships\GsMembershipController', ['except' =>['show', 'create', 'store']]);
 	Route::get('/gsmembership','Memberships\GsMembershipController@index')->name('gsmembership.index');
-
+	Route::get('/gsmembership/getformula','Memberships\GsMembershipController@formulagroup')->name('gsmembership.getformula');
+	
  	Route::resource('/hsmembership','Memberships\HsMembershipController', ['except' =>['show', 'create', 'store']]);
 	Route::get('/hsmembership','Memberships\HsMembershipController@index')->name('hsmembership.index');
 

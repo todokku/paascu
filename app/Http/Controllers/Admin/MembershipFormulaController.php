@@ -16,21 +16,14 @@ class MembershipFormulaController extends Controller
      */
     public function index()
     {   
-        $gs = DB::table('membership_formulas')->where('ed_level', 'gs')->first();
-        $hs = DB::table('membership_formulas')->where('ed_level', 'hs')->first();
-        $bed = DB::table('membership_formulas')->where('ed_level', 'bed')->first();
-        $semcol = DB::table('membership_formulas')->where('ed_level', 'semcol')->first();
-        $tricol = DB::table('membership_formulas')->where('ed_level', 'tricol')->first();
-        $semged = DB::table('membership_formulas')->where('ed_level', 'semged')->first();
-        $triged= DB::table('membership_formulas')->where('ed_level', 'triged')->first();
-        return view('admin.membershipformula.index')
-        ->with('gs', $gs)
-        ->with('hs', $hs)
-        ->with('bed', $bed)
-        ->with('semcol', $semcol)
-        ->with('tricol', $tricol)
-        ->with('semged', $semged)
-        ->with('triged', $triged);
+        // $gsfullformula = "";
+        $formula = MembershipFormula::all();
+        // ->orderBy('position','asc')->get();
+
+        // foreach ($gsformula as $formulas) {
+        //     $gsfullformula .= $formulas->variable." ";
+        // }
+       return view('admin.membershipformula.index')->with('formula', $formula);
     }
 
     /**
@@ -71,9 +64,10 @@ class MembershipFormulaController extends Controller
      * @param  \App\MembershipFormula  $membershipFormula
      * @return \Illuminate\Http\Response
      */
-    public function edit(MembershipFormula $membershipFormula)
+    public function edit($id)
     {
-        //
+        $formula = MembershipFormula::find($id);
+        return view('admin.membershipformula.edit')->with('formula',$formula);
     }
 
     /**
@@ -83,9 +77,16 @@ class MembershipFormulaController extends Controller
      * @param  \App\MembershipFormula  $membershipFormula
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, MembershipFormula $membershipFormula)
+    public function update(Request $request, $formula)
     {
-        //
+        $formula = MembershipFormula::find($request->input('id'));
+        $formula->variable = $request->input('formula');
+        if($formula->save()){
+        $request->session()->flash('success', 'Member has been Updated');
+        }else{
+        $request->session()->flash('error', 'Error in Member Update');
+        }
+        return redirect()->route('admin.membershipformula.index');
     }
 
     /**

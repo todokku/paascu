@@ -15,8 +15,8 @@ class CreateMembershipFormulasTable extends Migration
     {
         Schema::create('membership_formulas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('formula');
-            $table->string('ed_level');
+            $table->string('variable')->default(null);
+            $table->string('ed_type')->default(null);
             $table->timestamps();
         });
     }

@@ -7,8 +7,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Members;
+use App\MembershipFormula;
 // use App\BedMembership;
-
+use DB;
+use App\ScheduleMembership;
 class GsMembershipController extends Controller
 {
     /**
@@ -32,9 +34,16 @@ class GsMembershipController extends Controller
         // dd($memedschool,$memedstat);
 
         // $members = MemberEducation::all();
+
+        $formula = MembershipFormula::where('ed_type','Grade School')->first();
+
+                // $membership = GsMembership::all();
+        $membership = GsMembership::select('id', 'member_id', 'title', 'content', 'position', 'gtr')->groupBy('member_id')->get();
         
-        $membership = GsMembership::all();
-        return view('admin.membershipfee.gs.index')->with('membership', $membership);
+        $pieces = explode(" ", $formula->variable); 
+        $sm = ScheduleMembership::all();
+        return view('admin.membershipfee.gs.index')->with('membership', $membership)->with('formula', $formula)->with('pieces', $pieces)->with( 'sm' , $sm );
+
     }
 
     /**
@@ -101,5 +110,13 @@ class GsMembershipController extends Controller
     public function destroy(GsMembership $gsmembership)
     {
         //
+    }
+
+    public function formulagroup(Request $request)
+    {
+        $id= $request->id;
+        $data = DB::table('gs_memberships')->whereIn('member_id', [$id])->get();
+        echo json_encode($data);
+
     }
 }
