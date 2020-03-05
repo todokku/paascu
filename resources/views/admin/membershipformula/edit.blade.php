@@ -161,7 +161,6 @@ var formulaAppend ="";
 formulaAppend += $("#school option:selected").text()+" ";
 $('#newformula').val(formulaAppend); 
 $('#school').val(' '); 
-
   });
 $('#btnadd').click(function(){
 formulaAppend += "+ ";

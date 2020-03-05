@@ -42,8 +42,31 @@
         <a href="{{ route('admin.programs.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/program.png') }}">  Manage Programs</a>
 
         <a href="{{ route('admin.schedulemembership.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/table.png') }}">  Manage Schedule Membership</a>
+{{-- 
+        <a href="{{ route('enrollmembership.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/enroll.png') }}">  Enroll Membership Fee</a> --}}
 
-        <a href="{{ route('enrollmembership.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/enroll.png') }}">  Enroll Membership Fee</a>
+        <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown list-group-item list-group-item-action bg-light"><img src="{{ asset('img/enroll.png') }}">  Enroll Membership Fee <img src="{{ asset('img/arrowdown.png') }}" class="float-right"></a>
+                <ul class="collapse list-unstyled" id="pageSubmenu2">
+                    <li>
+                                <a href="{{ route('gsenrollment.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/enroll.png') }}">  GS Membership Fee</a>
+                    </li>
+{{--                     <li>
+                                <a href="{{ route('hsmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  HS Membership Fee</a>
+                    </li>
+                    <li>
+                                <a href="{{ route('bedmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  BED Membership Fee</a>
+                    </li>
+                    <li>
+                                <a href="#" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  College Membership Fee</a>
+                    </li>
+                    <li>
+                                <a href="#" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  GED Membership Fee</a>
+                    </li> --}}
+                </ul>
+
+
+
+
 
         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown list-group-item list-group-item-action bg-light"><img src="{{ asset('img/money.png') }}">  Manage Membership Fee <img src="{{ asset('img/arrowdown.png') }}" class="float-right"></a>
                 <ul class="collapse list-unstyled" id="pageSubmenu">

@@ -89,7 +89,7 @@ return view('admin.membershipformula.index')->with('formula', $formula);
         }else{
         $request->session()->flash('error', 'Error in Formula Update');
         }
-        return redirect()->route('admin.membershipformula.index');
+        return back();
     }
 
         public function updatevariable(Request $request)

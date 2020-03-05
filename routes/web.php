@@ -87,3 +87,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:admi
 	Route::get('/bedmembership','Memberships\BedMembershipController@index')->name('bedmembership.index');
 
 
+
+
+//revising the fucking enrollment
+ 	Route::get('/gsenrollment','MembershipEnrollment\GsEnrollController@index')->name('gsenrollment.index');
