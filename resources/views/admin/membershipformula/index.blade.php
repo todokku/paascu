@@ -10,7 +10,7 @@
                 </div>
 
 @foreach($formula as $alumrof)
-<form id="updateformula" name="updateformula" action="{{ url('admin/membershipformula/'.$alumrof->id.'/edit')}}">
+<form id="updateformula" name="updateformula" action="{{ url('admin/membershipformula/'.$alumrof->id.'/edit/'.$alumrof->formula_id.'')}}">
 {{-- @csrf
 @method('PUT') --}}
 
@@ -22,11 +22,11 @@
     <li class="list-group-item">{{$alumrof->variable." = gross_tuition_fee"}}</li>
   </ul>
 </div> --}}
-{{$alumrof->ed_type}} formula
+{{$alumrof->formula_id}} Formula
 <div class="input-group mb-3">
-  <input type="text" class="form-control" value="{{$alumrof->variable.' = gross_tuition_fee'}}" aria-label="Recipient's username" aria-describedby="button-{{$alumrof->ed_type}}" disabled>
+  <input type="text" class="form-control" value="{{$alumrof->formula.' = gross_tuition_fee'}}" aria-label="Recipient's username" aria-describedby="button-{{$alumrof->id}}" disabled>
   <div class="input-group-append">
-    <button class="btn btn-outline-secondary" type="submit" id="button-{{$alumrof->ed_type}}">Update</button>
+    <button class="btn btn-outline-secondary" type="submit" id="button-{{$alumrof->id}}">Update</button>
   </div>
 </div>
 </div>

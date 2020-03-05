@@ -24,7 +24,6 @@ class CreateMembershipsTable extends Migration
             $table->unsignedBigInteger('variable_id');
             $table->foreign('variable_id')->references('id')->on('variables');
             $table->decimal('content', 13, 2);
-            $table->integer('position');
             $table->timestamps();
         });
     }

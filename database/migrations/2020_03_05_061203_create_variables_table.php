@@ -17,6 +17,7 @@ class CreateVariablesTable extends Migration
             $table->bigIncrements('id');
             $table->string('code');
             $table->string('title');
+            $table->string('ed_type');
             $table->timestamps();
         });
     }

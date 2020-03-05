@@ -35,9 +35,9 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:admi
  	Route::resource('/membershipformula','MembershipFormulaController', ['except' =>['show', 'create', 'store']]);
 
  	// Route::post('/membershipformula/update/{id}', 'MembershipFormulaController@update');
- 	Route::get('/membershipformula/{id}/edit','MembershipFormulaController@edit')->name('membershipformula.edit');
+ 	Route::get('/membershipformula/{id}/edit/{ed_type}','MembershipFormulaController@edit')->name('membershipformula.edit');
 	Route::post('/membershipformula/update','MembershipFormulaController@update')->name('membershipformula.update');
-
+	Route::post('/membershipformula/updatevariable','MembershipFormulaController@updatevariable')->name('membershipformula.updatevariable');
 	
 	Route::get('/members/{id}/edit','MembersController@edit')->name('members.edit');
 	Route::post('/members/update','MembersController@update')->name('members.update');

@@ -1,11 +1,15 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+//old shit
+// use App\MembershipFormula;
 
-use App\MembershipFormula;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use DB;
+
+use App\Formula;
+use App\Variable;
 
 class MembershipFormulaController extends Controller
 {
@@ -15,15 +19,12 @@ class MembershipFormulaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
-        // $gsfullformula = "";
-        $formula = MembershipFormula::all();
-        // ->orderBy('position','asc')->get();
+    {   //oldshit
+       //  $formula = MembershipFormula::all();
+       // return view('admin.membershipformula.index')->with('formula', $formula);
 
-        // foreach ($gsformula as $formulas) {
-        //     $gsfullformula .= $formulas->variable." ";
-        // }
-       return view('admin.membershipformula.index')->with('formula', $formula);
+ $formula = Formula::all();
+return view('admin.membershipformula.index')->with('formula', $formula);
     }
 
     /**
@@ -64,10 +65,11 @@ class MembershipFormulaController extends Controller
      * @param  \App\MembershipFormula  $membershipFormula
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, $ed_type)
     {
-        $formula = MembershipFormula::find($id);
-        return view('admin.membershipformula.edit')->with('formula',$formula);
+        $variable = Variable::whereIn('ed_type', [$ed_type])->get();
+        $formula = Formula::find($id);
+        return view('admin.membershipformula.edit')->with('formula',$formula)->with('variable',$variable);
     }
 
     /**
@@ -79,14 +81,29 @@ class MembershipFormulaController extends Controller
      */
     public function update(Request $request, $formula)
     {
-        $formula = MembershipFormula::find($request->input('id'));
-        $formula->variable = $request->input('formula');
+        $formula = Formula::find($request->input('id'));
+        $formula->formula = $request->input('newformula');
+        // $formula->ed_type = $request->input('ed_type');
         if($formula->save()){
-        $request->session()->flash('success', 'Member has been Updated');
+        $request->session()->flash('success', 'Formula has been Updated');
         }else{
-        $request->session()->flash('error', 'Error in Member Update');
+        $request->session()->flash('error', 'Error in Formula Update');
         }
         return redirect()->route('admin.membershipformula.index');
+    }
+
+        public function updatevariable(Request $request)
+    {
+        $vari = new Variable();
+        $vari->code = $request->input('newvariable');
+        $vari->title = $request->input('newvartitle');
+        $vari->ed_type = $request->input('newvared_type');
+        if($vari->save()){
+        $request->session()->flash('success', 'Variable has been Added');
+        }else{
+        $request->session()->flash('error', 'Error in Adding Variable');
+        }
+        return back();
     }
 
     /**
