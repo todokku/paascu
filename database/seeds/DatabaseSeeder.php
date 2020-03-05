@@ -19,5 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call(AccreditedGraduateProgramsTableSeeder::class);
         $this->call(ScheduleMembershipTableSeeder::class);
         $this->call(MembershipFormulaTableSeeder::class);
+        $this->call(VariableTableSeeder::class);
+        $this->call(FormulaTableSeeder::class);
     }
 }

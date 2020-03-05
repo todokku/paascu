@@ -50,7 +50,7 @@
                     <li>
                                 <a href="{{ route('gsmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  GS Membership Fee</a>
                     </li>
-                    <li>
+{{--                     <li>
                                 <a href="{{ route('hsmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  HS Membership Fee</a>
                     </li>
                     <li>
@@ -61,7 +61,7 @@
                     </li>
                     <li>
                                 <a href="#" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  GED Membership Fee</a>
-                    </li>
+                    </li> --}}
                 </ul>
 
         <a href="{{ route('admin.membershipformula.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/formula.png') }}">  Manage Membership Formulas</a>

@@ -18,4 +18,13 @@ class Members extends Model
     public function bedmembership(){
         return $this->hasMany('App\BedMembership', 'member_id');
     }
+    public function membership(){
+        return $this->hasMany('App\Membership', 'member_id');
+    }
+    public function formula(){
+        return $this->hasMany('App\Formula', 'member_id');
+    }
+    public function compute(){
+        return $this->hasMany('App\Compute', 'member_id');
+    }
 }
