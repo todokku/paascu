@@ -91,3 +91,4 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:admi
 
 //revising the fucking enrollment
  	Route::get('/gsenrollment','MembershipEnrollment\GsEnrollController@index')->name('gsenrollment.index');
+ 	Route::post('/gsenrollment','MembershipEnrollment\GsEnrollController@store')->name('gsenrollment.store');

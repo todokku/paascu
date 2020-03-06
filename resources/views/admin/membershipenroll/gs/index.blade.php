@@ -24,25 +24,30 @@
 </div>
 </form>
 
-{{$formula->id}}
+{{--     --}}
 
-<form id="formGS" name="formGS" action="#" method="POST">
+<form id="formGS" name="formGS" action="{{ route('gsenrollment.store')}}" method="POST">
 @csrf
 {{-- GS TOTAL ENROLLMENT --}}
-@foreach($variabled as $xxx)
-<input type="hidden" id="varid" name="gsname" value="{{$xxx->id}}">
-<input type="hidden" id="title{{$xxx->code}}" name="title{{$xxx->code}}" value="{{$xxx->code}}">
+<input type="hidden" id="gsmember" name="gsmember">
+{{-- <input type="hidden" id="gsformula" name="gsformula" value="{{$formula->id}}"> --}}
+@foreach($variabled as $delbairav)
+<input type="hidden" id="vari-{{$delbairav->id}}" name="vari-{{$delbairav->id}}" value="{{$delbairav->id}}">
+
 <div class="form-group row">
-    <label for="gste" class="col-md-2 col-form-label text-md-right">{{$xxx->title}}</label>
+
+    <label for="{{$delbairav->code}}" class="col-md-2 col-form-label text-md-right">{{$delbairav->title}}</label>
 
     <div class="col-md-8">
-        <input id="{{$xxx->code}}" type="number" step=".01" min="0" class="form-control @error($xxx->code) is-invalid @enderror" name="{{$xxx->code}}" required placeholder="{{$xxx->id}}">
 
-        @error($xxx->code)
+        <input id="{{$delbairav->code}}" type="number" step=".01" min="0" class="form-control @error($delbairav->code) is-invalid @enderror" name="{{$delbairav->code}}" required >
+
+        @error($delbairav->code)
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
         @enderror
+
     </div>
 </div>
 @endforeach
@@ -59,4 +64,12 @@
     </div>
 </div>
 </div>
+<script>
+$(document).ready(function() {
+    console.log('ready');
+    $("#school").change(function() {
+        $('#gsmember').val($('#school').val());
+    });
+});
+</script>
 @endsection

@@ -20,26 +20,8 @@ class GsMembershipController extends Controller
      */
     public function index()
     {
-        // $bed = BedMembership::all();
-
-
-        // $members = Members::orderBy('school','asc')->get();
-        // $membership = GsMembership::all()->first();
-        // return view('admin.membershipfee.gs.index')->with('members', $members)->with('membership', $membership);
-
-        
-        // $memed = MemberEducation::find(2);
-        // $memedschool = $memed->members->school;
-        // $memedstat = $memed->ed_level;
-        // dd($memedschool,$memedstat);
-
-        // $members = MemberEducation::all();
-
         $formula = MembershipFormula::where('ed_type','Grade School')->first();
-
-                // $membership = GsMembership::all();
         $membership = GsMembership::select('id', 'member_id', 'title', 'content', 'position', 'gtr')->groupBy('member_id')->get();
-        
         $pieces = explode(" ", $formula->variable); 
         $sm = ScheduleMembership::all();
         return view('admin.membershipfee.gs.index')->with('membership', $membership)->with('formula', $formula)->with('pieces', $pieces)->with( 'sm' , $sm );

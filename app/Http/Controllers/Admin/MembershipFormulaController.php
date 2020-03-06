@@ -80,7 +80,15 @@ return view('admin.membershipformula.index')->with('formula', $formula);
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $formula)
-    {
+    {//update all formulas to gtr amf via Compute ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        //EXPLODE NEW FORMULA
+        //select variable_id WHEREIN member_id 
+            //
+        //USE ARRAY_DIFF
+        //get the result and deleted it from variable id
+
+
+
         $formula = Formula::find($request->input('id'));
         $formula->formula = $request->input('newformula');
         // $formula->ed_type = $request->input('ed_type');

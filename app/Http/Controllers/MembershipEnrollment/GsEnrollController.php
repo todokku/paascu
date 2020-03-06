@@ -10,6 +10,9 @@ use App\Members;
 use App\Formula;
 use App\Variable;
 use App\Programs;
+
+use App\Membership;
+use App\Compute;
 class GsEnrollController extends Controller
 {
     /**
@@ -19,51 +22,14 @@ class GsEnrollController extends Controller
      */
     public function index()
     {   
-
-        // $variIDcollector = array();
-
-
-        // $members = Members::orderBy('school','asc')->get();
-        // $formula = Formula::select('formula')->where('formula_id','Grade School')->get();
-        // $varis = Variable::select('id', 'code')->whereIn('ed_type',['Grade School'])->get();
-        // $sksksk = json_decode($formula);
-        // $sksksk2 = json_decode($varis);
-        // $formulaexplode = explode(" ", $sksksk[0]->formula);
-
-        // foreach($formulaexplode as $fex){
-        //     if(strlen($fex)>1){
-        //         foreach($varis as $sirav)
-        //             if(strcmp($sirav->code, $fex) == 0){
-
-        //                 array_push($variIDcollector,$sirav->id);
-        //                 array_push($variIDcollector,$sirav->code);
-        //             }
-        //         }
-        //     }
-        // dd($formula);
-        // $comment = App\Post::find(1)->comments()->where('title', 'foo')->first();
-        // $members = Members::all();
-        // $Products = Members::has('programs')->whereIn('program', ['Grade School'])->get();
         $members = Members::select('id','school')->whereHas('programs', function ($query) {
         $query->whereIn('program', ['Grade School']);
         })->get();
 
         $formula = Formula::where('formula_id','Grade School')->first();
-        // if(isset($formula)){
         $gspieces = explode(" ", $formula->formula);
         $variabled = Variable::whereIn('code',$gspieces)->get();
-                return view('admin.membershipenroll.gs.index')->with('members',$members)->with('formula',$formula)->with('gspieces',$gspieces)->with('variabled',$variabled);
-        // }else{
-
-        //     return view('admin.membershipenroll.gs.index')->with('members',$members); 
-        // }
-
-        // dd($variabled);
-        // $mataisubet = $members->programs()->whereIn('program', ['Grade School'])->get();
-        // $members = Members::orderBy('school','asc')->get();
-        // dd($gspieces);
-
-
+        return view('admin.membershipenroll.gs.index')->with('members',$members)->with('formula',$formula)->with('gspieces',$gspieces)->with('variabled',$variabled);
     }
 
     /**
@@ -84,31 +50,37 @@ class GsEnrollController extends Controller
      */
     public function store(Request $request)
     {
-//         $formula = MembershipFormula::where('ed_type','Grade School')->first();
-//         $gspieces = explode(" ", $formula->variable);
-//         $i = 0;
-//         $formulareplaced = $formula->variable;
-// foreach ($gspieces as $seceipsg){
-//     if(strlen($seceipsg)>1){
-//         $gs = new GsMembership();
-//         $gs->member_id = $request->input('gsname');
-//         $gs->title = $seceipsg;
-//         $gs->content = $request->input($seceipsg);
-//         $gs->position = $i;
-//         //replacing to formula
-// foreach ($gspieces as $seceipsgx){
-//     if(strlen($seceipsgx)>1){
-//         $formulareplaced = str_replace($seceipsgx,$request->input($seceipsgx),$formulareplaced);
-//     }
-// }
-//         //calculate gtr
-//         $gs->gtr = eval("return $formulareplaced;");
-//         $gs->save();
-//         $i++;
-//     }
-// }
-//         $request->session()->flash('success', 'Grade School Membership has been Added');
-//         return redirect()->route('enrollmembership.index');
+        $formula = Formula::where('formula_id','Grade School')->first();
+        $gspieces = explode(" ", $formula->formula);
+        $variabled = Variable::whereIn('code',$gspieces)->get();
+
+        $formulareplaced = $formula->formula; //$formula->formula = ( gs_total_enrollment * gs_annual_tuition_fee )
+        foreach ($variabled as $delbairav){
+        $gsm = new Membership();
+        $gsm->member_id = $request->input('gsmember');
+        $gsm->formula_id = "Grade School";
+        $gsm->variable_id = $request->input("vari-".$delbairav->id);
+        $gsm->content = $request->input($delbairav->code);
+        $gsm->save();
+        }
+
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        //replaceing form input into given formula;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+        // foreach ($variabled as $delbairav){
+        // $formulareplaced = str_replace($delbairav->code,$request->input($delbairav->code),$formulareplaced);
+        // }
+        // echo $formulareplaced;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        // computing the current formula~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+        // $gsmcompute = new Compute();
+        // $gsmcompute->member_id = $request->input('gsmember');
+        // $gsmcompute->gtr = eval("return $formulareplaced;");
+        // $gsmcompute->amf = 404;
+        // $gsmcompute->save();
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $request->session()->flash('success', 'Grade School Membership has been Added');
+        return redirect()->route('gsenrollment.index');
     }
 
     /**
