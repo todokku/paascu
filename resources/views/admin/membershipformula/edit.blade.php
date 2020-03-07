@@ -15,13 +15,15 @@
 <div class="form-group row">
         <input type="hidden" name="id" value = "{{$formula->id}}">
         <input type="hidden" name="ed_type" value = "{{$formula->formula_id}}">
+        <input type="hidden" name="newvari" id="newvari">
+        <input type="hidden" name="schoolid" id="schoolid">
  </div>
  
                         <div class="form-group row">
                             <label for="formula" class="col-md-2 col-form-label text-md-right">Current Formula</label>
 
                             <div class="col-md-10">
-                                <input id="formula" type="text" class="form-control @error('formula') is-invalid @enderror" name="formula" value="{{ $formula->formula }}" required autocomplete="formula" disabled>
+                                <input id="formula" type="text" class="form-control @error('formula') is-invalid @enderror" name="formula" value="{{$formula->formula}}" required autocomplete="formula" readonly>
 
                                 @error('formula')
                                     <span class="invalid-feedback" role="alert">
@@ -156,10 +158,16 @@
 <script>
 $(document).ready(function() {
         console.log('ready');
-var formulaAppend ="";
+var formulaAppend = "";
+var varaibleAppend = "";
   $("#school").change(function() {
+    //new formula
 formulaAppend += $("#school option:selected").text()+" ";
 $('#newformula').val(formulaAppend); 
+    //new variable ids
+varaibleAppend += $("#school option:selected").val()+" ";
+$('#schoolid').val($("#school option:selected").val()); 
+$('#newvari').val(varaibleAppend); 
 $('#school').val(' '); 
   });
 $('#btnadd').click(function(){

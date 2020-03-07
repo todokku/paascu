@@ -6,10 +6,13 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+
 use DB;
 
 use App\Formula;
 use App\Variable;
+
+use App\Membership;
 
 class MembershipFormulaController extends Controller
 {
@@ -80,18 +83,46 @@ return view('admin.membershipformula.index')->with('formula', $formula);
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $formula)
-    {//update all formulas to gtr amf via Compute ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        //EXPLODE NEW FORMULA
-        //select variable_id WHEREIN member_id 
-            //
-        //USE ARRAY_DIFF
-        //get the result and deleted it from variable id
+    {
 
 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//find differences get the differences (variable ids @ memberships)
+$membership = Membership::select('variable_id')->whereIn('formula_id', [$request->input('ed_type')])->get();
+$newarra = array();
+foreach ($membership as $membershipx) {
+        if(!in_array($membershipx->variable_id, $newarra, true)){
+    array_push($newarra, $membershipx->variable_id);
+    }
+}
+$newvari = $request->input('newvari');
+$exvari = explode(" ", $newvari);
+$thedifference = array_diff($newarra, $exvari); //TRUE OLD > new
+$thedifference2 = array_diff($exvari,$newarra); //true old < NEW
+// $mergeDifference = array_merge($thedifference, $thedifference2); 
+if(!empty($thedifference)){
+    //delete begins here
+Membership::whereIn('variable_id', $thedifference)->where('formula_id', $request->input('ed_type'))->delete();
+}elseif(!empty($thedifference2)){
+$membershipids = Membership::select('member_id')->groupBy('member_id')->get();
+foreach($membershipids as $msi1){ 
+foreach($thedifference2 as $td2){ 
+Membership::whereIn('variable_id', $thedifference2)->where('formula_id', $request->input('ed_type'))->create(
+[
+'member_id' => $msi1->member_id,
+'formula_id' => $request->input('ed_type'),
+'variable_id' => $td2,
+'content' => 0
+]
 
+);
+}
+}
+}
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       
+        // save starts here
         $formula = Formula::find($request->input('id'));
         $formula->formula = $request->input('newformula');
-        // $formula->ed_type = $request->input('ed_type');
         if($formula->save()){
         $request->session()->flash('success', 'Formula has been Updated');
         }else{

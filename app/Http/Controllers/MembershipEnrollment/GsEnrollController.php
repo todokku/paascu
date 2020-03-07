@@ -68,7 +68,7 @@ class GsEnrollController extends Controller
         //replaceing form input into given formula;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
         // foreach ($variabled as $delbairav){
-        // $formulareplaced = str_replace($delbairav->code,$request->input($delbairav->code),$formulareplaced);
+        // $formulareplaced =   str_replace($delbairav->code,$request->input($delbairav->code),$formulareplaced);
         // }
         // echo $formulareplaced;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         // computing the current formula~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

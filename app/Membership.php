@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Membership extends Model
 {
+    protected $fillable = [
+        'id', 'member_id', 'formula_id', 'variable_id', 'content',
+    ];
     public function variables(){
     	return $this->belongsTo('App\Variable', 'variable_id');
     }
