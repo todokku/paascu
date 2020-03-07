@@ -103,6 +103,7 @@ $thedifference2 = array_diff($exvari,$newarra); //true old < NEW
 if(!empty($thedifference)){
     //delete begins here
 Membership::whereIn('variable_id', $thedifference)->where('formula_id', $request->input('ed_type'))->delete();
+
 }elseif(!empty($thedifference2)){
 $membershipids = Membership::select('member_id')->groupBy('member_id')->get();
 foreach($membershipids as $msi1){ 
