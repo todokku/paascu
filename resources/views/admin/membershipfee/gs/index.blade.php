@@ -34,9 +34,12 @@
   <tbody>
 
     @foreach($members as $srebmem)
+    @if($srebmem->membership->first())
     <tr>
         <td>{{$srebmem->school}} </td>
+
 @foreach($srebmem->membership as $ggg)
+
         <td>{{$ggg->content}}</td>
 @endforeach
 
@@ -55,6 +58,7 @@
 <a href="#"><button type="button" class="btn btn-outline-primary float-left">Edit</button></a>
       </td>
     </tr>
+    @endif
     @endforeach
 
 

@@ -13,6 +13,7 @@ use App\Programs;
 
 use App\Membership;
 use App\Compute;
+use App\ScheduleMembership;
 class GsEnrollController extends Controller
 {
     /**
@@ -55,29 +56,44 @@ class GsEnrollController extends Controller
         $variabled = Variable::whereIn('code',$gspieces)->get();
 
         $formulareplaced = $formula->formula; //$formula->formula = ( gs_total_enrollment * gs_annual_tuition_fee )
+        $amfs;
         foreach ($variabled as $delbairav){
         $gsm = new Membership();
         $gsm->member_id = $request->input('gsmember');
         $gsm->formula_id = "Grade School";
+
+        // $gsm->fee_id = $request->input('gsmember');
+
         $gsm->variable_id = $request->input("vari-".$delbairav->id);
         $gsm->content = $request->input($delbairav->code);
         $gsm->save();
         }
 
-        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         //replaceing form input into given formula;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-        // foreach ($variabled as $delbairav){
-        // $formulareplaced =   str_replace($delbairav->code,$request->input($delbairav->code),$formulareplaced);
-        // }
-        // echo $formulareplaced;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        // computing the current formula~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        foreach ($variabled as $delbairav){
+        $formulareplaced =   str_replace($delbairav->code,$request->input($delbairav->code),$formulareplaced);
+        }
+        //time to compute the skyline gtr 
+        $computedgtr = eval("return $formulareplaced;");
+        //finding AMF via schedule start and end values ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-        // $gsmcompute = new Compute();
-        // $gsmcompute->member_id = $request->input('gsmember');
-        // $gsmcompute->gtr = eval("return $formulareplaced;");
-        // $gsmcompute->amf = 404;
-        // $gsmcompute->save();
+        $scheduled = ScheduleMembership::all();
+        foreach ($scheduled as $deludehcs){
+        if($deludehcs->gtrs <= $computedgtr && $deludehcs->gtre >= $computedgtr){
+            $amfs = $deludehcs->amf;
+        }
+        }
+        // saving to compute~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+        $gsmcompute = new Compute();
+        $gsmcompute->member_id = $request->input('gsmember');
+
+        // $gsmcompute->fee_id = $request->input('gsmember');
+
+        $gsmcompute->gtr = $computedgtr;
+        $gsmcompute->amf = $amfs;
+        $gsmcompute->save();
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         $request->session()->flash('success', 'Grade School Membership has been Added');
         return redirect()->route('gsenrollment.index');

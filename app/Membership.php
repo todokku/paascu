@@ -18,4 +18,7 @@ class Membership extends Model
     public function members(){
     	return $this->belongsTo('App\Members', 'member_id');
     }
+    //     public function compute(){
+    //     return $this->hasMany('App\Compute', 'fee_id');
+    // }
 }

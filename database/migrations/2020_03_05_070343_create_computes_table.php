@@ -17,6 +17,7 @@ class CreateComputesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('member_id');
             $table->foreign('member_id')->references('id')->on('Members');
+
             $table->decimal('gtr', 13, 2);
             $table->decimal('amf', 13, 2);
             $table->timestamps();
