@@ -14,6 +14,8 @@ use App\ScheduleMembership;
 
 use App\Membership;
 use App\Variable;
+use App\Compute;
+use App\Formula;
 class GsMembershipController extends Controller
 {
     /**
@@ -36,9 +38,10 @@ class GsMembershipController extends Controller
         $membership = Membership::all();
         $variable = Variable::all();
         $membershipids = Membership::select('variable_id')->groupBy('variable_id')->where('formula_id', 'Grade School')->with('variables')->get();
+        $compute = Compute::all();
 
         // dd($membershipids);
-        return view('admin.membershipfee.gs.index')->with('members',$members)->with('membership',$membership)->with('membershipids',$membershipids);
+        return view('admin.membershipfee.gs.index')->with('members',$members)->with('membership',$membership)->with('membershipids',$membershipids)->with('compute', $compute);
     }
 
     /**
@@ -79,9 +82,15 @@ class GsMembershipController extends Controller
      * @param  \App\Gshsmembership  $gshsmembership
      * @return \Illuminate\Http\Response
      */
-    public function edit(GsMembership $gsmembership)
-    {
-        //
+    public function edit($id)
+    {   $memid = $id;
+        $school = Members::find($id);
+        $membership = Membership::whereIn('member_id', [$id])->get();
+
+        $compute = Compute::where('member_id', $id)->first();
+
+        // dd($school);
+        return view('admin.membershipfee.gs.edit')->with('membership', $membership)->with('compute',$compute)->with('school',$school)->with('memid',$memid);
     }
 
     /**
@@ -91,9 +100,53 @@ class GsMembershipController extends Controller
      * @param  \App\Gshsmembership  $gshsmembership
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, GsMembership $gsmembership)
+    public function update(Request $request)
     {
-        //
+        //updating contents ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $membership = Membership::whereIn('member_id', [$request->input('id')])->get();
+        foreach($membership as $pihsrebmem){
+        $gsupdate = Membership::find($pihsrebmem->id);
+        $gsupdate->content = $request->input($pihsrebmem->id);
+        $gsupdate->save();
+        }
+
+        //updating calculated values~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $activestat = $request->input('status');
+        $cformula = Formula::where('formula_id','Grade School')->first();
+        $cmembership = Membership::whereIn('member_id', [$request->input('id')])->get();
+
+        $formulareplaced = $cformula->formula;
+        $amfs;
+
+        foreach ($cmembership as $pihsrebmem){
+        $msfv = Variable::find($pihsrebmem->variable_id);
+        $formulareplaced =   str_replace($msfv->code,$request->input($pihsrebmem->id),$formulareplaced);
+        }   
+        //time to compute the skyline gtr 
+        $computedgtr = eval("return $formulareplaced;");
+        //finding AMF via schedule start and end values ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+        $scheduled = ScheduleMembership::all();
+        foreach ($scheduled as $deludehcs){
+        if($deludehcs->gtrs <= $computedgtr && $deludehcs->gtre >= $computedgtr){
+            $amfs = $deludehcs->amf;
+        }
+        }
+        // saving to compute~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $cCompute = Compute::where('member_id', $request->input('id'))->update(['status' => $activestat,'gtr' => $computedgtr,'amf' => $amfs]);
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+        // dd($formulareplaced);
+
+        $request->session()->flash('success', 'Grade School Membership has been Updated');
+        
+        return redirect()->route('gsmembership.index');
     }
 
     /**

@@ -6,8 +6,8 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">Grade School Membership{{-- <a href="#"><button type="button" class="btn btn-outline-success float-right">+ Add Formula</button></a> --}}</div>
-            <br>
-<form>
+{{--             <br> --}}
+{{-- <form>
     <div class="form-group row">
     <label for="school" class="col-md-2 col-form-label text-md-right">School</label>
         <div class="col-md-8">
@@ -19,16 +19,18 @@
         </select>
     </div>
 </div>
-</form>
+</form> --}}
 <table class="table">
   <thead>
     <tr>
-      <th scope="col" style="width: 35%">School</th>
+      <th scope="col" >School</th>
       @foreach($membershipids as $msi)
-        <th scope="col" style="width: 35%">{{$msi->variables->title}}</th>
+        <th scope="col">{{$msi->variables->title}}</th>
         @endforeach
-      <th scope="col" style="width: 35%">Status</th>
-      <th scope="col" style="width: 35%">Edit</th>
+      <th scope="col" >Gross Tution Revenue</th>
+      <th scope="col" >Annual Membership Fee</th>
+      <th scope="col" >Status</th>
+      <th scope="col" >Edit</th>
     </tr>
   </thead>
   <tbody>
@@ -44,18 +46,25 @@
 @endforeach
 
 
+
+<td>{{$srebmem->compute->first()->gtr}}</td>
+<td>{{$srebmem->compute->first()->amf}}</td>
+
+
+
+
               <td>
-{{-- @if ($member->status == 'active')
+@if ($srebmem->compute->first()->status == 'active')
     <span class="badge badge-success">Active</span>
-@elseif ($member->status == 'deactive')
+@elseif ($srebmem->compute->first()->status == 'deactive')
     <span class="badge badge-secondary">Deactive</span>
 @else
     <span class="badge badge-danger">Error</span>
-@endif --}}
-<span class="badge badge-success">Error</span>
+@endif
+{{-- <span class="badge badge-success">Error</span> --}}
       </td>
       <td>
-<a href="#"><button type="button" class="btn btn-outline-primary float-left">Edit</button></a>
+<a href="{{route('gsenrollment.edit',['id'=>$srebmem->membership->first()->member_id])}}"><button type="button" class="btn btn-outline-primary float-left">Edit</button></a>
       </td>
     </tr>
     @endif

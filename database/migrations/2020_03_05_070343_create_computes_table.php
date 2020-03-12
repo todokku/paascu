@@ -20,6 +20,7 @@ class CreateComputesTable extends Migration
 
             $table->decimal('gtr', 13, 2);
             $table->decimal('amf', 13, 2);
+            $table->string('status')->default("active");
             $table->timestamps();
         });
     }

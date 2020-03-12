@@ -76,9 +76,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:admi
 	Route::post('/enrollmembership/bed','Memberships\EnrollController@storebed')->name('enrollmembership.bed');
 
 
- 	Route::resource('/gsmembership','Memberships\GsMembershipController', ['except' =>['show', 'create', 'store']]);
-	Route::get('/gsmembership','Memberships\GsMembershipController@index')->name('gsmembership.index');
-	Route::get('/gsmembership/getformula','Memberships\GsMembershipController@formulagroup')->name('gsmembership.getformula');
+
 	
  	Route::resource('/hsmembership','Memberships\HsMembershipController', ['except' =>['show', 'create', 'store']]);
 	Route::get('/hsmembership','Memberships\HsMembershipController@index')->name('hsmembership.index');
@@ -87,8 +85,12 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:admi
 	Route::get('/bedmembership','Memberships\BedMembershipController@index')->name('bedmembership.index');
 
 
-
-
 //revising the fucking enrollment
  	Route::get('/gsenrollment','MembershipEnrollment\GsEnrollController@index')->name('gsenrollment.index');
  	Route::post('/gsenrollment','MembershipEnrollment\GsEnrollController@store')->name('gsenrollment.store');
+//THIS IS THE MAANGE GS 
+ 	Route::resource('/gsmembership','Memberships\GsMembershipController', ['except' =>['show', 'create', 'store']]);
+	Route::get('/gsmembership','Memberships\GsMembershipController@index')->name('gsmembership.index');
+	Route::get('/gsmembership/getformula','Memberships\GsMembershipController@formulagroup')->name('gsmembership.getformula');
+ 	Route::get('/gsenrollment/{id}/edit','Memberships\GsMembershipController@edit')->name('gsenrollment.edit');
+ 	Route::post('/gsenrollment/update','Memberships\GsMembershipController@update')->name('gsenrollment.update');
