@@ -88,9 +88,20 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:admi
 //revising the fucking enrollment
  	Route::get('/gsenrollment','MembershipEnrollment\GsEnrollController@index')->name('gsenrollment.index');
  	Route::post('/gsenrollment','MembershipEnrollment\GsEnrollController@store')->name('gsenrollment.store');
+//hs enroll
+ 	Route::get('/hsenrollment','MembershipEnrollment\HsEnrollController@index')->name('hsenrollment.index');
+ 	Route::post('/hsenrollment','MembershipEnrollment\HsEnrollController@store')->name('hsenrollment.store');
+
 //THIS IS THE MAANGE GS 
  	Route::resource('/gsmembership','Memberships\GsMembershipController', ['except' =>['show', 'create', 'store']]);
 	Route::get('/gsmembership','Memberships\GsMembershipController@index')->name('gsmembership.index');
 	Route::get('/gsmembership/getformula','Memberships\GsMembershipController@formulagroup')->name('gsmembership.getformula');
  	Route::get('/gsenrollment/{id}/edit','Memberships\GsMembershipController@edit')->name('gsenrollment.edit');
  	Route::post('/gsenrollment/update','Memberships\GsMembershipController@update')->name('gsenrollment.update');
+
+ 	//THIS IS THE MAANGE HS 
+ 	Route::resource('/hsmembership','Memberships\HsMembershipController', ['except' =>['show', 'create', 'store']]);
+	Route::get('/hsmembership','Memberships\HsMembershipController@index')->name('hsmembership.index');
+	Route::get('/hsmembership/getformula','Memberships\HsMembershipController@formulagroup')->name('hsmembership.getformula');
+ 	Route::get('/hsenrollment/{id}/edit','Memberships\HsMembershipController@edit')->name('hsenrollment.edit');
+ 	Route::post('/hsenrollment/update','Memberships\HsMembershipController@update')->name('hsenrollment.update');

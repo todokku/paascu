@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card border-light mb-3 shadow">
-                <h4 class="card-header bg-white">Grade School Edit Membership</h4>
+                <h4 class="card-header bg-white">High School Edit Membership</h4>
             <br>
 
 
@@ -23,7 +23,7 @@
                         </div>
 
 
-<form action="{{ route('gsenrollment.update')}}" method="POST">
+<form action="{{ route('hsenrollment.update')}}" method="POST">
     <div class="form-group row">
         <input type="hidden" name="id" value = "{{$memid}}">
     </div>

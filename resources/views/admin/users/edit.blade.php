@@ -4,8 +4,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">Edit Users {{ $user->name }}</div>
+            <div class="card border-light mb-3 shadow">
+                <h4 class="card-header bg-white">Edit User Account: {{ $user->name }}</h4>
 
                 <div class="card-body">
 

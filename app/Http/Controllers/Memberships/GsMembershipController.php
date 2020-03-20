@@ -33,11 +33,16 @@ class GsMembershipController extends Controller
 
         $members = Members::select('id','school')->whereHas('programs', function ($query) {
         $query->whereIn('program', ['Grade School']);
-        })->get();
+        })
+        ->whereHas('membership', function ($query) {
+        $query->whereIn('formula_id', ['Grade School']);
+        })
+        ->get();
 
         $membership = Membership::all();
         $variable = Variable::all();
-        $membershipids = Membership::select('variable_id')->groupBy('variable_id')->where('formula_id', 'Grade School')->with('variables')->get();
+        $membershipids = Membership::select('variable_id')->groupBy('variable_id')->where('formula_id', 'Grade School')
+        ->get();
         $compute = Compute::all();
 
         // dd($membershipids);

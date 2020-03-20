@@ -4,19 +4,21 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="card">
+            <div class="card border-light mb-3 shadow">
 
-                <div class="card-header">Member Management<a href="{{route('admin.members.create')}}"><button type="button" class="btn btn-outline-success float-right">+ Add Member</button></a></div>
+                <h4 class="card-header bg-white">Member Management<a href="{{route('admin.members.create')}}"><button type="button" class="btn btn-outline-success float-right">+ Add Member</button></a></h4>
+                </br>
 
-                <table class="table">
-  <thead>
-    <tr>
-      <th scope="col" style="width: 30%">School</th>
-      <th scope="col" style="width: 35%">Address</th>
-      <th scope="col" style="width: 10%">Status</th>
-      <th scope="col" style="width: 25%";>Action</th>
-    </tr>
-  </thead>
+<div class="container">
+<table id="example" class="display table table-hover" style="width:100%">
+        <thead>
+            <tr>
+      <th style="width: 40;">School</th>
+      <th style="width: 40%;">Address</th>
+      <th style="width: 5%;">Status</th>
+      <th style="width: 15%;">Action</th>
+            </tr>
+        </thead>
   <tbody>
   @foreach($members as $member)
     <tr>
@@ -50,13 +52,21 @@
     @endforeach
 
   </tbody>
-</table>
+    </table>
+      </br>
+  </div>
+<script>
 
+$(document).ready(function() {
+    $('#example').DataTable({
+        responsive: true,
+      });
+} );
+
+</script> 
             </div>
         </div>
     </div>
 </div>
-
-{{ $members->links() }}
 
 @endsection

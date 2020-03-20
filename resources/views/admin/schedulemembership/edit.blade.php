@@ -4,8 +4,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">Edit Schedule Membership Fee</div>
+            <div class="card border-light mb-3 shadow">
+                <h4 class="card-header bg-white">Edit Schedule Membership Fee</h4>
 
                 <div class="card-body">
 

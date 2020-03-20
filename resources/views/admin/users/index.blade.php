@@ -2,27 +2,28 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center ">
         <div class="col-md-12">
-            <div class="card">
+            <div class="card border-light mb-3 shadow">
 
-                <div class="card-header">User Management<a href="{{ route('register') }}"><button type="button" class="btn btn-outline-success float-right">+ Add User</button></a></div>
+                <h4 class="card-header bg-white ">User Management<a href="{{ route('register') }}"><button type="button" class="btn btn-outline-success float-right">+ Add User</button></a></h4>
+                </br>
 
-                <table class="table">
+<div class="container">
+                <span id="buttons"></span>
+<table id="example" class="display table table-hover" style="width:100%">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">Name</th>
-      <th scope="col">Email</th>
-      <th scope="col">Roles</th>
-      <th scope="col">Status</th>
-      <th scope="col">Actions</th>
+      <th style="width: 30%;">Name</th>
+      <th style="width: 30%;">Email</th>
+      <th style="width: 10%;">Roles</th>
+      <th style="width: 10%;">Status</th>
+      <th style="width: 20%;">Actions</th>
     </tr>
   </thead>
-  <tbody>
+          <tbody>
     @foreach($users as $user)
     <tr>
-      <th scope="row">{{$user->id}}</th>
       <td>{{$user->name}}</td>
       <td>{{$user->email}}</td>
       <td>{{implode( ',',$user->roles()->get()->pluck('name')->toArray()) }}</td>
@@ -54,10 +55,54 @@
     @endforeach
 
   </tbody>
-</table>
+    </table>
+  </br>
+  </div>
+<script>
+$(document).ready(function() {
+    $('#example').DataTable({
+        responsive: true,
+      });
+} );
+// $(document).ready(function() {
+// var table = $('#example').DataTable( {
+//         responsive: true,
+//         lengthChange: false,
+        // buttons: {
+        // buttons: [ 
+//------------------------------------------------------------------------------------------------
+// 'copyHtml5', 
+// 'excelHtml5' ,
+// 'csvHtml5',
+// 'pdfHtml5',
+
+// { extend: 'print', text: 'Print All Account Users', exportOptions:{ columns: [ 0, 1, 2, 3]} }, ],
+//     dom: {
+//       button: {
+//         tag: "button",
+//         className: "btn btn-outline-success"
+//       },
+//       buttonLiner: {
+//         tag: null
+//       }
+//     }
+// }
+//------------------------------------------------------------------------------------------------
+//     }
+
+
+//      );
+ 
+//     table.buttons().container()
+//         .appendTo( '#example_wrapper .col-md-6:eq(0)' );
+// } );
+
+</script>
+
 
             </div>
         </div>
     </div>
 </div>
+
 @endsection

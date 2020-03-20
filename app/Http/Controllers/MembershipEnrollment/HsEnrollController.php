@@ -13,8 +13,9 @@ use App\Programs;
 
 use App\Membership;
 use App\Compute;
-use App\ScheduleMembership;
-class GsEnrollController extends Controller
+use App\ScheduleMembership;;
+
+class HsEnrollController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -22,15 +23,16 @@ class GsEnrollController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
+    {
         $members = Members::select('id','school')->whereHas('programs', function ($query) {
-        $query->whereIn('program', ['Grade School']);
+        $query->whereIn('program', ['High School']);
         })->get();
 
-        $formula = Formula::where('formula_id','Grade School')->first();
+        $formula = Formula::where('formula_id','High School')->first();
         $gspieces = explode(" ", $formula->formula);
-        $variabled = Variable::whereIn('code',$gspieces)->where('ed_type', 'Grade School')->get();
-        return view('admin.membershipenroll.gs.index')->with('members',$members)->with('formula',$formula)->with('gspieces',$gspieces)->with('variabled',$variabled);
+        $variabled = Variable::whereIn('code',$gspieces)->where('ed_type', 'High School')->get();
+        // return view('admin.membershipenroll.gs.index')->with('members',$members)->with('formula',$formula)->with('gspieces',$gspieces)->with('variabled',$variabled);
+        return view('admin.membershipenroll.hs.index')->with('members',$members)->with('formula',$formula)->with('gspieces',$gspieces)->with('variabled',$variabled);
     }
 
     /**
@@ -51,22 +53,22 @@ class GsEnrollController extends Controller
      */
     public function store(Request $request)
     {
-        $formula = Formula::where('formula_id','Grade School')->first();
-        $gspieces = explode(" ", $formula->formula);
-        $variabled = Variable::whereIn('code',$gspieces)->where('ed_type', 'Grade School')->get();
+        $formula = Formula::where('formula_id','High School')->first();
+        $hspieces = explode(" ", $formula->formula);
+        $variabled = Variable::whereIn('code',$hspieces)->where('ed_type', 'High School')->get();
 
         $formulareplaced = $formula->formula; //$formula->formula = ( gs_total_enrollment * gs_annual_tuition_fee )
         $amfs;
         foreach ($variabled as $delbairav){
-        $gsm = new Membership();
-        $gsm->member_id = $request->input('gsmember');
-        $gsm->formula_id = "Grade School";
+        $hsm = new Membership();
+        $hsm->member_id = $request->input('hsmember');
+        $hsm->formula_id = "High School";
 
         // $gsm->fee_id = $request->input('gsmember');
 
-        $gsm->variable_id = $request->input("vari-".$delbairav->id);
-        $gsm->content = $request->input($delbairav->code);
-        $gsm->save();
+        $hsm->variable_id = $request->input("vari-".$delbairav->id);
+        $hsm->content = $request->input($delbairav->code);
+        $hsm->save();
         }
 
         //replaceing form input into given formula;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -86,17 +88,17 @@ class GsEnrollController extends Controller
         }
         // saving to compute~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-        $gsmcompute = new Compute();
-        $gsmcompute->member_id = $request->input('gsmember');
+        $hsmcompute = new Compute();
+        $hsmcompute->member_id = $request->input('hsmember');
 
         // $gsmcompute->fee_id = $request->input('gsmember');
 
-        $gsmcompute->gtr = $computedgtr;
-        $gsmcompute->amf = $amfs;
-        $gsmcompute->save();
+        $hsmcompute->gtr = $computedgtr;
+        $hsmcompute->amf = $amfs;
+        $hsmcompute->save();
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        $request->session()->flash('success', 'Grade School Membership has been Added');
-        return redirect()->route('gsenrollment.index');
+        $request->session()->flash('success', 'High School Membership has been Added');
+        return redirect()->route('hsenrollment.index');
     }
 
     /**

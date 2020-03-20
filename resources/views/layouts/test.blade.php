@@ -50,6 +50,10 @@
                     <li>
                                 <a href="{{ route('gsenrollment.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/enroll.png') }}">  GS Membership Fee</a>
                     </li>
+
+                    <li>
+                                <a href="{{ route('hsenrollment.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/enroll.png') }}">  HS Membership Fee</a>
+                    </li>
 {{--                     <li>
                                 <a href="{{ route('hsmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  HS Membership Fee</a>
                     </li>
@@ -72,6 +76,9 @@
                 <ul class="collapse list-unstyled" id="pageSubmenu">
                     <li>
                                 <a href="{{ route('gsmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  GS Membership Fee</a>
+                    </li>
+                    <li>
+                                <a href="{{ route('hsmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  HS Membership Fee</a>
                     </li>
 {{--                     <li>
                                 <a href="{{ route('hsmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  HS Membership Fee</a>

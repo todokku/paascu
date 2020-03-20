@@ -3,8 +3,19 @@
 namespace App\Http\Controllers\Memberships;
 
 use App\HsMembership;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+use App\Members;
+use App\MembershipFormula;
+// use App\BedMembership;
+use DB;
+use App\ScheduleMembership;
+
+use App\Membership;
+use App\Variable;
+use App\Compute;
+use App\Formula;
 
 class HsMembershipController extends Controller
 {
@@ -15,15 +26,22 @@ class HsMembershipController extends Controller
      */
     public function index()
     {   //old
-        $membership = HsMembership::all();
-        return view('admin.membershipfee.hs.index')->with('membership', $membership);
 
-        //new
-        // $formula = MembershipFormula::where('ed_type','High School')->first();
-        // $pieces = explode(" ", $formula->variable);
-        // $membership = HsMembership::select('id', 'member_id', 'title', 'content', 'position', 'gtr')->groupBy('member_id')->get();
-        // $sm = ScheduleMembership::all();
-        // return view('admin.membershipfee.hs.index')->with('membership', $membership)->with('formula', $formula)->with('pieces', $pieces)->with( 'sm' , $sm );
+        $members = Members::select('id','school')->whereHas('programs', function ($query) {
+        $query->whereIn('program', ['High School']);
+        })
+        ->whereHas('membership', function ($query) {
+        $query->whereIn('formula_id', ['High School']);
+        })
+        ->get();
+
+        $membership = Membership::all();
+        $variable = Variable::all();
+        $membershipids = Membership::select('variable_id')->groupBy('variable_id')->where('formula_id', 'High School')->with('variables')->get();
+        $compute = Compute::all();
+
+        // dd($membershipids);
+        return view('admin.membershipfee.hs.index')->with('members',$members)->with('membership',$membership)->with('membershipids',$membershipids)->with('compute', $compute);
     }
 
     /**
@@ -64,9 +82,16 @@ class HsMembershipController extends Controller
      * @param  \App\HsMembership  $hsMembership
      * @return \Illuminate\Http\Response
      */
-    public function edit(HsMembership $hsMembership)
+    public function edit($id)
     {
-        //
+        $memid = $id;
+        $school = Members::find($id);
+        $membership = Membership::whereIn('member_id', [$id])->get();
+
+        $compute = Compute::where('member_id', $id)->first();
+
+        // dd($school);
+        return view('admin.membershipfee.hs.edit')->with('membership', $membership)->with('compute',$compute)->with('school',$school)->with('memid',$memid);
     }
 
     /**
@@ -76,9 +101,46 @@ class HsMembershipController extends Controller
      * @param  \App\HsMembership  $hsMembership
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, HsMembership $hsMembership)
+    public function update(Request $request)
     {
-        //
+//updating contents ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $membership = Membership::whereIn('member_id', [$request->input('id')])->get();
+        foreach($membership as $pihsrebmem){
+        $hsupdate = Membership::find($pihsrebmem->id);
+        $hsupdate->content = $request->input($pihsrebmem->id);
+        $hsupdate->save();
+        }
+
+        //updating calculated values~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $activestat = $request->input('status');
+        $cformula = Formula::where('formula_id','High School')->first();
+        $cmembership = Membership::whereIn('member_id', [$request->input('id')])->get();
+
+        $formulareplaced = $cformula->formula;
+        $amfs;
+
+        foreach ($cmembership as $pihsrebmem){
+        $msfv = Variable::find($pihsrebmem->variable_id);
+        $formulareplaced =   str_replace($msfv->code,$request->input($pihsrebmem->id),$formulareplaced);
+        }   
+        //time to compute the skyline gtr 
+        $computedgtr = eval("return $formulareplaced;");
+        //finding AMF via schedule start and end values ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+        $scheduled = ScheduleMembership::all();
+        foreach ($scheduled as $deludehcs){
+        if($deludehcs->gtrs <= $computedgtr && $deludehcs->gtre >= $computedgtr){
+            $amfs = $deludehcs->amf;
+        }
+        }
+        // saving to compute~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        $cCompute = Compute::where('member_id', $request->input('id'))->update(['status' => $activestat,'gtr' => $computedgtr,'amf' => $amfs]);
+        //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        // dd($formulareplaced);
+
+        $request->session()->flash('success', 'High School Membership has been Updated');
+        
+        return redirect()->route('hsmembership.index');
     }
 
     /**

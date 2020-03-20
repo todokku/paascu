@@ -17,6 +17,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 3,   
@@ -24,6 +25,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 3,   
@@ -31,6 +33,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 3,   
@@ -38,6 +41,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 3,   
@@ -45,6 +49,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 3,   
@@ -52,6 +57,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 3,   
@@ -59,6 +65,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 3,   
@@ -66,6 +73,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 4,   
@@ -73,6 +81,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 4,   
@@ -80,6 +89,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 4,   
@@ -87,6 +97,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 4,   
@@ -94,6 +105,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 4,   
@@ -101,6 +113,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 4,   
@@ -108,6 +121,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 5,   
@@ -115,6 +129,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 5,   
@@ -122,6 +137,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 5,   
@@ -129,6 +145,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 5,   
@@ -136,6 +153,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 5,   
@@ -143,6 +161,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 6,   
@@ -150,6 +169,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 6,   
@@ -157,6 +177,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 6,   
@@ -164,6 +185,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 6,   
@@ -171,6 +193,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 6,   
@@ -178,6 +201,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 6,   
@@ -185,6 +209,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 6,   
@@ -192,6 +217,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 6,   
@@ -199,6 +225,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 6,   
@@ -206,6 +233,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 6,   
@@ -213,6 +241,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 6,   
@@ -220,6 +249,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 6,   
@@ -227,6 +257,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 6,   
@@ -234,6 +265,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 6,   
@@ -241,6 +273,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 6,   
@@ -248,6 +281,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 6,   
@@ -255,6 +289,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 6,   
@@ -262,6 +297,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 6,   
@@ -269,6 +305,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 6,   
@@ -276,6 +313,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 6,   
@@ -283,6 +321,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 6,   
@@ -290,6 +329,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 6,   
@@ -297,6 +337,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 7,   
@@ -304,6 +345,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 8,   
@@ -311,6 +353,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 9,   
@@ -318,6 +361,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 9,   
@@ -325,6 +369,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Sept.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 9,   
@@ -332,6 +377,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 9,   
@@ -339,6 +385,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 9,   
@@ -346,6 +393,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 9,   
@@ -353,6 +401,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 10,  
@@ -360,6 +409,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 11,  
@@ -367,6 +417,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 12,  
@@ -374,6 +425,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 12,  
@@ -381,6 +433,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2023',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 13,  
@@ -388,6 +441,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 13,  
@@ -395,6 +449,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 13,  
@@ -402,6 +457,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 13,  
@@ -409,6 +465,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 13,  
@@ -416,6 +473,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 14,  
@@ -423,6 +481,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 15,  
@@ -430,6 +489,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 15,  
@@ -437,6 +497,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 15,  
@@ -444,6 +505,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 15,  
@@ -451,6 +513,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 15,  
@@ -458,6 +521,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 16,  
@@ -465,6 +529,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 17,  
@@ -472,6 +537,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 17,  
@@ -479,6 +545,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 17,  
@@ -486,6 +553,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 17,  
@@ -493,6 +561,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 17,  
@@ -500,6 +569,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May 2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 17,  
@@ -507,6 +577,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 17,  
@@ -514,6 +585,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 17,  
@@ -521,6 +593,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 17,  
@@ -528,6 +601,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 17,  
@@ -535,6 +609,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 17,  
@@ -542,6 +617,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 17,  
@@ -549,6 +625,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 17,  
@@ -556,6 +633,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 17,  
@@ -563,6 +641,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 17,  
@@ -570,6 +649,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 17,  
@@ -577,6 +657,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 17,  
@@ -584,6 +665,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 17,  
@@ -591,6 +673,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 18,  
@@ -598,6 +681,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 19,  
@@ -605,6 +689,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 19,  
@@ -612,6 +697,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 19,  
@@ -619,6 +705,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 19,  
@@ -626,6 +713,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 19,  
@@ -633,6 +721,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 19,  
@@ -640,6 +729,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 19,  
@@ -647,6 +737,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 19,  
@@ -654,6 +745,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 19,  
@@ -661,6 +753,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 19,  
@@ -668,6 +761,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 19,  
@@ -675,6 +769,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 20,  
@@ -682,6 +777,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr. 2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 20,  
@@ -689,6 +785,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 20,  
@@ -696,6 +793,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 20,  
@@ -703,6 +801,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr. 2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 20,  
@@ -710,6 +809,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 20,  
@@ -717,6 +817,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 20,  
@@ -724,6 +825,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 20,  
@@ -731,6 +833,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 20,  
@@ -738,6 +841,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 20,  
@@ -745,6 +849,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May 2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 20,  
@@ -752,6 +857,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 20,  
@@ -759,6 +865,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 20,  
@@ -766,6 +873,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 20,  
@@ -773,6 +881,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 20,  
@@ -780,6 +889,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 20,  
@@ -787,6 +897,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 20,  
@@ -794,6 +905,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 20,  
@@ -801,6 +913,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 20,  
@@ -808,6 +921,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 20,  
@@ -815,6 +929,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May 2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 21,  
@@ -822,6 +937,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2019',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 21,  
@@ -829,6 +945,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 21,  
@@ -836,6 +953,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 21,  
@@ -843,6 +961,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 21,  
@@ -850,6 +969,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 21,  
@@ -857,6 +977,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 21,  
@@ -864,6 +985,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 21,  
@@ -871,6 +993,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 21,  
@@ -878,6 +1001,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 22,  
@@ -885,6 +1009,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 23,  
@@ -892,6 +1017,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 23,  
@@ -899,6 +1025,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 24,  
@@ -906,6 +1033,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 25,  
@@ -913,6 +1041,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 26,  
@@ -920,6 +1049,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2022',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 26,  
@@ -927,6 +1057,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 27,  
@@ -934,6 +1065,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 28,  
@@ -941,6 +1073,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr. 2020',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 29,  
@@ -948,6 +1081,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 30,  
@@ -955,6 +1089,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 31,  
@@ -962,6 +1097,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 31,  
@@ -969,6 +1105,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 31,  
@@ -976,6 +1113,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 31,  
@@ -983,6 +1121,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 31,  
@@ -990,6 +1129,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 31,  
@@ -997,6 +1137,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 31,  
@@ -1004,6 +1145,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 31,  
@@ -1011,6 +1153,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 31,  
@@ -1018,6 +1161,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 31,  
@@ -1025,6 +1169,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 32,  
@@ -1032,6 +1177,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 33,  
@@ -1039,6 +1185,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 34,  
@@ -1046,6 +1193,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 34,  
@@ -1053,6 +1201,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 34,  
@@ -1060,6 +1209,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 34,  
@@ -1067,6 +1217,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 34,  
@@ -1074,6 +1225,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 34,  
@@ -1081,6 +1233,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 34,  
@@ -1088,6 +1241,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 34,  
@@ -1095,6 +1249,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 34,  
@@ -1102,6 +1257,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 35,  
@@ -1109,6 +1265,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 35,  
@@ -1116,6 +1273,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 36,  
@@ -1123,6 +1281,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 36,  
@@ -1130,6 +1289,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 37,  
@@ -1137,6 +1297,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 38,  
@@ -1144,6 +1305,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 38,  
@@ -1151,6 +1313,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 39,  
@@ -1158,6 +1321,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Dec.2018',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 39,  
@@ -1165,6 +1329,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 39,  
@@ -1172,6 +1337,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 39,  
@@ -1179,6 +1345,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 39,  
@@ -1186,6 +1353,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 40,  
@@ -1193,6 +1361,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr. 2020',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 40,  
@@ -1200,6 +1369,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 41,  
@@ -1207,6 +1377,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 41,  
@@ -1214,6 +1385,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 42,  
@@ -1221,6 +1393,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 42,  
@@ -1228,6 +1401,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 43,  
@@ -1235,6 +1409,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 43,  
@@ -1242,6 +1417,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 44,  
@@ -1249,6 +1425,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 44,  
@@ -1256,6 +1433,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 45,  
@@ -1263,6 +1441,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 45,  
@@ -1270,6 +1449,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 45,  
@@ -1277,6 +1457,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 45,  
@@ -1284,6 +1465,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 46,  
@@ -1291,6 +1473,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 46,  
@@ -1298,6 +1481,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 46,  
@@ -1305,6 +1489,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 46,  
@@ -1312,6 +1497,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 46,  
@@ -1319,6 +1505,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 46,  
@@ -1326,6 +1513,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 46,  
@@ -1333,6 +1521,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 46,  
@@ -1340,6 +1529,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 46,  
@@ -1347,6 +1537,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 46,  
@@ -1354,6 +1545,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 46,  
@@ -1361,6 +1553,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 46,  
@@ -1368,6 +1561,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 46,  
@@ -1375,6 +1569,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 46,  
@@ -1382,6 +1577,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 46,  
@@ -1389,6 +1585,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 46,  
@@ -1396,6 +1593,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 47,  
@@ -1403,6 +1601,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 48,  
@@ -1410,6 +1609,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 48,  
@@ -1417,6 +1617,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 48,  
@@ -1424,6 +1625,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 49,  
@@ -1431,6 +1633,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 50,  
@@ -1438,6 +1641,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 51,  
@@ -1445,6 +1649,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 51,  
@@ -1452,6 +1657,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 51,  
@@ -1459,6 +1665,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 51,  
@@ -1466,6 +1673,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 51,  
@@ -1473,6 +1681,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 51,  
@@ -1480,6 +1689,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 51,  
@@ -1487,6 +1697,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May 2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 51,  
@@ -1494,6 +1705,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 51,  
@@ -1501,6 +1713,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr. 2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 51,  
@@ -1508,6 +1721,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr. 2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 51,  
@@ -1515,6 +1729,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May 2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 51,  
@@ -1522,6 +1737,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 51,  
@@ -1529,6 +1745,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 51,  
@@ -1536,6 +1753,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 51,  
@@ -1543,6 +1761,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 51,  
@@ -1550,6 +1769,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr. 2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 51,  
@@ -1557,6 +1777,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr. 2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 52,  
@@ -1564,6 +1785,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 52,  
@@ -1571,6 +1793,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 53,  
@@ -1578,6 +1801,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2021',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 53,  
@@ -1585,6 +1809,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 54,  
@@ -1592,6 +1817,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 54,  
@@ -1599,6 +1825,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 54,  
@@ -1606,6 +1833,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 55,  
@@ -1613,6 +1841,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 56,  
@@ -1620,6 +1849,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2023',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 56,  
@@ -1627,6 +1857,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 56,  
@@ -1634,6 +1865,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 56,  
@@ -1641,6 +1873,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 57,  
@@ -1648,6 +1881,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 57,  
@@ -1655,6 +1889,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 57,  
@@ -1662,6 +1897,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 57,  
@@ -1669,6 +1905,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 57,  
@@ -1676,6 +1913,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 58,  
@@ -1683,6 +1921,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 59,  
@@ -1690,6 +1929,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 59,  
@@ -1697,6 +1937,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 59,  
@@ -1704,6 +1945,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 60,  
@@ -1711,6 +1953,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 61,  
@@ -1718,6 +1961,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 61,  
@@ -1725,6 +1969,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 61,  
@@ -1732,6 +1977,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 61,  
@@ -1739,6 +1985,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 61,  
@@ -1746,6 +1993,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 61,  
@@ -1753,6 +2001,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 61,  
@@ -1760,6 +2009,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 61,  
@@ -1767,6 +2017,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 61,  
@@ -1774,6 +2025,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 61,  
@@ -1781,6 +2033,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 61,  
@@ -1788,6 +2041,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 61,  
@@ -1795,6 +2049,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 61,  
@@ -1802,6 +2057,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 62,  
@@ -1809,6 +2065,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 63,  
@@ -1816,6 +2073,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 64,  
@@ -1823,6 +2081,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 65,  
@@ -1830,6 +2089,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 65,  
@@ -1837,6 +2097,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 65,  
@@ -1844,6 +2105,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 65,  
@@ -1851,6 +2113,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 66,  
@@ -1858,6 +2121,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 67,  
@@ -1865,6 +2129,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 67,  
@@ -1872,6 +2137,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Sept.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 67,  
@@ -1879,6 +2145,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 67,  
@@ -1886,6 +2153,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 67,  
@@ -1893,6 +2161,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 67,  
@@ -1900,6 +2169,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 67,  
@@ -1907,6 +2177,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Sept.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 67,  
@@ -1914,6 +2185,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Sept.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 67,  
@@ -1921,6 +2193,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Sept.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 67,  
@@ -1928,6 +2201,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 67,  
@@ -1935,6 +2209,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 67,  
@@ -1942,6 +2217,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Sept.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 68,  
@@ -1949,6 +2225,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 68,  
@@ -1956,6 +2233,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 69,  
@@ -1963,6 +2241,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 69,  
@@ -1970,6 +2249,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 69,  
@@ -1977,6 +2257,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 69,  
@@ -1984,6 +2265,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 69,  
@@ -1991,6 +2273,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 69,  
@@ -1998,6 +2281,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 69,  
@@ -2005,6 +2289,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 69,  
@@ -2012,6 +2297,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 69,  
@@ -2019,6 +2305,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 69,  
@@ -2026,6 +2313,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 69,  
@@ -2033,15 +2321,18 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 69,  
 'status' => 'active','program'=> 'Graduat
+
 ]);
 Programs in Liberal Arts, Science and Education',
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 69,  
@@ -2049,6 +2340,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 69,  
@@ -2056,6 +2348,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 69,  
@@ -2063,6 +2356,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 69,  
@@ -2070,6 +2364,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 69,  
@@ -2077,6 +2372,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 69,  
@@ -2084,6 +2380,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 69,  
@@ -2091,6 +2388,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 69,  
@@ -2098,6 +2396,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 69,  
@@ -2105,6 +2404,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 69,  
@@ -2112,6 +2412,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 69,  
@@ -2119,6 +2420,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 69,  
@@ -2126,6 +2428,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 69,  
@@ -2133,6 +2436,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 70,  
@@ -2140,6 +2444,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 70,  
@@ -2147,6 +2452,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 70,  
@@ -2154,6 +2460,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 70,  
@@ -2161,6 +2468,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 70,  
@@ -2168,6 +2476,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 70,  
@@ -2175,6 +2484,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 70,  
@@ -2182,6 +2492,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 70,  
@@ -2189,6 +2500,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 70,  
@@ -2196,6 +2508,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 70,  
@@ -2203,6 +2516,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 70,  
@@ -2210,6 +2524,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 70,  
@@ -2217,6 +2532,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 70,  
@@ -2224,6 +2540,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 70,  
@@ -2231,6 +2548,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 70,  
@@ -2238,6 +2556,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 70,  
@@ -2245,6 +2564,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 70,  
@@ -2252,6 +2572,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 70,  
@@ -2259,6 +2580,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 70,  
@@ -2266,6 +2588,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 70,  
@@ -2273,6 +2596,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 70,  
@@ -2280,6 +2604,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 70,  
@@ -2287,6 +2612,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 70,  
@@ -2294,6 +2620,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 70,  
@@ -2301,6 +2628,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 70,  
@@ -2308,6 +2636,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 70,  
@@ -2315,6 +2644,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 71,  
@@ -2322,6 +2652,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 71,  
@@ -2329,6 +2660,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 71,  
@@ -2336,6 +2668,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 71,  
@@ -2343,6 +2676,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 71,  
@@ -2350,6 +2684,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 71,  
@@ -2357,6 +2692,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 71,  
@@ -2364,6 +2700,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 71,  
@@ -2371,6 +2708,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 71,  
@@ -2378,6 +2716,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 71,  
@@ -2385,6 +2724,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 71,  
@@ -2392,6 +2732,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 71,  
@@ -2399,6 +2740,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 72,  
@@ -2406,6 +2748,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 72,  
@@ -2413,6 +2756,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 72,  
@@ -2420,6 +2764,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 72,  
@@ -2427,6 +2772,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 73,  
@@ -2434,6 +2780,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 74,  
@@ -2441,6 +2788,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 74,  
@@ -2448,6 +2796,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 74,  
@@ -2455,6 +2804,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 74,  
@@ -2462,6 +2812,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 74,  
@@ -2469,6 +2820,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 75,  
@@ -2476,6 +2828,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 75,  
@@ -2483,6 +2836,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 75,  
@@ -2490,6 +2844,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 75,  
@@ -2497,6 +2852,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 75,  
@@ -2504,6 +2860,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 75,  
@@ -2511,6 +2868,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 75,  
@@ -2518,6 +2876,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 76,  
@@ -2525,6 +2884,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 76,  
@@ -2532,6 +2892,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 76,  
@@ -2539,6 +2900,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 76,  
@@ -2546,6 +2908,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 77,  
@@ -2553,6 +2916,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 77,  
@@ -2560,6 +2924,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 77,  
@@ -2567,6 +2932,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr. 2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 77,  
@@ -2574,6 +2940,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 77,  
@@ -2581,6 +2948,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr. 2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 77,  
@@ -2588,6 +2956,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 78,  
@@ -2595,6 +2964,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 78,  
@@ -2602,6 +2972,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 78,  
@@ -2609,6 +2980,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 78,  
@@ -2616,6 +2988,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 78,  
@@ -2623,6 +2996,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 79,  
@@ -2630,6 +3004,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May 2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 80,  
@@ -2637,6 +3012,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 80,  
@@ -2644,6 +3020,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 81,  
@@ -2651,6 +3028,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 82,  
@@ -2658,6 +3036,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 83,  
@@ -2665,6 +3044,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 84,  
@@ -2672,6 +3052,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 85,  
@@ -2679,6 +3060,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 86,  
@@ -2686,6 +3068,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 86,  
@@ -2693,6 +3076,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2018',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 87,  
@@ -2700,6 +3084,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 88,  
@@ -2707,6 +3092,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 88,  
@@ -2714,6 +3100,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 89,  
@@ -2721,6 +3108,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2019',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 89,  
@@ -2728,6 +3116,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 90,  
@@ -2735,6 +3124,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 90,  
@@ -2742,6 +3132,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr. 2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 91,  
@@ -2749,6 +3140,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 92,  
@@ -2756,6 +3148,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 93,  
@@ -2763,6 +3156,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 93,  
@@ -2770,6 +3164,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id' => 94, 
@@ -2777,6 +3172,7 @@ Programs::create([
 'level' => 'Canidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 94,  
@@ -2784,6 +3180,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 94,  
@@ -2791,6 +3188,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 94,  
@@ -2798,6 +3196,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 94,  
@@ -2805,6 +3204,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 94,  
@@ -2812,6 +3212,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 94,  
@@ -2819,6 +3220,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 95,  
@@ -2826,6 +3228,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 96,  
@@ -2833,6 +3236,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 96,  
@@ -2840,6 +3244,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 97,  
@@ -2847,6 +3252,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 97,  
@@ -2854,6 +3260,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 97,  
@@ -2861,6 +3268,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 97,  
@@ -2868,6 +3276,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 97,  
@@ -2875,6 +3284,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 97,  
@@ -2882,6 +3292,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 97,  
@@ -2889,6 +3300,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 97,  
@@ -2896,6 +3308,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 97,  
@@ -2903,6 +3316,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 97,  
@@ -2910,6 +3324,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 97,  
@@ -2917,6 +3332,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 97,  
@@ -2924,6 +3340,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 97,  
@@ -2931,6 +3348,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 97,  
@@ -2938,6 +3356,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 98,  
@@ -2945,6 +3364,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 99,  
@@ -2952,6 +3372,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 100, 
@@ -2959,6 +3380,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 101, 
@@ -2966,6 +3388,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 102, 
@@ -2973,6 +3396,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 102, 
@@ -2980,6 +3404,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 102, 
@@ -2987,6 +3412,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 102, 
@@ -2994,6 +3420,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 102, 
@@ -3001,6 +3428,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 102, 
@@ -3008,6 +3436,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 102, 
@@ -3015,6 +3444,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 102, 
@@ -3022,6 +3452,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 102, 
@@ -3029,6 +3460,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Sept.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 102, 
@@ -3036,6 +3468,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Sept.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 102, 
@@ -3043,6 +3476,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 102, 
@@ -3050,6 +3484,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 102, 
@@ -3057,6 +3492,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Sept.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 102, 
@@ -3064,6 +3500,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 102, 
@@ -3071,6 +3508,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Sept.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 102, 
@@ -3078,6 +3516,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 102, 
@@ -3085,6 +3524,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 103, 
@@ -3092,6 +3532,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 104, 
@@ -3099,6 +3540,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 104, 
@@ -3106,6 +3548,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 104, 
@@ -3113,6 +3556,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 104, 
@@ -3120,6 +3564,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 104, 
@@ -3127,6 +3572,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 105, 
@@ -3134,6 +3580,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 106, 
@@ -3141,6 +3588,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr. 2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 107, 
@@ -3148,6 +3596,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 107, 
@@ -3155,6 +3604,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 107, 
@@ -3162,6 +3612,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 107, 
@@ -3169,6 +3620,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 107, 
@@ -3176,6 +3628,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 107, 
@@ -3183,6 +3636,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 107, 
@@ -3190,6 +3644,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 107, 
@@ -3197,6 +3652,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 107, 
@@ -3204,6 +3660,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 107, 
@@ -3211,6 +3668,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 107, 
@@ -3218,6 +3676,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 107, 
@@ -3225,6 +3684,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 107, 
@@ -3232,6 +3692,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 108, 
@@ -3239,6 +3700,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May 2021',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 108, 
@@ -3246,6 +3708,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 109, 
@@ -3253,6 +3716,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 109, 
@@ -3260,6 +3724,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 110, 
@@ -3267,6 +3732,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 110, 
@@ -3274,6 +3740,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 110, 
@@ -3281,6 +3748,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 110, 
@@ -3288,6 +3756,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 110, 
@@ -3295,6 +3764,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 110, 
@@ -3302,6 +3772,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 110, 
@@ -3309,6 +3780,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 110, 
@@ -3316,6 +3788,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 110, 
@@ -3323,6 +3796,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 110, 
@@ -3330,6 +3804,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 110, 
@@ -3337,6 +3812,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 111, 
@@ -3344,6 +3820,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 112, 
@@ -3351,6 +3828,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 113, 
@@ -3358,6 +3836,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2020',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 113, 
@@ -3365,6 +3844,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr. 2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 114, 
@@ -3372,6 +3852,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 115, 
@@ -3379,6 +3860,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 116, 
@@ -3386,6 +3868,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 117, 
@@ -3393,6 +3876,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 117, 
@@ -3400,6 +3884,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 117, 
@@ -3407,6 +3892,7 @@ Programs::create([
 'level' => 'Level I',		
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 117, 
@@ -3414,6 +3900,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 117, 
@@ -3421,6 +3908,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 117, 
@@ -3428,6 +3916,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 117, 
@@ -3435,6 +3924,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 118, 
@@ -3442,6 +3932,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2019',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 118, 
@@ -3449,6 +3940,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 119, 
@@ -3456,6 +3948,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 120, 
@@ -3463,6 +3956,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 121, 
@@ -3470,6 +3964,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 122, 
@@ -3477,6 +3972,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr. 2019',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 122, 
@@ -3484,6 +3980,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 123, 
@@ -3491,6 +3988,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 124, 
@@ -3498,6 +3996,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 124, 
@@ -3505,6 +4004,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 125, 
@@ -3512,6 +4012,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 126, 
@@ -3519,6 +4020,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 127, 
@@ -3526,6 +4028,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2021',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 127, 
@@ -3533,6 +4036,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 128, 
@@ -3540,6 +4044,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 129, 
@@ -3547,6 +4052,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 130, 
@@ -3554,6 +4060,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 131, 
@@ -3561,6 +4068,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 131, 
@@ -3568,6 +4076,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 131, 
@@ -3575,6 +4084,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 131, 
@@ -3582,6 +4092,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 131, 
@@ -3589,6 +4100,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 131, 
@@ -3596,6 +4108,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 131, 
@@ -3603,6 +4116,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 131, 
@@ -3610,6 +4124,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 132, 
@@ -3617,6 +4132,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 132, 
@@ -3624,6 +4140,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr. 2019',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 133, 
@@ -3631,6 +4148,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 134, 
@@ -3638,6 +4156,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 135, 
@@ -3645,6 +4164,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov. 2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 136, 
@@ -3652,6 +4172,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2018',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 136, 
@@ -3659,6 +4180,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 136, 
@@ -3666,6 +4188,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 136, 
@@ -3673,6 +4196,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 136, 
@@ -3680,6 +4204,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 136, 
@@ -3687,6 +4212,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 136, 
@@ -3694,6 +4220,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 137, 
@@ -3701,6 +4228,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 137, 
@@ -3708,6 +4236,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 138, 
@@ -3715,6 +4244,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 139, 
@@ -3722,6 +4252,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 140, 
@@ -3729,6 +4260,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 140, 
@@ -3736,6 +4268,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 140, 
@@ -3743,6 +4276,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 141, 
@@ -3750,6 +4284,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 142, 
@@ -3757,6 +4292,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 143, 
@@ -3764,6 +4300,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 143, 
@@ -3771,6 +4308,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 143, 
@@ -3778,6 +4316,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 144, 
@@ -3785,6 +4324,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 145, 
@@ -3792,6 +4332,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 146, 
@@ -3799,6 +4340,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 146, 
@@ -3806,6 +4348,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 146, 
@@ -3813,6 +4356,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 146, 
@@ -3820,6 +4364,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 146, 
@@ -3827,6 +4372,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 146, 
@@ -3834,6 +4380,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 147, 
@@ -3841,6 +4388,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 148, 
@@ -3848,6 +4396,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 149, 
@@ -3855,6 +4404,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 150, 
@@ -3862,6 +4412,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 151, 
@@ -3869,6 +4420,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 152, 
@@ -3876,6 +4428,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 153, 
@@ -3883,6 +4436,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2020',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 153, 
@@ -3890,6 +4444,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 154, 
@@ -3897,6 +4452,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 155, 
@@ -3904,6 +4460,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr. 2020',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 155, 
@@ -3911,6 +4468,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 156, 
@@ -3918,6 +4476,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 157, 
@@ -3925,6 +4484,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 157, 
@@ -3932,6 +4492,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 157, 
@@ -3939,6 +4500,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 157, 
@@ -3946,6 +4508,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 157, 
@@ -3953,6 +4516,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 157, 
@@ -3960,6 +4524,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 157, 
@@ -3967,6 +4532,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 157, 
@@ -3974,6 +4540,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 157, 
@@ -3981,6 +4548,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 157, 
@@ -3988,6 +4556,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 157, 
@@ -3995,6 +4564,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 157, 
@@ -4002,6 +4572,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 157, 
@@ -4009,6 +4580,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 157, 
@@ -4016,6 +4588,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 157, 
@@ -4023,6 +4596,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 158, 
@@ -4030,6 +4604,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 159, 
@@ -4037,6 +4612,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Sept.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 159, 
@@ -4044,6 +4620,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Sept.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 159, 
@@ -4051,6 +4628,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 159, 
@@ -4058,6 +4636,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 160, 
@@ -4065,6 +4644,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 160, 
@@ -4072,6 +4652,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 160, 
@@ -4079,6 +4660,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 160, 
@@ -4086,6 +4668,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 160, 
@@ -4093,6 +4676,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 160, 
@@ -4100,6 +4684,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 160, 
@@ -4107,6 +4692,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 160, 
@@ -4114,6 +4700,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 160, 
@@ -4121,6 +4708,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 160, 
@@ -4128,6 +4716,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 160, 
@@ -4135,6 +4724,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 160, 
@@ -4142,6 +4732,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 161, 
@@ -4149,6 +4740,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 161, 
@@ -4156,6 +4748,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 162, 
@@ -4163,6 +4756,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 162, 
@@ -4170,6 +4764,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 163, 
@@ -4177,6 +4772,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 163, 
@@ -4184,6 +4780,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 163, 
@@ -4191,6 +4788,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 163, 
@@ -4198,6 +4796,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 163, 
@@ -4205,6 +4804,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 163, 
@@ -4212,6 +4812,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 163, 
@@ -4219,6 +4820,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 163, 
@@ -4226,6 +4828,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 163, 
@@ -4233,6 +4836,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 163, 
@@ -4240,6 +4844,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 163, 
@@ -4247,6 +4852,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 163, 
@@ -4254,6 +4860,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 163, 
@@ -4261,6 +4868,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 163, 
@@ -4268,6 +4876,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 163, 
@@ -4275,6 +4884,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 163, 
@@ -4282,6 +4892,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 163, 
@@ -4289,6 +4900,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 164, 
@@ -4296,6 +4908,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 164, 
@@ -4303,6 +4916,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 164, 
@@ -4310,6 +4924,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 165, 
@@ -4317,6 +4932,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Sept.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 166, 
@@ -4324,6 +4940,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 166, 
@@ -4331,6 +4948,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 167, 
@@ -4338,6 +4956,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 168, 
@@ -4345,6 +4964,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 168, 
@@ -4352,6 +4972,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 169, 
@@ -4359,6 +4980,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 170, 
@@ -4366,6 +4988,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 170, 
@@ -4373,6 +4996,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 171, 
@@ -4380,6 +5004,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2022',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 171, 
@@ -4387,6 +5012,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 172, 
@@ -4394,6 +5020,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 173, 
@@ -4401,6 +5028,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 174, 
@@ -4408,6 +5036,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 175, 
@@ -4415,6 +5044,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 175, 
@@ -4422,6 +5052,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 175, 
@@ -4429,6 +5060,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 175, 
@@ -4436,6 +5068,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 175, 
@@ -4443,6 +5076,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 175, 
@@ -4450,6 +5084,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 175, 
@@ -4457,6 +5092,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 175, 
@@ -4464,6 +5100,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 175, 
@@ -4471,6 +5108,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 175, 
@@ -4478,6 +5116,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 175, 
@@ -4485,6 +5124,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 175, 
@@ -4492,6 +5132,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 175, 
@@ -4499,6 +5140,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 175, 
@@ -4506,6 +5148,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 176, 
@@ -4513,6 +5156,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May 2023',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 177, 
@@ -4520,6 +5164,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 178, 
@@ -4527,6 +5172,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 179, 
@@ -4534,6 +5180,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 180, 
@@ -4541,6 +5188,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2022',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 180, 
@@ -4548,6 +5196,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 180, 
@@ -4555,6 +5204,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 180, 
@@ -4562,6 +5212,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 180, 
@@ -4569,6 +5220,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 180, 
@@ -4576,6 +5228,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Sept.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 180, 
@@ -4583,6 +5236,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 180, 
@@ -4590,6 +5244,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 180, 
@@ -4597,6 +5252,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 180, 
@@ -4604,6 +5260,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 180, 
@@ -4611,6 +5268,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Sept.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 180, 
@@ -4618,6 +5276,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 180, 
@@ -4625,6 +5284,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 180, 
@@ -4632,6 +5292,7 @@ Programs::create([
 'level' => 'Level II',
 'valid'=> 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 180,
@@ -4639,6 +5300,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 180, 
@@ -4646,6 +5308,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 180, 
@@ -4653,6 +5316,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 181, 
@@ -4660,6 +5324,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 182, 
@@ -4667,6 +5332,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 182, 
@@ -4674,6 +5340,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 183, 
@@ -4681,6 +5348,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 183, 
@@ -4688,6 +5356,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 183, 
@@ -4695,6 +5364,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 184, 
@@ -4702,6 +5372,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 184, 
@@ -4709,6 +5380,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 184, 
@@ -4716,6 +5388,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 184, 
@@ -4723,6 +5396,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 184, 
@@ -4730,6 +5404,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 184, 
@@ -4737,6 +5412,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 184, 
@@ -4744,6 +5420,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 185, 
@@ -4751,6 +5428,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 186, 
@@ -4758,6 +5436,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 186, 
@@ -4765,6 +5444,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 186, 
@@ -4772,6 +5452,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 186, 
@@ -4779,6 +5460,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 186, 
@@ -4786,6 +5468,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 186, 
@@ -4793,6 +5476,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 186, 
@@ -4800,6 +5484,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 186, 
@@ -4807,6 +5492,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 186, 
@@ -4814,6 +5500,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 186, 
@@ -4821,6 +5508,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 186, 
@@ -4828,6 +5516,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 186, 
@@ -4835,6 +5524,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 187, 
@@ -4842,6 +5532,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 187, 
@@ -4849,6 +5540,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 187, 
@@ -4856,6 +5548,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 187, 
@@ -4863,6 +5556,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 187, 
@@ -4870,6 +5564,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 187, 
@@ -4877,6 +5572,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 188, 
@@ -4884,6 +5580,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 188, 
@@ -4891,6 +5588,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 188, 
@@ -4898,6 +5596,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 188, 
@@ -4905,6 +5604,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 188, 
@@ -4912,6 +5612,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 188, 
@@ -4919,6 +5620,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 188, 
@@ -4926,6 +5628,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 188, 
@@ -4933,6 +5636,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 188, 
@@ -4940,6 +5644,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 188, 
@@ -4947,6 +5652,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 188, 
@@ -4954,6 +5660,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 188, 
@@ -4961,6 +5668,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 189, 
@@ -4968,6 +5676,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Dec.2018',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 189, 
@@ -4975,6 +5684,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 189, 
@@ -4982,6 +5692,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 189, 
@@ -4989,6 +5700,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 189, 
@@ -4996,6 +5708,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 189, 
@@ -5003,6 +5716,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 189, 
@@ -5010,6 +5724,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 189, 
@@ -5017,6 +5732,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 189, 
@@ -5024,6 +5740,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 190, 
@@ -5031,6 +5748,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 191, 
@@ -5038,6 +5756,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 192, 
@@ -5045,6 +5764,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 192, 
@@ -5052,6 +5772,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 192, 
@@ -5059,6 +5780,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 192, 
@@ -5066,6 +5788,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 192, 
@@ -5073,6 +5796,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 192, 
@@ -5080,6 +5804,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 192, 
@@ -5087,6 +5812,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 192, 
@@ -5094,6 +5820,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 192, 
@@ -5101,6 +5828,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 192, 
@@ -5108,6 +5836,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 192, 
@@ -5115,6 +5844,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 192, 
@@ -5122,6 +5852,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 192, 
@@ -5129,6 +5860,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 192, 
@@ -5136,6 +5868,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 192, 
@@ -5143,6 +5876,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 193, 
@@ -5150,6 +5884,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 194, 
@@ -5157,6 +5892,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 195, 
@@ -5164,6 +5900,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 196, 
@@ -5171,6 +5908,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 197, 
@@ -5178,6 +5916,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 198, 
@@ -5185,6 +5924,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 199, 
@@ -5192,6 +5932,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 200, 
@@ -5199,6 +5940,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 201, 
@@ -5206,6 +5948,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 202, 
@@ -5213,6 +5956,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 203, 
@@ -5220,6 +5964,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 203, 
@@ -5227,6 +5972,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2021',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 204, 
@@ -5234,6 +5980,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 204, 
@@ -5241,6 +5988,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 205, 
@@ -5248,6 +5996,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 206, 
@@ -5255,6 +6004,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 206, 
@@ -5262,6 +6012,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 207, 
@@ -5269,6 +6020,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 208, 
@@ -5276,6 +6028,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Sept.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 209, 
@@ -5283,6 +6036,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 209, 
@@ -5290,6 +6044,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 210, 
@@ -5297,6 +6052,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 210, 
@@ -5304,6 +6060,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 210, 
@@ -5311,6 +6068,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 210, 
@@ -5318,6 +6076,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 210, 
@@ -5325,6 +6084,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 211, 
@@ -5332,6 +6092,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2018',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 211, 
@@ -5339,6 +6100,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 212, 
@@ -5346,6 +6108,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 213, 
@@ -5353,6 +6116,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 214, 
@@ -5360,6 +6124,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 215, 
@@ -5367,6 +6132,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 216, 
@@ -5374,6 +6140,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 217, 
@@ -5381,6 +6148,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 218, 
@@ -5388,6 +6156,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr. 2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 219, 
@@ -5395,6 +6164,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 220, 
@@ -5402,6 +6172,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 220, 
@@ -5409,6 +6180,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 220, 
@@ -5416,6 +6188,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 220, 
@@ -5423,6 +6196,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 220, 
@@ -5430,6 +6204,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 221, 
@@ -5437,6 +6212,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 222, 
@@ -5444,6 +6220,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr. 2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 223, 
@@ -5451,6 +6228,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 224, 
@@ -5458,6 +6236,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 224, 
@@ -5465,6 +6244,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 224, 
@@ -5472,6 +6252,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 224, 
@@ -5479,6 +6260,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 224, 
@@ -5486,6 +6268,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 224, 
@@ -5493,6 +6276,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 224, 
@@ -5500,6 +6284,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 225, 
@@ -5507,6 +6292,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 226, 
@@ -5514,6 +6300,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 227, 
@@ -5521,6 +6308,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 227, 
@@ -5528,6 +6316,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 228, 
@@ -5535,6 +6324,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 229, 
@@ -5542,6 +6332,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 230, 
@@ -5549,6 +6340,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 231, 
@@ -5556,6 +6348,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2020',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 231, 
@@ -5563,6 +6356,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 231, 
@@ -5570,6 +6364,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 231, 
@@ -5577,6 +6372,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 231, 
@@ -5584,6 +6380,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 231, 
@@ -5591,6 +6388,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 231, 
@@ -5598,6 +6396,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 231, 
@@ -5605,6 +6404,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 231, 
@@ -5612,6 +6412,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 231, 
@@ -5619,6 +6420,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 231, 
@@ -5626,6 +6428,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 231, 
@@ -5633,6 +6436,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 231, 
@@ -5640,6 +6444,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 231, 
@@ -5647,6 +6452,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 231, 
@@ -5654,6 +6460,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 231, 
@@ -5661,6 +6468,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 231, 
@@ -5668,6 +6476,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 231, 
@@ -5675,6 +6484,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 232, 
@@ -5682,6 +6492,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2019',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 232, 
@@ -5689,6 +6500,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 233, 
@@ -5696,6 +6508,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 234, 
@@ -5703,6 +6516,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 235, 
@@ -5710,6 +6524,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 235, 
@@ -5717,6 +6532,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 235, 
@@ -5724,6 +6540,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 235, 
@@ -5731,6 +6548,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 235, 
@@ -5738,6 +6556,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 235, 
@@ -5745,6 +6564,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 235, 
@@ -5752,6 +6572,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 235, 
@@ -5759,6 +6580,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 235, 
@@ -5766,6 +6588,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 235, 
@@ -5773,6 +6596,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 235, 
@@ -5780,6 +6604,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 235, 
@@ -5787,6 +6612,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 235, 
@@ -5794,6 +6620,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 235, 
@@ -5801,6 +6628,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 235, 
@@ -5808,6 +6636,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 235, 
@@ -5815,6 +6644,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 235, 
@@ -5822,6 +6652,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 235, 
@@ -5829,6 +6660,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 235, 
@@ -5836,6 +6668,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 235, 
@@ -5843,6 +6676,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 235, 
@@ -5850,6 +6684,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 235, 
@@ -5857,6 +6692,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 235, 
@@ -5864,6 +6700,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 235, 
@@ -5871,6 +6708,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 235, 
@@ -5878,6 +6716,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 235, 
@@ -5885,6 +6724,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 236, 
@@ -5892,6 +6732,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 237, 
@@ -5899,6 +6740,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 238, 
@@ -5906,6 +6748,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 239, 
@@ -5913,6 +6756,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 239, 
@@ -5920,6 +6764,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 239, 
@@ -5927,6 +6772,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 239, 
@@ -5934,6 +6780,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 239, 
@@ -5941,6 +6788,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 239, 
@@ -5948,6 +6796,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 239, 
@@ -5955,6 +6804,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 239, 
@@ -5962,6 +6812,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 239, 
@@ -5969,6 +6820,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 239, 
@@ -5976,6 +6828,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 239, 
@@ -5983,6 +6836,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 239, 
@@ -5990,6 +6844,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 239, 
@@ -5997,6 +6852,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 239, 
@@ -6004,6 +6860,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 239, 
@@ -6011,6 +6868,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 239, 
@@ -6018,6 +6876,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 239, 
@@ -6025,6 +6884,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 239, 
@@ -6032,6 +6892,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 239, 
@@ -6039,6 +6900,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 239, 
@@ -6046,6 +6908,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 240, 
@@ -6053,6 +6916,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 240, 
@@ -6060,6 +6924,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 240, 
@@ -6067,6 +6932,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 240, 
@@ -6074,6 +6940,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 241, 
@@ -6081,6 +6948,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 241, 
@@ -6088,6 +6956,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2023',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 242, 
@@ -6095,6 +6964,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 243, 
@@ -6102,6 +6972,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 243, 
@@ -6109,6 +6980,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 243, 
@@ -6116,6 +6988,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 243, 
@@ -6123,6 +6996,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr. 2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 243, 
@@ -6130,6 +7004,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr. 2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 243, 
@@ -6137,6 +7012,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr. 2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 243, 
@@ -6144,6 +7020,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr. 2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 243, 
@@ -6151,6 +7028,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 244, 
@@ -6158,6 +7036,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 244, 
@@ -6165,6 +7044,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 244, 
@@ -6172,6 +7052,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 244, 
@@ -6179,6 +7060,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 244, 
@@ -6186,6 +7068,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 245, 
@@ -6193,6 +7076,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 246, 
@@ -6200,6 +7084,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 247, 
@@ -6207,6 +7092,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 248, 
@@ -6214,6 +7100,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 249, 
@@ -6221,6 +7108,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 249, 
@@ -6228,6 +7116,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 249, 
@@ -6235,6 +7124,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 249, 
@@ -6242,6 +7132,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 250, 
@@ -6249,6 +7140,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 251, 
@@ -6256,6 +7148,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 251, 
@@ -6263,6 +7156,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 251, 
@@ -6270,6 +7164,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 251, 
@@ -6277,6 +7172,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 251, 
@@ -6284,6 +7180,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 252, 
@@ -6291,6 +7188,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 252, 
@@ -6298,6 +7196,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 253, 
@@ -6305,6 +7204,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 253, 
@@ -6312,6 +7212,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 253, 
@@ -6319,6 +7220,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 253, 
@@ -6326,6 +7228,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 253, 
@@ -6333,6 +7236,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 253, 
@@ -6340,6 +7244,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 253, 
@@ -6347,6 +7252,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 253, 
@@ -6354,6 +7260,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 253, 
@@ -6361,6 +7268,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 253, 
@@ -6368,6 +7276,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 253, 
@@ -6375,6 +7284,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 254, 
@@ -6382,6 +7292,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 254, 
@@ -6389,6 +7300,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2018',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 254, 
@@ -6396,6 +7308,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 254, 
@@ -6403,6 +7316,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 254, 
@@ -6410,6 +7324,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 254, 
@@ -6417,6 +7332,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 254, 
@@ -6424,6 +7340,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 254, 
@@ -6431,6 +7348,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 254, 
@@ -6438,6 +7356,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 255, 
@@ -6445,6 +7364,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 255, 
@@ -6452,6 +7372,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 255, 
@@ -6459,6 +7380,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 255, 
@@ -6466,6 +7388,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 255, 
@@ -6473,6 +7396,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 255, 
@@ -6480,6 +7404,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 256, 
@@ -6487,6 +7412,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 256, 
@@ -6494,6 +7420,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 257, 
@@ -6501,6 +7428,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 258, 
@@ -6508,6 +7436,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 258, 
@@ -6515,6 +7444,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 258, 
@@ -6522,6 +7452,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 258, 
@@ -6529,6 +7460,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 259, 
@@ -6536,6 +7468,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 259, 
@@ -6543,6 +7476,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 259, 
@@ -6550,6 +7484,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 259, 
@@ -6557,6 +7492,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 259, 
@@ -6564,6 +7500,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 259, 
@@ -6571,6 +7508,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 259, 
@@ -6578,6 +7516,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 260, 
@@ -6585,6 +7524,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 260, 
@@ -6592,6 +7532,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 260, 
@@ -6599,6 +7540,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 260, 
@@ -6606,6 +7548,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 260, 
@@ -6613,6 +7556,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 260, 
@@ -6620,6 +7564,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 260, 
@@ -6627,6 +7572,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 260, 
@@ -6634,6 +7580,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 260, 
@@ -6641,6 +7588,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 260, 
@@ -6648,6 +7596,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 260, 
@@ -6655,6 +7604,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 260, 
@@ -6662,6 +7612,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 260, 
@@ -6669,6 +7620,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 260, 
@@ -6676,6 +7628,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 260, 
@@ -6683,6 +7636,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 260, 
@@ -6690,6 +7644,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 260, 
@@ -6697,6 +7652,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 260, 
@@ -6704,6 +7660,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 261, 
@@ -6711,6 +7668,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 261, 
@@ -6718,6 +7676,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 262, 
@@ -6725,6 +7684,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 262, 
@@ -6732,6 +7692,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 262, 
@@ -6739,6 +7700,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 262, 
@@ -6746,6 +7708,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 262, 
@@ -6753,6 +7716,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 262, 
@@ -6760,6 +7724,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 262, 
@@ -6767,6 +7732,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 263, 
@@ -6774,6 +7740,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 263, 
@@ -6781,6 +7748,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr. 2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 264, 
@@ -6788,6 +7756,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 265, 
@@ -6795,6 +7764,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 265, 
@@ -6802,6 +7772,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 265, 
@@ -6809,6 +7780,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 265, 
@@ -6816,6 +7788,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 265, 
@@ -6823,6 +7796,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 265, 
@@ -6830,6 +7804,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 265, 
@@ -6837,6 +7812,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 266, 
@@ -6844,6 +7820,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 267, 
@@ -6851,6 +7828,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May 2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 267, 
@@ -6858,6 +7836,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 267, 
@@ -6865,6 +7844,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 267, 
@@ -6872,6 +7852,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 267, 
@@ -6879,6 +7860,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 267, 
@@ -6886,6 +7868,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 268, 
@@ -6893,6 +7876,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 269, 
@@ -6900,6 +7884,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 270, 
@@ -6907,6 +7892,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 271, 
@@ -6914,6 +7900,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 272, 
@@ -6921,6 +7908,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 273, 
@@ -6928,6 +7916,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 274, 
@@ -6935,6 +7924,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 275, 
@@ -6942,6 +7932,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 275, 
@@ -6949,6 +7940,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2020',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 276, 
@@ -6956,6 +7948,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 277, 
@@ -6963,6 +7956,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 278, 
@@ -6970,6 +7964,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 279, 
@@ -6977,6 +7972,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2018',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 280, 
@@ -6984,6 +7980,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 281, 
@@ -6991,6 +7988,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2018',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 281, 
@@ -6998,6 +7996,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May 2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 281, 
@@ -7005,6 +8004,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 281, 
@@ -7012,6 +8012,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 281, 
@@ -7019,6 +8020,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 281, 
@@ -7026,6 +8028,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 281, 
@@ -7033,6 +8036,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 282, 
@@ -7040,6 +8044,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 283, 
@@ -7047,6 +8052,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 283, 
@@ -7054,6 +8060,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 283, 
@@ -7061,6 +8068,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 283, 
@@ -7068,6 +8076,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 283, 
@@ -7075,6 +8084,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 284, 
@@ -7082,6 +8092,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 285, 
@@ -7089,6 +8100,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 286, 
@@ -7096,6 +8108,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 287, 
@@ -7103,6 +8116,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 287, 
@@ -7110,6 +8124,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 288, 
@@ -7117,6 +8132,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 289, 
@@ -7124,6 +8140,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr. 2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 290, 
@@ -7131,6 +8148,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 291, 
@@ -7138,6 +8156,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 292, 
@@ -7145,6 +8164,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 293, 
@@ -7152,6 +8172,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 294, 
@@ -7159,6 +8180,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr. 2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 295, 
@@ -7166,6 +8188,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 296, 
@@ -7173,6 +8196,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 297, 
@@ -7180,6 +8204,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 298, 
@@ -7187,6 +8212,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2018',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 298, 
@@ -7194,6 +8220,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 299, 
@@ -7201,6 +8228,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 300, 
@@ -7208,6 +8236,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 301, 
@@ -7215,6 +8244,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2021',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 301, 
@@ -7222,6 +8252,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 302, 
@@ -7229,6 +8260,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 303, 
@@ -7236,6 +8268,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 303, 
@@ -7243,6 +8276,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2023',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 304, 
@@ -7250,6 +8284,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 304, 
@@ -7257,6 +8292,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 304, 
@@ -7264,6 +8300,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 304, 
@@ -7271,6 +8308,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 304, 
@@ -7278,6 +8316,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 305, 
@@ -7285,6 +8324,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 306, 
@@ -7292,6 +8332,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 306, 
@@ -7299,6 +8340,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 306, 
@@ -7306,6 +8348,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 306, 
@@ -7313,6 +8356,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 306, 
@@ -7320,6 +8364,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 306, 
@@ -7327,6 +8372,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 306, 
@@ -7334,6 +8380,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 306, 
@@ -7341,6 +8388,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 306, 
@@ -7348,6 +8396,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 306, 
@@ -7355,6 +8404,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 306, 
@@ -7362,6 +8412,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 307, 
@@ -7369,6 +8420,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 308, 
@@ -7376,6 +8428,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 308, 
@@ -7383,6 +8436,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 308, 
@@ -7390,6 +8444,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 308, 
@@ -7397,6 +8452,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 308, 
@@ -7404,6 +8460,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 308, 
@@ -7411,6 +8468,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 308, 
@@ -7418,6 +8476,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 308, 
@@ -7425,6 +8484,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 308, 
@@ -7432,6 +8492,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 309, 
@@ -7439,6 +8500,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 310, 
@@ -7446,6 +8508,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 310, 
@@ -7453,6 +8516,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 311, 
@@ -7460,6 +8524,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2021',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 311, 
@@ -7467,6 +8532,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 312, 
@@ -7474,6 +8540,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 313, 
@@ -7481,6 +8548,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 314, 
@@ -7488,6 +8556,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2018',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 314, 
@@ -7495,6 +8564,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Mar.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 314, 
@@ -7502,6 +8572,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 314, 
@@ -7509,6 +8580,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 314, 
@@ -7516,6 +8588,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 314, 
@@ -7523,6 +8596,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 314, 
@@ -7530,6 +8604,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 314, 
@@ -7537,6 +8612,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 315, 
@@ -7544,6 +8620,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 315, 
@@ -7551,6 +8628,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 315, 
@@ -7558,6 +8636,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 315, 
@@ -7565,6 +8644,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 315, 
@@ -7572,6 +8652,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 315, 
@@ -7579,6 +8660,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 315, 
@@ -7586,6 +8668,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 315, 
@@ -7593,6 +8676,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 315, 
@@ -7600,6 +8684,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 315, 
@@ -7607,6 +8692,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 316, 
@@ -7614,6 +8700,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 316, 
@@ -7621,6 +8708,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 316, 
@@ -7628,6 +8716,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 316, 
@@ -7635,6 +8724,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 316, 
@@ -7642,6 +8732,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Sept.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 316, 
@@ -7649,6 +8740,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 316, 
@@ -7656,6 +8748,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 316, 
@@ -7663,6 +8756,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 316, 
@@ -7670,6 +8764,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 316, 
@@ -7677,6 +8772,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 316, 
@@ -7684,6 +8780,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 317, 
@@ -7691,6 +8788,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2019',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 317, 
@@ -7698,6 +8796,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 317, 
@@ -7705,6 +8804,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 317, 
@@ -7712,6 +8812,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 317, 
@@ -7719,6 +8820,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 318, 
@@ -7726,6 +8828,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Dec.2018',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 318, 
@@ -7733,6 +8836,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 318, 
@@ -7740,6 +8844,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 318, 
@@ -7747,6 +8852,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Sept.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 318, 
@@ -7754,6 +8860,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 318, 
@@ -7761,6 +8868,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 319, 
@@ -7768,6 +8876,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 320, 
@@ -7775,6 +8884,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 321, 
@@ -7782,6 +8892,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 321, 
@@ -7789,6 +8900,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 322, 
@@ -7796,6 +8908,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 323, 
@@ -7803,6 +8916,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2021',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 323, 
@@ -7810,6 +8924,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 324, 
@@ -7817,6 +8932,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 325, 
@@ -7824,6 +8940,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 325, 
@@ -7831,6 +8948,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 326, 
@@ -7838,6 +8956,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 326, 
@@ -7845,6 +8964,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 327, 
@@ -7852,6 +8972,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 327, 
@@ -7859,6 +8980,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 327, 
@@ -7866,6 +8988,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 327, 
@@ -7873,6 +8996,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 327, 
@@ -7880,6 +9004,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 327, 
@@ -7887,6 +9012,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 327, 
@@ -7894,6 +9020,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 327, 
@@ -7901,6 +9028,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 327, 
@@ -7908,6 +9036,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 328, 
@@ -7915,6 +9044,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 328, 
@@ -7922,6 +9052,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 329, 
@@ -7929,6 +9060,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 329, 
@@ -7936,6 +9068,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 329, 
@@ -7943,6 +9076,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 329, 
@@ -7950,6 +9084,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 329, 
@@ -7957,6 +9092,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 329, 
@@ -7964,6 +9100,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 329, 
@@ -7971,6 +9108,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 330, 
@@ -7978,6 +9116,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 331, 
@@ -7985,6 +9124,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 332, 
@@ -7992,6 +9132,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 333, 
@@ -7999,6 +9140,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2021',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 333, 
@@ -8006,6 +9148,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 334, 
@@ -8013,6 +9156,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 335, 
@@ -8020,6 +9164,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 335, 
@@ -8027,6 +9172,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 336, 
@@ -8034,6 +9180,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 337, 
@@ -8041,6 +9188,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 338, 
@@ -8048,6 +9196,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Sept.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 338, 
@@ -8055,6 +9204,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Sept.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 338, 
@@ -8062,6 +9212,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Sept.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 338, 
@@ -8069,6 +9220,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 338, 
@@ -8076,6 +9228,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 338, 
@@ -8083,6 +9236,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 338, 
@@ -8090,6 +9244,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 338, 
@@ -8097,6 +9252,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Sept.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 338, 
@@ -8104,6 +9260,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 338, 
@@ -8111,6 +9268,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 338, 
@@ -8118,6 +9276,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 339, 
@@ -8125,6 +9284,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 340, 
@@ -8132,6 +9292,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 340, 
@@ -8139,6 +9300,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 341, 
@@ -8146,6 +9308,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 341, 
@@ -8153,6 +9316,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 341, 
@@ -8160,6 +9324,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 342, 
@@ -8167,6 +9332,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 342, 
@@ -8174,6 +9340,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 342, 
@@ -8181,6 +9348,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 342, 
@@ -8188,6 +9356,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 342, 
@@ -8195,6 +9364,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 342, 
@@ -8202,6 +9372,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 342, 
@@ -8209,6 +9380,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 342, 
@@ -8216,6 +9388,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 343, 
@@ -8223,6 +9396,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 344, 
@@ -8230,6 +9404,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 344, 
@@ -8237,6 +9412,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 344, 
@@ -8244,6 +9420,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 344, 
@@ -8251,6 +9428,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 344, 
@@ -8258,6 +9436,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 344, 
@@ -8265,6 +9444,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 344, 
@@ -8272,6 +9452,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 344, 
@@ -8279,6 +9460,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 345, 
@@ -8286,6 +9468,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 346, 
@@ -8293,6 +9476,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr. 2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 347, 
@@ -8300,6 +9484,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 348, 
@@ -8307,6 +9492,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 348, 
@@ -8314,6 +9500,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 348, 
@@ -8321,6 +9508,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 348, 
@@ -8328,6 +9516,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 348, 
@@ -8335,6 +9524,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 348, 
@@ -8342,6 +9532,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 348, 
@@ -8349,6 +9540,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 349, 
@@ -8356,6 +9548,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2021',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 349, 
@@ -8363,6 +9556,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 349, 
@@ -8370,6 +9564,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 349, 
@@ -8377,6 +9572,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 349, 
@@ -8384,6 +9580,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 349, 
@@ -8391,6 +9588,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 349, 
@@ -8398,6 +9596,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 349, 
@@ -8405,6 +9604,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 349, 
@@ -8412,6 +9612,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 349, 
@@ -8419,6 +9620,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 349, 
@@ -8426,6 +9628,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 349, 
@@ -8433,6 +9636,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 349, 
@@ -8440,6 +9644,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 349, 
@@ -8447,6 +9652,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 349, 
@@ -8454,6 +9660,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 349, 
@@ -8461,6 +9668,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 349, 
@@ -8468,6 +9676,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 350, 
@@ -8475,6 +9684,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 350, 
@@ -8482,6 +9692,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 350, 
@@ -8489,6 +9700,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 350, 
@@ -8496,6 +9708,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 350, 
@@ -8503,6 +9716,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 350, 
@@ -8510,6 +9724,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 350, 
@@ -8517,6 +9732,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 350, 
@@ -8524,6 +9740,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 350, 
@@ -8531,6 +9748,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 350, 
@@ -8538,6 +9756,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 350, 
@@ -8545,6 +9764,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 350, 
@@ -8552,6 +9772,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 350, 
@@ -8559,6 +9780,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 350, 
@@ -8566,6 +9788,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 350, 
@@ -8573,6 +9796,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 350, 
@@ -8580,6 +9804,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 350, 
@@ -8587,6 +9812,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 350, 
@@ -8594,6 +9820,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 351, 
@@ -8601,6 +9828,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 351, 
@@ -8608,6 +9836,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 351, 
@@ -8615,6 +9844,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 351, 
@@ -8622,6 +9852,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 351, 
@@ -8629,6 +9860,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 351, 
@@ -8636,6 +9868,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 351, 
@@ -8643,6 +9876,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 351, 
@@ -8650,6 +9884,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 351, 
@@ -8657,6 +9892,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 351, 
@@ -8664,6 +9900,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 351, 
@@ -8671,6 +9908,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 351, 
@@ -8678,6 +9916,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 351, 
@@ -8685,6 +9924,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 351, 
@@ -8692,6 +9932,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 351, 
@@ -8699,6 +9940,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 351, 
@@ -8706,6 +9948,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 351, 
@@ -8713,6 +9956,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 351, 
@@ -8720,6 +9964,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 351, 
@@ -8727,6 +9972,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 351, 
@@ -8734,6 +9980,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 351, 
@@ -8741,6 +9988,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 351, 
@@ -8748,6 +9996,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 352, 
@@ -8755,6 +10004,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 352, 
@@ -8762,6 +10012,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 352, 
@@ -8769,6 +10020,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 352, 
@@ -8776,6 +10028,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 352, 
@@ -8783,6 +10036,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Sept.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 352, 
@@ -8790,6 +10044,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 352, 
@@ -8797,6 +10052,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Sept.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 352, 
@@ -8804,6 +10060,7 @@ Programs::create([
 'level' => 'Level I ',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 352, 
@@ -8811,6 +10068,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 352, 
@@ -8818,6 +10076,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 352, 
@@ -8825,6 +10084,7 @@ Programs::create([
 'level' => 'Level I ',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 352, 
@@ -8832,6 +10092,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 352, 
@@ -8839,6 +10100,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 353, 
@@ -8846,6 +10108,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 353, 
@@ -8853,6 +10116,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 353, 
@@ -8860,6 +10124,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 353, 
@@ -8867,6 +10132,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 353, 
@@ -8874,6 +10140,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 353, 
@@ -8881,6 +10148,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 353, 
@@ -8888,6 +10156,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 353, 
@@ -8895,6 +10164,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 353, 
@@ -8902,6 +10172,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 353, 
@@ -8909,6 +10180,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 353, 
@@ -8916,15 +10188,18 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 353, 
 'status' => 'active','program'=> 'Graduat
+
 ]);
 Programs in Education and Arts & Sciences',
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 353, 
@@ -8932,6 +10207,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 353, 
@@ -8939,6 +10215,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 353, 
@@ -8946,6 +10223,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 353, 
@@ -8953,6 +10231,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 353, 
@@ -8960,6 +10239,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 353, 
@@ -8967,6 +10247,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 353, 
@@ -8974,6 +10255,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 354, 
@@ -8981,6 +10263,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Sept. 2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 355, 
@@ -8988,6 +10271,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 356, 
@@ -8995,6 +10279,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 357, 
@@ -9002,6 +10287,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 357, 
@@ -9009,6 +10295,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 357, 
@@ -9016,6 +10303,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 357, 
@@ -9023,6 +10311,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 357, 
@@ -9030,6 +10319,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 357, 
@@ -9037,6 +10327,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 357, 
@@ -9044,6 +10335,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 357, 
@@ -9051,6 +10343,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 357, 
@@ -9058,6 +10351,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 357, 
@@ -9065,6 +10359,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 357, 
@@ -9072,6 +10367,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 357, 
@@ -9079,6 +10375,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 357, 
@@ -9086,6 +10383,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 357, 
@@ -9093,6 +10391,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 358, 
@@ -9100,6 +10399,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 358, 
@@ -9107,6 +10407,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 359, 
@@ -9114,6 +10415,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 359, 
@@ -9121,6 +10423,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 359, 
@@ -9128,6 +10431,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Sept.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 359, 
@@ -9135,6 +10439,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 359, 
@@ -9142,6 +10447,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 359, 
@@ -9149,6 +10455,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 359, 
@@ -9156,6 +10463,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Sept.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 359, 
@@ -9163,6 +10471,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Sept.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 359, 
@@ -9170,6 +10479,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 360, 
@@ -9177,6 +10487,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 361, 
@@ -9184,6 +10495,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 362, 
@@ -9191,6 +10503,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2020',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 362, 
@@ -9198,6 +10511,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 362, 
@@ -9205,6 +10519,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 362, 
@@ -9212,6 +10527,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 362, 
@@ -9219,6 +10535,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 362, 
@@ -9226,6 +10543,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 362, 
@@ -9233,6 +10551,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 363, 
@@ -9240,6 +10559,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 364, 
@@ -9247,6 +10567,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 365, 
@@ -9254,6 +10575,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 366, 
@@ -9261,6 +10583,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 366, 
@@ -9268,6 +10591,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 366, 
@@ -9275,6 +10599,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 366, 
@@ -9282,6 +10607,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 366, 
@@ -9289,6 +10615,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 366, 
@@ -9296,6 +10623,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 366, 
@@ -9303,6 +10631,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 366, 
@@ -9310,6 +10639,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 366, 
@@ -9317,6 +10647,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 366, 
@@ -9324,6 +10655,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 366, 
@@ -9331,6 +10663,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 367, 
@@ -9338,6 +10671,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 367, 
@@ -9345,6 +10679,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 367, 
@@ -9352,6 +10687,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 367, 
@@ -9359,6 +10695,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 367, 
@@ -9366,6 +10703,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 367, 
@@ -9373,6 +10711,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 367, 
@@ -9380,6 +10719,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 367, 
@@ -9387,6 +10727,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 367, 
@@ -9394,6 +10735,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 368, 
@@ -9401,6 +10743,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 368, 
@@ -9408,6 +10751,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 368, 
@@ -9415,6 +10759,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 368, 
@@ -9422,6 +10767,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 368, 
@@ -9429,6 +10775,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 368, 
@@ -9436,6 +10783,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 368, 
@@ -9443,6 +10791,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 368, 
@@ -9450,6 +10799,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 368, 
@@ -9457,6 +10807,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 368, 
@@ -9464,6 +10815,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 368, 
@@ -9471,6 +10823,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 368, 
@@ -9478,6 +10831,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 368, 
@@ -9485,6 +10839,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 368, 
@@ -9492,6 +10847,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 368, 
@@ -9499,6 +10855,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 369, 
@@ -9506,6 +10863,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 369, 
@@ -9513,6 +10871,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 369, 
@@ -9520,6 +10879,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 369, 
@@ -9527,6 +10887,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 369, 
@@ -9534,6 +10895,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 369, 
@@ -9541,6 +10903,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 369, 
@@ -9548,6 +10911,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 369, 
@@ -9555,6 +10919,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 369, 
@@ -9562,6 +10927,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 369, 
@@ -9569,6 +10935,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 369, 
@@ -9576,6 +10943,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 370, 
@@ -9583,6 +10951,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2018',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 370, 
@@ -9590,6 +10959,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 370, 
@@ -9597,6 +10967,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 370, 
@@ -9604,6 +10975,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 370, 
@@ -9611,6 +10983,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 370, 
@@ -9618,6 +10991,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 370, 
@@ -9625,6 +10999,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr. 2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 370, 
@@ -9632,6 +11007,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 370, 
@@ -9639,6 +11015,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr. 2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 370, 
@@ -9646,6 +11023,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 370, 
@@ -9653,6 +11031,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 370, 
@@ -9660,6 +11039,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 370, 
@@ -9667,6 +11047,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Nov.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 370, 
@@ -9674,6 +11055,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 370, 
@@ -9681,6 +11063,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 370, 
@@ -9688,6 +11071,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 370, 
@@ -9695,6 +11079,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 370, 
@@ -9702,6 +11087,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 370, 
@@ -9709,6 +11095,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 370, 
@@ -9716,6 +11103,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 370, 
@@ -9723,6 +11111,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 370, 
@@ -9730,6 +11119,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 370, 
@@ -9737,6 +11127,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 370, 
@@ -9744,6 +11135,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 370, 
@@ -9751,6 +11143,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 370, 
@@ -9758,6 +11151,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Nov.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 371, 
@@ -9765,6 +11159,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 371, 
@@ -9772,6 +11167,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'Nov.2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 371, 
@@ -9779,6 +11175,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 371, 
@@ -9786,6 +11183,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 371, 
@@ -9793,6 +11191,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Dec.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 371, 
@@ -9800,6 +11199,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Apr.2022',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 372, 
@@ -9807,6 +11207,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Dec.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 373, 
@@ -9814,6 +11215,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'Nov.2023',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 374, 
@@ -9821,6 +11223,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 374, 
@@ -9828,6 +11231,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 374, 
@@ -9835,6 +11239,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Apr.2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 374, 
@@ -9842,6 +11247,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 374, 
@@ -9849,6 +11255,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr.2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 375, 
@@ -9856,6 +11263,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 376, 
@@ -9863,6 +11271,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 377, 
@@ -9870,6 +11279,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 377, 
@@ -9877,6 +11287,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 378, 
@@ -9884,6 +11295,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 379, 
@@ -9891,6 +11303,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 379, 
@@ -9898,6 +11311,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2020',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 379, 
@@ -9905,6 +11319,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 379, 
@@ -9912,6 +11327,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 379, 
@@ -9919,6 +11335,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 379, 
@@ -9926,6 +11343,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 379, 
@@ -9933,6 +11351,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 379, 
@@ -9940,6 +11359,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 379, 
@@ -9947,6 +11367,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 379, 
@@ -9954,6 +11375,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 379, 
@@ -9961,6 +11383,7 @@ Programs::create([
 'level' => 'Level II',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 379, 
@@ -9968,6 +11391,7 @@ Programs::create([
 'level' => 'Level I',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 379, 
@@ -9975,6 +11399,7 @@ Programs::create([
 'level' => 'Level IV',
 'valid' => 'May2019',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 380, 
@@ -9982,6 +11407,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 380, 
@@ -9989,6 +11415,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'May2018',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 381, 
@@ -9996,6 +11423,7 @@ Programs::create([
 'level' => 'Candidate',
 'valid' => 'Apr. 2019',
 'status' => 'active',
+'ed_level' => 'Grade School',
 ]);
 Programs::create([
 'member_id'=> 382, 
@@ -10003,6 +11431,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'May2021',
 'status' => 'active',
+
 ]);
 Programs::create([
 'member_id'=> 383,
@@ -10010,6 +11439,7 @@ Programs::create([
 'level' => 'Level III',
 'valid' => 'Nov.2022',
 'status' => 'active',
+
 ]);
     }
 }

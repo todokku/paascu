@@ -4,12 +4,12 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="card">
+            <div class="card border-light mb-3 shadow">
 
-                <div class="card-header">Manage Schedule Membership Fee<a href="{{route('admin.schedulemembership.create')}}"><button type="button" class="btn btn-outline-success float-right">+ Add</button></a></div>
+                <h4 class="card-header bg-white">Manage Schedule Membership Fee<a href="{{route('admin.schedulemembership.create')}}"><button type="button" class="btn btn-outline-success float-right">+ Add</button></a></h4>
 </BR>
-<div class="row">
-  <div class="col-md-10 offset-md-1">
+{{-- <div class="row">
+  <div class="col-md-10 offset-md-1"> --}}
 
 {{-- <table>
   <tr>
@@ -24,18 +24,21 @@
 
   </tr>
 </table> --}}
-</br>
+
+
 <center><h2><b>Schedule of Membership Fees</b></h2></center>
 </br>
-<table class="table text-center">
-  <thead>
-    <tr>
+<div class="container" >
+                <span id="buttons"></span>
+<table id="example" class="display table table-hover table-sm" style="width:100%">
+        <thead>
+            <tr>
       <th scope="col">GROSS TUITION REVENUE</th>
       <th scope="col">ANNUAL MEMBERSHIP FEE</th>
 {{--       <th scope="col">STATUS</th> --}}
       <th scope="col">ACTION</th>
-    </tr>
-  </thead>
+            </tr>
+        </thead>
   <tbody>
         @foreach($smf as $fms)  
     <tr>
@@ -61,11 +64,62 @@
     </tr>
         @endforeach
   </tbody>
-</table>
+    </table>
+  </br>
+
+{{-- </div>
+</div> --}}
+</div>
+
+<script>
+  
+// $(document).ready(function() {
+//     $('#example').DataTable({
+//         responsive: true,
+//         lengthChange: false,
+//         paging: false,
+//         "order": [[ 1, "asc" ]],
+//       });
+// } );
+
+$(document).ready(function() {
+var table = $('#example').DataTable( {
+        responsive: true,
+        lengthChange: false,
+                paging: false,
+                info: false,
+        "order": [[ 1, "asc" ]],
+        buttons: {
+        buttons: [ 
+{ extend: 'print',
+ text: 'Print All Schedule Membership Fees',
+exportOptions:{ columns: [ 0, 1,]},
+title: 'PHILIPPINE ACCREDITING ASSOCIATION OF SCHOOLS, COLLEGES AND UNIVERSITIES (PAASCU)',
+messageTop: 'SCHEDULE OF MEMBERSHIP FEES',
+}, 
+],
+
+    dom: {
+      button: {
+        tag: "button",
+        className: "btn btn-outline-success",
+      },
+      buttonLiner: {
+        tag: null
+      }
+    }
+}
+
+    }
 
 
-</div>
-</div>
+     );
+ 
+    table.buttons().container()
+        .appendTo( '#example_wrapper .col-md-6:eq(0)' );
+} );
+
+</script>
             </div>
         </div>
     </div>

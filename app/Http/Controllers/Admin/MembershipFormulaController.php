@@ -105,7 +105,7 @@ if(!empty($thedifference)){
 Membership::whereIn('variable_id', $thedifference)->where('formula_id', $request->input('ed_type'))->delete();
 
 }elseif(!empty($thedifference2)){
-$membershipids = Membership::select('member_id')->groupBy('member_id')->get();
+$membershipids = Membership::select('member_id')->groupBy('member_id')->where('formula_id', $request->input('ed_type'))->get();
 foreach($membershipids as $msi1){ 
 foreach($thedifference2 as $td2){ 
 Membership::whereIn('variable_id', $thedifference2)->where('formula_id', $request->input('ed_type'))->create(

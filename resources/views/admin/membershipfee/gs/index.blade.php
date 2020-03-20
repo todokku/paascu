@@ -4,8 +4,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">Grade School Membership{{-- <a href="#"><button type="button" class="btn btn-outline-success float-right">+ Add Formula</button></a> --}}</div>
+            <div class="card border-light mb-3 shadow">
+                <h4 class="card-header bg-white">Grade School Membership{{-- <a href="#"><button type="button" class="btn btn-outline-success float-right">+ Add Formula</button></a> --}}</h4>
 {{--             <br> --}}
 {{-- <form>
     <div class="form-group row">
@@ -20,7 +20,9 @@
     </div>
 </div>
 </form> --}}
-<table class="table">
+</br>
+<div class="container" >
+<table id="example" class="display table table-hover table-sm" style="width:100%">
   <thead>
     <tr>
       <th scope="col" >School</th>
@@ -74,6 +76,58 @@
 
   </tbody>
 </table>
+  </br>
+</div>
+<script>
+  
+// $(document).ready(function() {
+//     $('#example').DataTable({
+//         responsive: true,
+//         lengthChange: false,
+//         paging: false,
+//         "order": [[ 1, "asc" ]],
+//       });
+// } );
+
+$(document).ready(function() {
+var table = $('#example').DataTable( {
+        responsive: true,
+        lengthChange: false,
+                paging: false,
+                info: false,
+        "order": [[ 0, "asc" ]],
+        buttons: {
+        buttons: [ 
+{ extend: 'print',
+ text: 'Print All Grade School Membership Fees',
+exportOptions:{ columns: [0,1,2,3,4,]},
+title: 'PHILIPPINE ACCREDITING ASSOCIATION OF SCHOOLS, COLLEGES AND UNIVERSITIES (PAASCU)',
+messageTop: 'GRADE SCHOOL MEMBERSHIP FEES',
+}, 
+],
+
+    dom: {
+      button: {
+        tag: "button",
+        className: "btn btn-outline-success",
+      },
+      buttonLiner: {
+        tag: null
+      }
+    }
+}
+
+    }
+
+
+     );
+ 
+    table.buttons().container()
+        .appendTo( '#example_wrapper .col-md-6:eq(0)' );
+} );
+
+</script>
+
             </div>
         </div>
     </div>
