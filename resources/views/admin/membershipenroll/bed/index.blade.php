@@ -8,7 +8,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card border-light mb-3 shadow">
-                <h4 class="card-header bg-white">Enroll High School Membership</h4>
+                <h4 class="card-header bg-white">Enroll Basic Education Membership</h4>
             <br>
 <form>
 <div class="form-group row">
@@ -25,10 +25,10 @@
 </form>
 
 
-<form id="formHS" name="formHS" action="{{ route('hsenrollment.store')}}" method="POST">
+<form id="formBED" name="formBED" action="{{ route('bedenrollment.store')}}" method="POST">
 @csrf
 
-<input type="hidden" id="hsmember" name="hsmember">
+<input type="hidden" id="bedmember" name="bedmember">
 
 @foreach($variabled as $delbairav)
 <input type="hidden" id="vari-{{$delbairav->id}}" name="vari-{{$delbairav->id}}" value="{{$delbairav->id}}">
@@ -53,7 +53,7 @@
 
 
 <div class="col-md-8 offset-sm-2">
-  <button id="submitHS" name="submitHS" type="submit" class="btn btn-primary btn-block">Submit</button>
+  <button id="submitBED" name="submitBED" type="submit" class="btn btn-primary btn-block">Submit</button>
 </div>
 </form>
             <br>
@@ -67,7 +67,7 @@
 $(document).ready(function() {
     console.log('ready');
     $("#school").change(function() {
-        $('#hsmember').val($('#school').val());
+        $('#bedmember').val($('#school').val());
     });
 });
 </script>

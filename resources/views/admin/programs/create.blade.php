@@ -53,6 +53,20 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="ed_level" class="col-md-2 col-form-label text-md-right">Education level</label>
+
+                            <div class="col-md-10">
+                                <input id="ed_level" type="text" class="form-control @error('ed_level') is-invalid @enderror" name="ed_level" value="" required autofocus>
+
+                                @error('ed_level')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
 
                         <div class="form-group row">
                             <label for="valid" class="col-md-2 col-form-label text-md-right">Valid</label>

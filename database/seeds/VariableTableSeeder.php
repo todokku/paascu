@@ -63,6 +63,7 @@ class VariableTableSeeder extends Seeder
         'code'=> 'col_sem_21_units',
         'title'=> '21 Units',
         'ed_type'=> 'College Semester',
+        'def_val'=> 21,
         ]);
         Variable::create([
         'code'=> 'col_tri_total_enrollment',
@@ -78,6 +79,7 @@ class VariableTableSeeder extends Seeder
         'code'=> 'col_tri_21_units',
         'title'=> '21 Units',
         'ed_type'=> 'College Trimester',
+        'def_val'=> 21,
         ]);
         Variable::create([
         'code'=> 'ged_sem_total_enrollment',
@@ -93,6 +95,7 @@ class VariableTableSeeder extends Seeder
         'code'=> 'ged_sem_12_units',
         'title'=> '12 Units',
         'ed_type'=> 'Graduate Education Semester',
+        'def_val'=> 12,
         ]);
         Variable::create([
         'code'=> 'ged_tri_total_enrollment',
@@ -108,6 +111,7 @@ class VariableTableSeeder extends Seeder
         'code'=> 'ged_tri_21_units',
         'title'=> '21 Units',
         'ed_type'=> 'Graduate Education Trimester',
+        'def_val'=> 21,
         ]);
     }
 }

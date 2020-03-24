@@ -17,8 +17,9 @@ class ProgramsController extends Controller
     public function index()
     {
         $members = Members::orderBy('school','asc')->get();
-        $programs = Programs::all();
-        return view('admin.programs.index')->with('members', $members)->with('programs', $programs);
+        // $programs = Programs::all();
+        return view('admin.programs.index')->with('members', $members);
+        // return view('admin.programs.index')->with('programs', $programs);
     }
 
     /**
@@ -47,6 +48,7 @@ class ProgramsController extends Controller
         $program->level = $request->input('level');
         $program->valid = $request->input('valid');
         $program->status = 'active';
+        $program->ed_level = $request->input('ed_level');
 
         if($program->save()){
 
@@ -98,6 +100,7 @@ class ProgramsController extends Controller
         $program->level = $request->input('level');
         $program->valid = $request->input('valid');
         $program->status = $request->input('status');
+        $program->ed_level = $request->input('ed_level');
 
         if($program->save()){
 

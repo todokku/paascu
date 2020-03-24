@@ -19,7 +19,7 @@
 		<select class="form-control selectpicker" id="school" name="school" data-live-search="true" data-style="btn-info" title="Select School...">
 			<option value=""> </option>
 				@foreach($members as $member)
-			<option value="{{$member->id}}">{{$member->school}}</option>
+			<option value="{{$member->id}} data-days="{{ $member->programs }}">{{$member->school}}</option>
 				@endforeach
 		</select>
 	</div>
@@ -397,6 +397,7 @@
   </div>
 </br>
   <button id="submitSEMGED" name="submitSEMGED" type="submit" class="btn btn-primary btn-block">Submit</button>
+  <a href="{{ route('bedenrollment.index') }}" class="btn btn-primary">  Basic Education Membership Fee</a>
 </div>
 </form>
 

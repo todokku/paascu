@@ -7,8 +7,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">Enroll Grade School Membership</div>
+            <div class="card border-light mb-3 shadow">
+                <h4 class="card-header bg-white">Enroll Grade School Membership</h4>
             <br>
 <form>
 <div class="form-group row">
@@ -57,7 +57,7 @@
   <button id="submitGS" name="submitGS" type="submit" class="btn btn-primary btn-block">Submit</button>
 </div>
 </form>
-
+            <br>
 
 
         </div>

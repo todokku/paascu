@@ -4,127 +4,136 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">Basic Education Membership{{-- <a href="#"><button type="button" class="btn btn-outline-success float-right">+ Add Formula</button></a> --}}</div>
-            </br>
-<form>
-<div class="form-group row">
-	<label for="school" class="col-md-2 col-form-label text-md-right">School</label>
-    	<div class="col-md-8">
-		<select class="form-control" id="school" name="school">
-			<option value=""> </option>
-				@foreach($membership as $memberships)    
-			<option 
-                value="{{$memberships->members->id}}" 
-                data-price="{{$memberships->members->address}}" 
-                data-te="{{$memberships->te}}" 
-                data-atf="{{$memberships->atf}}" 
-                data-gtr="{{$memberships->gtr}}">
-                {{$memberships->members->school}}
-            </option>
-				@endforeach
-		</select>
-	</div>
+            <div class="card border-light mb-3 shadow">
+                <h4 class="card-header bg-white">Basic Education Membership{{-- <a href="#"><button type="button" class="btn btn-outline-success float-right">+ Add Formula</button></a> --}}</h4>
+{{--             <br> --}}
+{{-- <form>
+    <div class="form-group row">
+    <label for="school" class="col-md-2 col-form-label text-md-right">School</label>
+        <div class="col-md-8">
+        <select class="form-control selectpicker" id="school" name="school" data-live-search="true" data-style="btn-info" title="Select School...">
+            <option value=""> </option>
+                @foreach($members as $srebmem)
+            <option value="{{$srebmem->id}}">{{$srebmem->school}}</option>
+                @endforeach
+        </select>
+    </div>
 </div>
- 
-                        <div class="form-group row">
-                            <label for="address" class="col-md-2 col-form-label text-md-right">Address</label>
-
-                            <div class="col-md-8">
-                                <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" required>
-
-                                @error('address')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-
-
-
-                                                <div class="form-group row">
-                            <label for="formula" class="col-md-2 col-form-label text-md-right">Formula</label>
-
-                            <div class="col-md-8">
-                                <input id="formula" type="text" class="form-control @error('formula') is-invalid @enderror" name="formula" value="TOTAL BED ENROLMENT X ANNUAL TUITION FEE = GTR" required disabled>
-
-                                @error('formula')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-
+</form> --}}
 </br>
-    	<div class="col-md-10 offset-md-1">
-<table class="table">
-  <thead class="thead-dark">
+<div class="container" >
+<table id="example" class="display table table-hover table-sm" style="width:100%">
+  <thead>
     <tr>
-      <th scope="col" style="width: 35%;text-align: center">Total Enrolment</th>
-      <th scope="col" style="width: 35%;text-align: center">Annual Tuition Fee</th>
-      <th scope="col" style="width: 30%;text-align: center">Gross Tuition Revenue (GTR)*</th>
+      <th scope="col" >School</th>
+      @foreach($membershipids as $msi)
+        <th scope="col">{{$msi->variables->title}}</th>
+        @endforeach
+      <th scope="col" >Gross Tution Revenue</th>
+      <th scope="col" >Annual Membership Fee</th>
+      <th scope="col" >Status</th>
+      <th scope="col" >Edit</th>
     </tr>
   </thead>
   <tbody>
-{{--   @foreach($membership as $membershipx) --}}
+
+    @foreach($members as $srebmem)
+    @if($srebmem->membership->first())
     <tr>
-      <td>  
- <input id="totalEnrollment" name="totalEnrollment" type="number" step=".01" min="0" class="form-control form-control-lg" @error('totalEnrollment') is-invalid @enderror>
+        <td>{{$srebmem->school}} </td>
 
-                                @error('totalEnrollment')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-</td>
+@foreach($srebmem->membership as $ggg)
 
-      <td>  
-<input id="annualTuitionFee" name="annualTuitionFee" type="number" step=".01" min="0" class="form-control form-control-lg" @error('annualTuitionFee') is-invalid @enderror>
+        <td>{{$ggg->content}}</td>
+@endforeach
 
-                                @error('annualTuitionFee')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-</td>
+
+
+<td>{{$srebmem->compute->first()->gtr}}</td>
+<td>{{$srebmem->compute->first()->amf}}</td>
+
+
+
+
+              <td>
+@if ($srebmem->compute->first()->status == 'active')
+    <span class="badge badge-success">Active</span>
+@elseif ($srebmem->compute->first()->status == 'deactive')
+    <span class="badge badge-secondary">Deactive</span>
+@else
+    <span class="badge badge-danger">Error</span>
+@endif
+{{-- <span class="badge badge-success">Error</span> --}}
+      </td>
       <td>
-<input id="grossTuitionRevenue" name="grossTuitionRevenue" type="number" step=".01" min="0" class="form-control form-control-lg @error('grossTuitionRevenue') is-invalid @enderror" disabled>
-
-                                @error('grossTuitionRevenue')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+<a href="{{route('bedenrollment.edit',['id'=>$srebmem->membership->first()->member_id])}}"><button type="button" class="btn btn-outline-primary float-left">Edit</button></a>
       </td>
     </tr>
-{{--     @endforeach --}}
+    @endif
+    @endforeach
+
+
+
   </tbody>
 </table>
+  </br>
 </div>
+<script>
+  
+// $(document).ready(function() {
+//     $('#example').DataTable({
+//         responsive: true,
+//         lengthChange: false,
+//         paging: false,
+//         "order": [[ 1, "asc" ]],
+//       });
+// } );
 
-</form>
+$(document).ready(function() {
+var table = $('#example').DataTable( {
+        responsive: true,
+        lengthChange: false,
+                paging: false,
+                info: false,
+        "order": [[ 0, "asc" ]],
+        buttons: {
+        buttons: [ 
+{ extend: 'print',
+ text: 'Print All Basic Education Membership Fees',
+exportOptions:{ columns: [0,1,2,3,4,]},
+title: 'PHILIPPINE ACCREDITING ASSOCIATION OF SCHOOLS, COLLEGES AND UNIVERSITIES (PAASCU)',
+messageTop: 'BASIC EDUCATION MEMBERSHIP FEES',
+}, 
+],
+
+    dom: {
+      button: {
+        tag: "button",
+        className: "btn btn-outline-success",
+      },
+      buttonLiner: {
+        tag: null
+      }
+    }
+}
+
+    }
+
+
+     );
+ 
+    table.buttons().container()
+        .appendTo( '#example_wrapper .col-md-6:eq(0)' );
+} );
+
+</script>
+
             </div>
         </div>
     </div>
 </div>
 <script>
 
-$(function () {
-
-    $('#school').change(function() {
-        $var = $(this).find(':selected').data('price');
-        $('#address').val($var);
-        $te = $(this).find(':selected').data('te');
-        $('#totalEnrollment').val( $te);
-        $atf = $(this).find(':selected').data('atf');
-        $('#annualTuitionFee').val( $atf);
-        $gtr = $(this).find(':selected').data('gtr');
-        $('#grossTuitionRevenue').val( $gtr);   
-    })
-})
 </script>
 @endsection
+

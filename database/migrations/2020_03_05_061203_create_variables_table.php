@@ -17,6 +17,7 @@ class CreateVariablesTable extends Migration
             $table->bigIncrements('id');
             $table->string('code');
             $table->string('title');
+            $table->decimal('def_val', 13, 2)->default(0.00);
             $table->string('ed_type');
             $table->timestamps();
         });

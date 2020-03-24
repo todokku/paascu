@@ -9,6 +9,7 @@
                               </br>
 
 <div class="container">  
+
 <table id="example" class="display table table-hover" style="width:100%">
         <thead>
             <tr>
@@ -23,8 +24,6 @@
         </thead>
  <tbody>
   @foreach($members as $member)
-{{--     <tr>
-      <th scope="row">{{$member->school}}</th> --}}
 @foreach($member->programs as $xmember)
 <tr>
   <td>@if ($loop->first)
@@ -67,11 +66,11 @@
 $(document).ready(function() {
     $('#example').DataTable({
         responsive: true,
-        columnDefs: [
-          { targets: [2,3,4,5,6],
-            searchable: false
-          },
-    ]
+    //     columnDefs: [
+    //       { targets: [2,3,4,5,6],
+    //         searchable: false
+    //       },
+    // ]
       });
 } );
 

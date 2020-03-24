@@ -14,25 +14,35 @@ use App\Programs;
 use App\Membership;
 use App\Compute;
 use App\ScheduleMembership;
+use App\AccreditedCollegeProgram;
 
-class HsEnrollController extends Controller
+class ColsemEnrollController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $members = Members::select('id','school')->whereHas('programs', function ($query) {
-        $query->whereIn('program', ['High School']);
-        })->get();
+    public function index(Request $request)
+    {   $id = $request->input('colsemid');
+ 
+        $members = Members::find($id);
+        // foreach ($members->programs as $qwe) {
+        // echo $qwe->program;
+        // }
 
-        $formula = Formula::where('formula_id','High School')->first();
-        $gspieces = explode(" ", $formula->formula);
-        $variabled = Variable::whereIn('code',$gspieces)->where('ed_type', 'High School')->get();
-        // return view('admin.membershipenroll.gs.index')->with('members',$members)->with('formula',$formula)->with('gspieces',$gspieces)->with('variabled',$variabled);
-        return view('admin.membershipenroll.hs.index')->with('members',$members)->with('formula',$formula)->with('gspieces',$gspieces)->with('variabled',$variabled);
+
+        // $members = Members::select('id','school')->whereHas('programs', function ($query) {
+        // $query->whereIn('ed_level', ['College']);
+        // })->get();
+
+        $acp = AccreditedCollegeProgram::all();
+
+        $formula = Formula::where('formula_id','College Semester')->first();
+        $colsempieces = explode(" ", $formula->formula);
+        $variabled = Variable::whereIn('code',$colsempieces)->where('ed_type', 'College Semester')->get();
+
+        return view('admin.membershipenroll.colsem.index')->with('members',$members)->with('formula',$formula)->with('colsempieces',$colsempieces)->with('variabled',$variabled)->with('acp',$acp);
     }
 
     /**
@@ -53,22 +63,22 @@ class HsEnrollController extends Controller
      */
     public function store(Request $request)
     {
-        $formula = Formula::where('formula_id','High School')->first();
-        $hspieces = explode(" ", $formula->formula);
-        $variabled = Variable::whereIn('code',$hspieces)->where('ed_type', 'High School')->get();
+       $formula = Formula::where('formula_id','College Semester')->first();
+        $colsempieces = explode(" ", $formula->formula);
+        $variabled = Variable::whereIn('code',$colsempieces)->where('ed_type', 'College Semester')->get();
 
         $formulareplaced = $formula->formula; //$formula->formula = ( gs_total_enrollment * gs_annual_tuition_fee )
         $amfs;
         foreach ($variabled as $delbairav){
-        $hsm = new Membership();
-        $hsm->member_id = $request->input('hsmember');
-        $hsm->formula_id = "High School";
+        $colsem = new Membership();
+        $colsem->member_id = $request->input('colsemmember');
+        $colsem->formula_id = "College Semester";
 
         // $gsm->fee_id = $request->input('gsmember');
 
-        $hsm->variable_id = $request->input("vari-".$delbairav->id);
-        $hsm->content = $request->input($delbairav->code);
-        $hsm->save();
+        $colsem->variable_id = $request->input("vari-".$delbairav->id);
+        $colsem->content = $request->input($delbairav->code);
+        $colsem->save();
         }
 
         //replaceing form input into given formula;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -88,17 +98,17 @@ class HsEnrollController extends Controller
         }
         // saving to compute~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-        $hsmcompute = new Compute();
-        $hsmcompute->member_id = $request->input('hsmember');
+        $colsemmcompute = new Compute();
+        $colsemmcompute->member_id = $request->input('colsemmember');
 
         // $gsmcompute->fee_id = $request->input('gsmember');
 
-        $hsmcompute->gtr = $computedgtr;
-        $hsmcompute->amf = $amfs;
-        $hsmcompute->save();
+        $colsemmcompute->gtr = $computedgtr;
+        $colsemmcompute->amf = $amfs;
+        $colsemmcompute->save();
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        $request->session()->flash('success', 'High School Membership has been Added');
-        return redirect()->route('hsenrollment.index');
+        $request->session()->flash('success', 'College Semester Membership has been Added');
+        return redirect()->route('colsemenrollment.index');
     }
 
     /**
