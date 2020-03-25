@@ -5,8 +5,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">{{$formula->formula_id}} Edit Formula</div>
+            <div class="card border-light mb-3 shadow">
+                <h4 class="card-header bg-white">{{$formula->formula_id}} Edit Formula</h4>
 
                 <div class="card-body">
 
@@ -99,8 +99,8 @@
 
 
  <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">Insert New Variable</div>
+            <div class="card border-light mb-3 shadow">
+                <h4 class="card-header bg-white">Insert New Variable</h4>
 
                 <div class="card-body">
 
@@ -140,7 +140,7 @@
 
                   @csrf
                   
-                  <button type="submit" class="btn btn-success float-right">Create</button>
+                  <button type="submit" class="btn btn-outline-success float-right">Create</button>
                 </form>
 
 

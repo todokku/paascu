@@ -103,7 +103,17 @@ $thedifference2 = array_diff($exvari,$newarra); //true old < NEW
 if(!empty($thedifference)){
     //delete begins here
 Membership::whereIn('variable_id', $thedifference)->where('formula_id', $request->input('ed_type'))->delete();
+// need to get the contents from each ed_type
 
+//then calculate and this below
+
+// $stru = Membership::where('formula_id', $request->input('ed_type'))->get();
+//     foreach($stru as $urts){ 
+// DB::table('computes')->updateOrInsert(
+//         ['gtr' => 'john@example.com', 'name' => 'John'],
+//         ['amf' => '2']
+//     )->where('member_id', $urts->member_id);
+// }
 }elseif(!empty($thedifference2)){
 $membershipids = Membership::select('member_id')->groupBy('member_id')->where('formula_id', $request->input('ed_type'))->get();
 foreach($membershipids as $msi1){ 

@@ -22,7 +22,7 @@
   <tbody>
   @foreach($members as $member)
     <tr>
-      <th scope="row">{{$member->school}}</th>
+      <th scope="row"><img width="30px" height="30px" src="{!! asset('images/' . $member->image) !!}">&nbsp;&nbsp;&nbsp;{{$member->school}}</th>
       <td>{{$member->address}}</td>
       <td>
 @if ($member->status == 'active')
@@ -33,7 +33,7 @@
     <span class="badge badge-danger">Error</span>
 @endif
       </td>
-      <td>
+{{--       <td>
         @can('admin-user')
         <a href="{{route('admin.members.edit',['id'=>$member->id])}}"><button type="button" class="btn btn-outline-primary float-left">Edit</button></a>
         @endcan
@@ -44,10 +44,15 @@
 &nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-outline-danger">Delete</button>
 </form>
         @endcan
-        
+      </td> --}}
+  <td>
+    
+
+<div class="btn-group"><a href="{{route('admin.members.edit',['id'=>$member->id])}}"><button style="margin-right: 5px;" type="button" class="btn btn-outline-primary float-right">Edit</button></a><a href="{{route('admin.members.destroy',['id'=>$member->id])}}"><button  type="button" class="btn btn-outline-danger float-right">Delete</button></a></div>
 
 
-      </td>
+    
+  </td>
     </tr>
     @endforeach
 

@@ -55,7 +55,8 @@ class MembersController extends Controller
         // $member->level = $request->input('level');
         // $member->valid = $request->input('valid');
         $member->status = 'active';
-
+        $member->image = $imageName = time().'.'.request()->image->getClientOriginalExtension();
+        request()->image->move(public_path('images'), $imageName);
         if($member->save()){
 
         $request->session()->flash('success', 'Member has been Added');
@@ -122,6 +123,11 @@ class MembersController extends Controller
         // $member->level = $request->input('level');
         // $member->valid = $request->input('valid');
         $member->status = $request->input('status');
+            if ($request->hasFile('image')) {
+        $member->image = $imageName = time().'.'.request()->image->getClientOriginalExtension();
+        request()->image->move(public_path('images'), $imageName);
+        }
+
 
         if($member->save()){
 
@@ -142,6 +148,10 @@ class MembersController extends Controller
     public function destroy(Request $request,$id)
     {
         $member = Members::find($id);
+        $path = public_path()."/images/".$member->image;
+            if(file_exists($path) && strcmp($member->image, "default.png") !== 0 ){
+        @unlink($path);
+    }
         if($member->delete()){
         $request->session()->flash('error', 'Member has been deleted!');
         }

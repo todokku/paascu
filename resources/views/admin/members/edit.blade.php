@@ -10,7 +10,7 @@
                 <div class="card-body">
 
 
-                <form action="{{ route('admin.members.update')}}" method="POST">
+                <form action="{{ route('admin.members.update')}}" method="POST" enctype="multipart/form-data">
 <div class="form-group row">
         <input type="hidden" name="id" value = "{{$member->id}}">
  </div>
@@ -59,6 +59,23 @@
                                 @enderror
                             </div>
                         </div>
+
+                                                <div class="form-group row">
+                            <label for="image" class="col-md-2 col-form-label text-md-right">Member Logo</label>
+
+                            <div class="col-md-10">
+                                                        <img src="{!! asset('images/' . $member->image) !!}">
+                                <input id="image" type="file" class="form-control @error('address') is-invalid @enderror" name="image" autofocus>
+
+                                @error('address')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+
 
 {{--                         <div class="form-group row">
                             <label for="program" class="col-md-2 col-form-label text-md-right">Program</label>

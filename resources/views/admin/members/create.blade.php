@@ -9,7 +9,7 @@
 
                 <div class="card-body">
 
-                <form action="{{ route('admin.members.store')}}" method="POST">
+                <form action="{{ route('admin.members.store')}}" method="POST" enctype="multipart/form-data">
                   @csrf
                         <div class="form-group row">
                             <label for="school" class="col-md-2 col-form-label text-md-right">School</label>
@@ -32,6 +32,20 @@
 
                             <div class="col-md-10">
                                 <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="" required autofocus>
+
+                                @error('address')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="image" class="col-md-2 col-form-label text-md-right">Member Logo</label>
+
+                            <div class="col-md-10">
+                                <input id="image" type="file" class="form-control @error('address') is-invalid @enderror" name="image"  required autofocus>
 
                                 @error('address')
                                     <span class="invalid-feedback" role="alert">

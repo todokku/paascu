@@ -4,10 +4,10 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="card">
+            <div class="card border-light mb-3 shadow">
 
-                <div class="card-header">Membership Fee Formula Management
-                </div>
+                <h4 class="card-header bg-white">Membership Fee Formula Management
+                </h4>
 
 @foreach($formula as $alumrof)
 <form id="updateformula" name="updateformula" action="{{ url('admin/membershipformula/'.$alumrof->id.'/edit/'.$alumrof->formula_id.'')}}">
