@@ -27,11 +27,11 @@
 @foreach($member->programs as $xmember)
 <tr>
   <td>@if ($loop->first)
-{{$xmember->members->school}}
+<img width="30px" height="30px" src="{!! asset('images/' . $member->image) !!}">&nbsp;&nbsp;&nbsp;{{$xmember->members->school}}
 @else
-{{$xmember->members->school}}
+<img width="30px" height="30px" src="{!! asset('images/' . $member->image) !!}">&nbsp;&nbsp;&nbsp;{{$xmember->members->school}}
 @endif</td>
-        <td>{{$xmember->program}}</td>
+        <th scope="row">{{$xmember->program}}</th>
       <td>{{$xmember->level}}</td>
       <td>
         @if ($xmember->ed_level == null)

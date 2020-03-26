@@ -108,7 +108,7 @@ class ColsemEnrollController extends Controller
         $colsemmcompute->save();
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         $request->session()->flash('success', 'College Semester Membership has been Added');
-        return redirect()->route('colsemenrollment.index');
+        return redirect()->route('colenrollment.index');
     }
 
     /**

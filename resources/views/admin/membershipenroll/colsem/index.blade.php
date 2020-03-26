@@ -32,12 +32,12 @@
 <form id="formCOLSEM" name="formCOLSEM" action="{{ route('colsemenrollment.store')}}" method="POST">
 @csrf
 
-<input type="hidden" id="colsemmember" name="colsemmember">
+<input type="hidden" id="colsemmember" name="colsemmember" value="{{$members->id}}">
 
 <div class="form-group row">
     <label for="acp" class="col-md-2 col-form-label text-md-right">Accredited College Programs</label>
         <div class="col-md-8">
-        <select class="form-control selectpicker" id="school" name="acp" multiple data-live-search="true" data-style="btn-info" title="Please Select ...">
+        <select class="form-control selectpicker" id="acp" name="acp" multiple data-live-search="true" data-style="btn-info" title="Please Select ...">
             <option value=""> </option>
       @foreach($acp as $pca)
             <option>{{$pca->program}}</option>
@@ -139,9 +139,8 @@ second sem
 </div>
 @endforeach
 
-
 <div class="col-md-8 offset-sm-2">
-  <button id="submitCOLSEM" name="submitCOLSEM" type="button" class="btn btn-primary btn-block">Submit</button>
+  <button id="submitCOLSEM" name="submitCOLSEM" type="submit" class="btn btn-primary btn-block">Submit</button>
 </div>
 </form>
             <br>

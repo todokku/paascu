@@ -91,6 +91,11 @@
                     <li>
                                 <a href="{{ route('bedmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  Basic Education Membership Fee</a>
                     </li>
+                    <li>
+                                <a href="{{ route('colsemmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  College Semester Membership Fee</a>
+                    </li>
+
+                    
 {{--                     <li>
                                 <a href="{{ route('hsmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  HS Membership Fee</a>
                     </li>

@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
 
-        <div class="col-md-10">
+        <div class="col-md-11">
             <div class="card border-light mb-3 shadow">
                 <h4 class="card-header bg-white">{{ __('Login') }}</h4>
                 <div class="card-body">
@@ -15,7 +15,7 @@
     <div class="col-sm-5">
 
             <center><img src="{{ asset('img/paascu.png') }}"></center></br>
-            <center><h3>Paascu Accounting System</h3></center>
+            <center><h3>PAASCU Accounting System</h3></center>
     </div>
     <div class="col-sm-7">
 

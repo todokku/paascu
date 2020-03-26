@@ -94,6 +94,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:admi
 //bed enroll
  	Route::get('/bedenrollment','MembershipEnrollment\BedEnrollController@index')->name('bedenrollment.index');
  	Route::post('/bedenrollment','MembershipEnrollment\BedEnrollController@store')->name('bedenrollment.store');
+
  //col enroll
  	Route::get('/colenrollment','MembershipEnrollment\ColEnrollController@index')->name('colenrollment.index');
  	// Route::post('/colenrollment','MembershipEnrollment\ColEnrollController@store')->name('colenrollment.store');
@@ -106,22 +107,27 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:admi
 //THIS IS THE MAANGE GS 
  	Route::resource('/gsmembership','Memberships\GsMembershipController', ['except' =>['show', 'create', 'store']]);
 	Route::get('/gsmembership','Memberships\GsMembershipController@index')->name('gsmembership.index');
-	Route::get('/gsmembership/getformula','Memberships\GsMembershipController@formulagroup')->name('gsmembership.getformula');
+	// Route::get('/gsmembership/getformula','Memberships\GsMembershipController@formulagroup')->name('gsmembership.getformula');
  	Route::get('/gsenrollment/{id}/edit','Memberships\GsMembershipController@edit')->name('gsenrollment.edit');
  	Route::post('/gsenrollment/update','Memberships\GsMembershipController@update')->name('gsenrollment.update');
 
 //THIS IS THE MAANGE HS 
  	Route::resource('/hsmembership','Memberships\HsMembershipController', ['except' =>['show', 'create', 'store']]);
 	Route::get('/hsmembership','Memberships\HsMembershipController@index')->name('hsmembership.index');
-	Route::get('/hsmembership/getformula','Memberships\HsMembershipController@formulagroup')->name('hsmembership.getformula');
+	// Route::get('/hsmembership/getformula','Memberships\HsMembershipController@formulagroup')->name('hsmembership.getformula');
  	Route::get('/hsenrollment/{id}/edit','Memberships\HsMembershipController@edit')->name('hsenrollment.edit');
  	Route::post('/hsenrollment/update','Memberships\HsMembershipController@update')->name('hsenrollment.update');
 
 //THIS IS THE MAANGE BED 
  	Route::resource('/bedmembership','Memberships\BedMembershipController', ['except' =>['show', 'create', 'store']]);
 	Route::get('/bedmembership','Memberships\BedMembershipController@index')->name('bedmembership.index');
-	Route::get('/bedmembership/getformula','Memberships\BedMembershipController@formulagroup')->name('bedmembership.getformula');
+	// Route::get('/bedmembership/getformula','Memberships\BedMembershipController@formulagroup')->name('bedmembership.getformula');
  	Route::get('/bedenrollment/{id}/edit','Memberships\BedMembershipController@edit')->name('bedenrollment.edit');
  	Route::post('/bedenrollment/update','Memberships\BedMembershipController@update')->name('bedenrollment.update');
 
- 
+//THIS IS THE MAANGE COL SEM
+ 	Route::resource('/colsemmembership','Memberships\ColsemMembershipController', ['except' =>['show', 'create', 'store']]);
+	Route::get('/colsemmembership','Memberships\ColsemMembershipController@index')->name('colsemmembership.index');
+	// Route::get('/bedmembership/getformula','Memberships\BedMembershipController@formulagroup')->name('bedmembership.getformula');
+ 	Route::get('/colsemenrollment/{id}/edit','Memberships\ColsemMembershipController@edit')->name('colsemenrollment.edit');
+ 	Route::post('/colsemenrollment/update','Memberships\ColsemMembershipController@update')->name('colsemenrollment.update');
