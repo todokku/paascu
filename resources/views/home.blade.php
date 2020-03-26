@@ -18,14 +18,14 @@
     <h1 class="display-5">Welcome, {{Auth::user()->name}} </h1>
 {{--     <p class="lead">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p> --}}
 
-        <div id="chart_div" style="width: 100%; height: 500px;"></div>
+{{--         <div id="chart_div" style="width: 100%; height: 500px;"></div> --}}
   </div>
 
                 </div>
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+{{--     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
@@ -67,5 +67,5 @@
 
 });
       }
-    </script>
+    </script> --}}
 @endsection
