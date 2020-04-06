@@ -8,7 +8,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card border-light mb-3 shadow">
-                <h4 class="card-header bg-white">Enroll College Membership (Semester)</h4>
+                <h4 class="card-header bg-white">Enroll College Membership (Trimester)</h4>
             <br>
 <form>
 {{-- <div class="form-group row">
@@ -29,10 +29,10 @@
 
 
 
-<form id="formCOLSEM" name="formCOLSEM" action="{{ route('colsemenrollment.store')}}" method="POST">
+<form id="formCOLTRI" name="formCOLTRI" action="{{ route('coltrienrollment.store')}}" method="POST">
 @csrf
 
-<input type="hidden" id="colsemmember" name="colsemmember" value="{{$members->id}}">
+<input type="hidden" id="coltrimember" name="coltrimember" value="{{$members->id}}">
 
 <div class="form-group row">
     <label for="acp" class="col-md-2 col-form-label text-md-right">Accredited College Programs</label>
@@ -50,9 +50,10 @@
 <table id="example" class="display table table-hover table-sm" style="width:100%">
         <thead>
             <tr>
-      <th style="width: 40%;">Program</th>
-      <th style="width: 25%;">1st Semester</th>
-      <th style="width: 25%;">2nd Semester</th>
+      <th style="width: 30%;">Program</th>
+      <th style="width: 23.33%;">1st Trimester</th>
+      <th style="width: 23.33%;">2nd Trimester</th>
+      <th style="width: 23.33%;">3rd Trimester</th>
 {{--       <th style="width: 10%;">Total</th> --}}
             </tr>
         </thead>
@@ -62,6 +63,7 @@
                 <td>{{$rebmem->program}}</td>
                 <td><input id="{{"f".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("f".$rebmem->id) is-invalid @enderror" name="price" required></td>
                 <td><input id="{{"s".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("s".$rebmem->id) is-invalid @enderror" name="price" required></td>
+                <td><input id="{{"t".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("t".$rebmem->id) is-invalid @enderror" name="price" required></td>
 {{--                 <td><input id="{{"s".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("s".$rebmem->id) is-invalid @enderror" name="tprice" required></td> --}}
 
             </tr>
@@ -140,7 +142,7 @@ second sem
 @endforeach
 
 <div class="col-md-8 offset-sm-2">
-  <button id="submitCOLSEM" name="submitCOLSEM" type="submit" class="btn btn-primary btn-block">Submit</button>
+  <button id="submitCOLTRI" name="submitCOLTRI" type="submit" class="btn btn-primary btn-block">Submit</button>
 </div>
 </form>
             <br>
@@ -154,7 +156,7 @@ second sem
 $(document).ready(function() {
     console.log('ready');
     $("#school").change(function() {
-        $('#colsemmember').val($('#school').val());
+        $('#coltrimember').val($('#school').val());
     });
 //  val = 0;
 // $( "#submitCOLSEM" ).click(function() {
@@ -173,17 +175,17 @@ $(document).ready(function() {
  
 
 
-$('form#formCOLSEM :input[name=price]').change(function(){
+$('form#formCOLTRI :input[name=price]').change(function(){
 var input = 0.00;
 //  console.log(val);
-$("form#formCOLSEM :input[name=price]").each(function(){
+$("form#formCOLTRI :input[name=price]").each(function(){
 
  input = Number($(this).val()) + input; // This is the jquery object of the input, do what you will
 
  console.log(input);
 });
 
-$("#col_sem_total_enrollment").val(input.toFixed(2));
+$("#col_tri_total_enrollment").val(input.toFixed(2));
 });
 
 // $('.fprice').blur(function () {

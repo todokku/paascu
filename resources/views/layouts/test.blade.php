@@ -31,7 +31,7 @@
 
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading"><img src="{{ asset('img/paasculogo.png') }}"> Paascu Accouting System</div>
+      <div class="sidebar-heading"><img src="{{ asset('img/paasculogo.png') }}"> Paascu Accounting System</div>
       <div class="list-group list-group-flush">
         <a href="{{ route('home') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/home.png') }}">  Dashboard</a>
 
@@ -61,6 +61,9 @@
 
                     <li>
                                 <a href="{{ route('colenrollment.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/enroll.png') }}">  College Membership Fee</a>
+                    </li>
+                    <li>
+                                <a href="{{ route('gedenrollment.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/enroll.png') }}">  Graduate Education Membership Fee</a>
                     </li>
 {{--                     <li>
                                 <a href="{{ route('hsmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  HS Membership Fee</a>
@@ -94,7 +97,15 @@
                     <li>
                                 <a href="{{ route('colsemmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  College Semester Membership Fee</a>
                     </li>
-
+                    <li>
+                                <a href="{{ route('coltrimembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  College Trimester Membership Fee</a>
+                    </li>
+                    <li>
+                                <a href="{{ route('gedsemmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  Graduate Education Semester Membership Fee</a>
+                    </li>
+                    <li>
+                                <a href="{{ route('gedtrimembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  Graduate Education Trimester Membership Fee</a>
+                    </li>
                     
 {{--                     <li>
                                 <a href="{{ route('hsmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  HS Membership Fee</a>
@@ -112,7 +123,7 @@
 
         <a href="{{ route('admin.membershipformula.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/formula.png') }}">  Manage Membership Formulas</a>
 
-
+        <a href="#" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/billing.png') }}">  Manage Billing</a>
 
 
 {{--         <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown list-group-item list-group-item-action bg-light"><img src="{{ asset('img/formula.png') }}">  Manage Membership Formula <img src="{{ asset('img/arrowdown.png') }}" class="float-right"></a>

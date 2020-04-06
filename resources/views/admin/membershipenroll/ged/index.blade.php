@@ -8,7 +8,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card border-light mb-3 shadow">
-                <h4 class="card-header bg-white">Enroll College Membership</h4>
+                <h4 class="card-header bg-white">Enroll Graduate Education Membership</h4>
             <br>
 <form>
 <div class="form-group row">
@@ -28,13 +28,13 @@
                 <div class="col-md-6 offset-sm-2">
 <div class=" custom-control custom-radio custom-control-inline">
 
-  <input type="radio" id="colsemester" name="status" class="custom-control-input" value="Semester">
+  <input type="radio" id="gedsemester" name="status" class="custom-control-input" value="Semester">
 
-  <label class=" custom-control-label" for="colsemester">Semester</label>
+  <label class=" custom-control-label" for="gedsemester">Semester</label>
 </div>
 <div class="custom-control custom-radio custom-control-inline">
-  <input type="radio" id="coltrimester" name="status" class="custom-control-input" value="Trimester">
-  <label class="custom-control-label" for="coltrimester">Trimester</label>
+  <input type="radio" id="gedtrimester" name="status" class="custom-control-input" value="Trimester">
+  <label class="custom-control-label" for="gedtrimester">Trimester</label>
 </div>
 </div>
 </div>
@@ -42,15 +42,15 @@
 </form>
 
 <div class="col-md-8 offset-sm-2">
-<form style="display:none" id="formCOL" name="formCOL" action="{{ route('colsemenrollment.index')}}" method="POST">
-<input type="hidden" id="colsemid" name="colsemid">
+<form style="display:none" id="formGED" name="formGED" action="{{ route('gedsemenrollment.index')}}" method="POST">
+<input type="hidden" id="gedsemid" name="gedsemid">
 @csrf
-<button id="submitCOL" name="submitCOL" type="submit" class="btn btn-primary btn-block">Submit</button>
+<button id="submitGED" name="submitGED" type="submit" class="btn btn-primary btn-block">Submit</button>
 
 </form>
 {{-- make as tri --}}
-<form style="display:none" id="formTRI" name="formTRI" action="{{ route('coltrienrollment.index')}}" method="POST">
-<input type="hidden" id="coltriid" name="coltriid">
+<form style="display:none" id="formTRI" name="formTRI" action="{{ route('gedtrienrollment.index')}}" method="POST">
+<input type="hidden" id="gedtriid" name="gedtriid">
 @csrf
 <button id="submitTRI" name="submitTRI" type="submit" class="btn btn-primary btn-block">Submit</button>
 </form>
@@ -67,37 +67,37 @@
 <script>
 $(document).ready(function() {
 //this checks if anything selected and shows the submit
-    if($('#colsemester').prop("checked")) {
+    if($('#gedsemester').prop("checked")) {
         $("#formTRI").hide();
-        $("#formCOL").show(); 
+        $("#formGED").show(); 
     }
-    if($('#coltrimester').prop("checked")) {
-        $("#formCOL").hide();
+    if($('#gedtrimester').prop("checked")) {
+        $("#formGED").hide();
         $("#formTRI").show();
     }
 //sending ids based on selection of school
     console.log('ready');
     $("#school").change(function() {
-        $('#colsemid').val($('#school').val());
-        $('#coltriid').val($('#school').val());
+        $('#gedsemid').val($('#school').val());
+        $('#gedtriid').val($('#school').val());
     });
 //radio button on change
-$('#colsemester, #coltrimester').change(function(){
+$('#gedsemester, #gedtrimester').change(function(){
     switch($(this).val()) {
     case 'Semester':
     $("#formTRI").hide();
-    $("#formCOL").show();
+    $("#formGED").show();
 
 
     break;
     case 'Trimester':
-    $("#formCOL").hide();
+    $("#formGED").hide();
     $("#formTRI").show();
 
 
     break;
     default:
-        $("#formCOL").hide();
+        $("#formGED").hide();
         $("#formTRI").hide();
       alert("error");
   }  

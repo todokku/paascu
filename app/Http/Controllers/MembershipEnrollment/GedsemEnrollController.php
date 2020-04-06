@@ -14,9 +14,9 @@ use App\Programs;
 use App\Membership;
 use App\Compute;
 use App\ScheduleMembership;
-use App\AccreditedCollegeProgram;
+use App\AccreditedGraduateProgram;
 
-class ColsemEnrollController extends Controller
+class GedsemEnrollController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,25 +24,29 @@ class ColsemEnrollController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
-    {   $id = $request->input('colsemid');
- 
+    {
+        $id = $request->input('gedsemid');
         $members = Members::find($id);
-        // foreach ($members->programs as $qwe) {
-        // echo $qwe->program;
-        // }
-        $programs = Programs::where('member_id', $id)->whereIn('ed_level', ['College'])->get();
 
-        // $members = Members::select('id','school')->whereHas('programs', function ($query) {
-        // $query->whereIn('ed_level', ['College']);
+        // $pros = Programs::whereIn('ed_level', ['Graduate Education'])->get();
+
+        // $members = Members::find($id)->whereHas('programs', function ($query) {
+        // $query->whereIn('ed_level', ['Graduate Education']);
         // })->get();
 
-        $acp = AccreditedCollegeProgram::all();
+        $programs = Programs::where('member_id', $id)->whereIn('ed_level', ['Graduate Education'])->get();
+        // $progamu = DB::table('pwbs')->whereIn('code',  $codeArray)->where('project_id', $id)
 
-        $formula = Formula::where('formula_id','College Semester')->first();
-        $colsempieces = explode(" ", $formula->formula);
-        $variabled = Variable::whereIn('code',$colsempieces)->where('ed_type', 'College Semester')->get();
+        $acp = AccreditedGraduateProgram::all();
+        $formula = Formula::where('formula_id','Graduate Education Semester')->first();
+        $gedsempieces = explode(" ", $formula->formula);
+        $variabled = Variable::whereIn('code',$gedsempieces)->where('ed_type', 'Graduate Education Semester')->get();
+        return view('admin.membershipenroll.gedsem.index')->with('members',$members)->with('formula',$formula)->with('gedsempieces',$gedsempieces)->with('variabled',$variabled)->with('acp',$acp)->with('programs',$programs);
 
-        return view('admin.membershipenroll.colsem.index')->with('members',$members)->with('formula',$formula)->with('colsempieces',$colsempieces)->with('variabled',$variabled)->with('acp',$acp)->with('programs',$programs);
+// foreach ($progamu as $cpa) {
+// echo $cpa->program;
+// }
+        // dd($progamu);
     }
 
     /**
@@ -63,22 +67,22 @@ class ColsemEnrollController extends Controller
      */
     public function store(Request $request)
     {
-       $formula = Formula::where('formula_id','College Semester')->first();
-        $colsempieces = explode(" ", $formula->formula);
-        $variabled = Variable::whereIn('code',$colsempieces)->where('ed_type', 'College Semester')->get();
+       $formula = Formula::where('formula_id','Graduate Education Semester')->first();
+        $gedsempieces = explode(" ", $formula->formula);
+        $variabled = Variable::whereIn('code',$gedsempieces)->where('ed_type', 'Graduate Education Semester')->get();
 
         $formulareplaced = $formula->formula; //$formula->formula = ( gs_total_enrollment * gs_annual_tuition_fee )
         $amfs;
         foreach ($variabled as $delbairav){
-        $colsem = new Membership();
-        $colsem->member_id = $request->input('colsemmember');
-        $colsem->formula_id = "College Semester";
+        $gedsem = new Membership();
+        $gedsem->member_id = $request->input('gedsemmember');
+        $gedsem->formula_id = "Graduate Education Semester";
 
         // $gsm->fee_id = $request->input('gsmember');
 
-        $colsem->variable_id = $request->input("vari-".$delbairav->id);
-        $colsem->content = $request->input($delbairav->code);
-        $colsem->save();
+        $gedsem->variable_id = $request->input("vari-".$delbairav->id);
+        $gedsem->content = $request->input($delbairav->code);
+        $gedsem->save();
         }
 
         //replaceing form input into given formula;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -98,17 +102,17 @@ class ColsemEnrollController extends Controller
         }
         // saving to compute~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-        $colsemmcompute = new Compute();
-        $colsemmcompute->member_id = $request->input('colsemmember');
+        $gedsemmcompute = new Compute();
+        $gedsemmcompute->member_id = $request->input('gedsemmember');
 
         // $gsmcompute->fee_id = $request->input('gsmember');
 
-        $colsemmcompute->gtr = $computedgtr;
-        $colsemmcompute->amf = $amfs;
-        $colsemmcompute->save();
+        $gedsemmcompute->gtr = $computedgtr;
+        $gedsemmcompute->amf = $amfs;
+        $gedsemmcompute->save();
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        $request->session()->flash('success', 'College Semester Membership has been Added');
-        return redirect()->route('colenrollment.index');
+        $request->session()->flash('success', 'Graduate Education Semester Membership has been Added');
+        return redirect()->route('gedenrollment.index');
     }
 
     /**

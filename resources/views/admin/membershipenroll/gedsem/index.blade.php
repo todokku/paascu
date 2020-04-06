@@ -8,20 +8,20 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card border-light mb-3 shadow">
-                <h4 class="card-header bg-white">Enroll College Membership (Semester)</h4>
+                <h4 class="card-header bg-white">Enroll Graduate Education Membership (Semester)</h4>
             <br>
 <form>
 {{-- <div class="form-group row">
-	<label for="school" class="col-md-2 col-form-label text-md-right">School</label>
-    	<div class="col-md-8">
-		<select class="form-control selectpicker" id="school" name="school" data-live-search="true" data-style="btn-info" title="Select School...">
-			<option value=""> </option>
-				@foreach($members as $srebmem)
-			<option value="{{$srebmem->id}}" >{{$srebmem->school}}</option>
+    <label for="school" class="col-md-2 col-form-label text-md-right">School</label>
+        <div class="col-md-8">
+        <select class="form-control selectpicker" id="school" name="school" data-live-search="true" data-style="btn-info" title="Select School...">
+            <option value=""> </option>
+                @foreach($members as $srebmem)
+            <option value="{{$srebmem->id}}" >{{$srebmem->school}}</option>
 
-				@endforeach
-		</select>
-	</div>
+                @endforeach
+        </select>
+    </div>
 </div> --}}
 
 </form>
@@ -29,13 +29,13 @@
 
 
 
-<form id="formCOLSEM" name="formCOLSEM" action="{{ route('colsemenrollment.store')}}" method="POST">
+<form id="formGEDSEM" name="formGEDSEM" action="{{ route('gedsemenrollment.store')}}" method="POST">
 @csrf
 
-<input type="hidden" id="colsemmember" name="colsemmember" value="{{$members->id}}">
+<input type="hidden" id="gedsemmember" name="gedsemmember" value="{{$members->id}}">
 
 <div class="form-group row">
-    <label for="acp" class="col-md-2 col-form-label text-md-right">Accredited College Programs</label>
+    <label for="acp" class="col-md-2 col-form-label text-md-right">Accredited Graduate Education Programs</label>
         <div class="col-md-8">
         <select class="form-control selectpicker" id="acp" name="acp" multiple data-live-search="true" data-style="btn-info" title="Please Select ...">
             <option value=""> </option>
@@ -140,7 +140,7 @@ second sem
 @endforeach
 
 <div class="col-md-8 offset-sm-2">
-  <button id="submitCOLSEM" name="submitCOLSEM" type="submit" class="btn btn-primary btn-block">Submit</button>
+  <button id="submitGEDSEM" name="submitGEDSEM" type="submit" class="btn btn-primary btn-block">Submit</button>
 </div>
 </form>
             <br>
@@ -154,7 +154,7 @@ second sem
 $(document).ready(function() {
     console.log('ready');
     $("#school").change(function() {
-        $('#colsemmember').val($('#school').val());
+        $('#gedsemmember').val($('#school').val());
     });
 //  val = 0;
 // $( "#submitCOLSEM" ).click(function() {
@@ -173,17 +173,17 @@ $(document).ready(function() {
  
 
 
-$('form#formCOLSEM :input[name=price]').change(function(){
+$('form#formGEDSEM :input[name=price]').change(function(){
 var input = 0.00;
 //  console.log(val);
-$("form#formCOLSEM :input[name=price]").each(function(){
+$("form#formGEDSEM :input[name=price]").each(function(){
 
  input = Number($(this).val()) + input; // This is the jquery object of the input, do what you will
 
  console.log(input);
 });
 
-$("#col_sem_total_enrollment").val(input.toFixed(2));
+$("#ged_sem_total_enrollment").val(input.toFixed(2));
 });
 
 // $('.fprice').blur(function () {

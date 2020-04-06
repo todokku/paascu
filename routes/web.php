@@ -102,6 +102,23 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:admi
  //col sem enroll
  	Route::post('/colsemenrollment/','MembershipEnrollment\ColsemEnrollController@index')->name('colsemenrollment.index');
  	Route::post('/colsemenrollment/submit','MembershipEnrollment\ColsemEnrollController@store')->name('colsemenrollment.store');
+ //col tri enroll
+ 	Route::post('/coltrienrollment/','MembershipEnrollment\ColtriEnrollController@index')->name('coltrienrollment.index');
+ 	Route::post('/coltrienrollment/submit','MembershipEnrollment\ColtriEnrollController@store')->name('coltrienrollment.store');
+
+
+
+ //ged enroll
+ 	Route::get('/gedenrollment','MembershipEnrollment\GedEnrollController@index')->name('gedenrollment.index');
+ 	// Route::post('/colenrollment','MembershipEnrollment\ColEnrollController@store')->name('colenrollment.store');
+ 	// Route::get('/colenrollment/semester/{id}','Memberships\ColEnrollController@semester')->name('colenrollment.semester');
+ //ged sem enroll
+ 	Route::post('/gedsemenrollment/','MembershipEnrollment\GedsemEnrollController@index')->name('gedsemenrollment.index');
+ 	Route::post('/gedsemenrollment/submit','MembershipEnrollment\GedsemEnrollController@store')->name('gedsemenrollment.store');
+ //ged tri enroll
+ 	Route::post('/gedtrienrollment/','MembershipEnrollment\GedtriEnrollController@index')->name('gedtrienrollment.index');
+ 	Route::post('/gedtrienrollment/submit','MembershipEnrollment\GedtriEnrollController@store')->name('gedtrienrollment.store');
+
 
 
 //THIS IS THE MAANGE GS 
@@ -131,3 +148,27 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:admi
 	// Route::get('/bedmembership/getformula','Memberships\BedMembershipController@formulagroup')->name('bedmembership.getformula');
  	Route::get('/colsemenrollment/{id}/edit','Memberships\ColsemMembershipController@edit')->name('colsemenrollment.edit');
  	Route::post('/colsemenrollment/update','Memberships\ColsemMembershipController@update')->name('colsemenrollment.update');
+
+//THIS IS THE MAANGE COL TRI
+ 	Route::resource('/coltrimembership','Memberships\ColtriMembershipController', ['except' =>['show', 'create', 'store']]);
+	Route::get('/coltrimembership','Memberships\ColtriMembershipController@index')->name('coltrimembership.index');
+	// Route::get('/bedmembership/getformula','Memberships\BedMembershipController@formulagroup')->name('bedmembership.getformula');
+ 	Route::get('/coltrienrollment/{id}/edit','Memberships\ColtriMembershipController@edit')->name('coltrienrollment.edit');
+ 	Route::post('/coltrienrollment/update','Memberships\ColtriMembershipController@update')->name('coltrienrollment.update');
+
+
+
+
+//THIS IS THE MAANGE GED SEM
+ 	Route::resource('/gedsemmembership','Memberships\GedsemMembershipController', ['except' =>['show', 'create', 'store']]);
+	Route::get('/gedsemmembership','Memberships\GedsemMembershipController@index')->name('gedsemmembership.index');
+	// Route::get('/bedmembership/getformula','Memberships\BedMembershipController@formulagroup')->name('bedmembership.getformula');
+ 	Route::get('/gedsemenrollment/{id}/edit','Memberships\GedsemMembershipController@edit')->name('gedsemenrollment.edit');
+ 	Route::post('/gedsemenrollment/update','Memberships\GedsemMembershipController@update')->name('gedsemenrollment.update');
+
+//THIS IS THE MAANGE GED TRI
+ 	Route::resource('/gedtrimembership','Memberships\GedtriMembershipController', ['except' =>['show', 'create', 'store']]);
+	Route::get('/gedtrimembership','Memberships\GedtriMembershipController@index')->name('gedtrimembership.index');
+	// Route::get('/bedmembership/getformula','Memberships\BedMembershipController@formulagroup')->name('bedmembership.getformula');
+ 	Route::get('/gedtrienrollment/{id}/edit','Memberships\GedtriMembershipController@edit')->name('gedtrienrollment.edit');
+ 	Route::post('/gedtrienrollment/update','Memberships\GedtriMembershipController@update')->name('gedtrienrollment.update');

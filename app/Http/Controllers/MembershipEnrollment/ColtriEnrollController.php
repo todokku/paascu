@@ -16,7 +16,7 @@ use App\Compute;
 use App\ScheduleMembership;
 use App\AccreditedCollegeProgram;
 
-class ColsemEnrollController extends Controller
+class ColtriEnrollController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +24,8 @@ class ColsemEnrollController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
-    {   $id = $request->input('colsemid');
+    {
+        $id = $request->input('coltriid');
  
         $members = Members::find($id);
         // foreach ($members->programs as $qwe) {
@@ -38,11 +39,11 @@ class ColsemEnrollController extends Controller
 
         $acp = AccreditedCollegeProgram::all();
 
-        $formula = Formula::where('formula_id','College Semester')->first();
-        $colsempieces = explode(" ", $formula->formula);
-        $variabled = Variable::whereIn('code',$colsempieces)->where('ed_type', 'College Semester')->get();
+        $formula = Formula::where('formula_id','College Trimester')->first();
+        $coltripieces = explode(" ", $formula->formula);
+        $variabled = Variable::whereIn('code',$coltripieces)->where('ed_type', 'College Trimester')->get();
 
-        return view('admin.membershipenroll.colsem.index')->with('members',$members)->with('formula',$formula)->with('colsempieces',$colsempieces)->with('variabled',$variabled)->with('acp',$acp)->with('programs',$programs);
+        return view('admin.membershipenroll.coltri.index')->with('members',$members)->with('formula',$formula)->with('coltripieces',$coltripieces)->with('variabled',$variabled)->with('acp',$acp)->with('programs',$programs);
     }
 
     /**
@@ -52,7 +53,7 @@ class ColsemEnrollController extends Controller
      */
     public function create()
     {
-        //
+//
     }
 
     /**
@@ -63,22 +64,22 @@ class ColsemEnrollController extends Controller
      */
     public function store(Request $request)
     {
-       $formula = Formula::where('formula_id','College Semester')->first();
-        $colsempieces = explode(" ", $formula->formula);
-        $variabled = Variable::whereIn('code',$colsempieces)->where('ed_type', 'College Semester')->get();
+       $formula = Formula::where('formula_id','College Trimester')->first();
+        $coltripieces = explode(" ", $formula->formula);
+        $variabled = Variable::whereIn('code',$coltripieces)->where('ed_type', 'College Trimester')->get();
 
         $formulareplaced = $formula->formula; //$formula->formula = ( gs_total_enrollment * gs_annual_tuition_fee )
         $amfs;
         foreach ($variabled as $delbairav){
-        $colsem = new Membership();
-        $colsem->member_id = $request->input('colsemmember');
-        $colsem->formula_id = "College Semester";
+        $coltri = new Membership();
+        $coltri->member_id = $request->input('coltrimember');
+        $coltri->formula_id = "College Trimester";
 
         // $gsm->fee_id = $request->input('gsmember');
 
-        $colsem->variable_id = $request->input("vari-".$delbairav->id);
-        $colsem->content = $request->input($delbairav->code);
-        $colsem->save();
+        $coltri->variable_id = $request->input("vari-".$delbairav->id);
+        $coltri->content = $request->input($delbairav->code);
+        $coltri->save();
         }
 
         //replaceing form input into given formula;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -98,16 +99,16 @@ class ColsemEnrollController extends Controller
         }
         // saving to compute~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-        $colsemmcompute = new Compute();
-        $colsemmcompute->member_id = $request->input('colsemmember');
+        $coltrimcompute = new Compute();
+        $coltrimcompute->member_id = $request->input('coltrimember');
 
         // $gsmcompute->fee_id = $request->input('gsmember');
 
-        $colsemmcompute->gtr = $computedgtr;
-        $colsemmcompute->amf = $amfs;
-        $colsemmcompute->save();
+        $coltrimcompute->gtr = $computedgtr;
+        $coltrimcompute->amf = $amfs;
+        $coltrimcompute->save();
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        $request->session()->flash('success', 'College Semester Membership has been Added');
+        $request->session()->flash('success', 'College Trimester Membership has been Added');
         return redirect()->route('colenrollment.index');
     }
 
