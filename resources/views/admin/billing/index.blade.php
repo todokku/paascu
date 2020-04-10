@@ -43,7 +43,7 @@
     @foreach($compute as $etupmoc)
     <tr>
         <td>{{$etupmoc->members->school}} </td>
-                <td>{{$etupmoc->created_at->format('M.Y')}} </td>
+        <td>{{$etupmoc->created_at->format('M.Y')}} </td>
         <td>{{$etupmoc->formula_id}} </td>
       <td>
 <a  href="{{route('billing.pdf',['ids'=> $etupmoc->members->id, 'idc'=> $etupmoc->id, 'mscid' => $etupmoc->content_id ])}}" target="_blank" ><button style="margin-right: 5px;" type="button" class="btn btn-outline-primary float-left">Preview</button></a>

@@ -299,7 +299,7 @@ $membership = GsMembership::whereIn('member_id', [$ids])->where('content_id', $m
 
 
 
-      public function download_pdf($ids, $idc)
+      public function download_pdf($ids, $idc, $mscid)
   {
     $school = Members::find($ids);
     $schoolname = $school->school;
@@ -321,7 +321,9 @@ $membership = GsMembership::whereIn('member_id', [$ids])->where('content_id', $m
     foreach ($membershipvariables as $mv){
     $replacedformula =   str_replace($mv->code,$mv->title,$replacedformula);
     }
-
+//------------------------------------
+$membership = GsMembership::whereIn('member_id', [$ids])->where('content_id', $mscid)->get();
+//------------------------------------
     $data = [
         'id' => $compute->id,
         'date' => $date, 
@@ -329,7 +331,9 @@ $membership = GsMembership::whereIn('member_id', [$ids])->where('content_id', $m
         'address' => $address,
         'membership_type' => $compute->formula_id,
         'member' => $school,
-        'membertype' => $school->gsmembership,
+//------------------------------------
+        'membertype' => $membership,
+//------------------------------------
         'membershipids' => $membershipids,
         'gtr' => number_format($compute->gtr,2),
         'amf' => number_format($compute->amf,2),
