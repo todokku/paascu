@@ -35,7 +35,7 @@
 <input type="hidden" id="gedsemmember" name="gedsemmember" value="{{$members->id}}">
 
 <div class="form-group row">
-    <label for="acp" class="col-md-2 col-form-label text-md-right">Accredited Graduate Education Programs</label>
+    <label for="acp" class="col-md-2 col-form-label text-md-right">Accredited Graduate Programs</label>
         <div class="col-md-8">
         <select class="form-control selectpicker" id="acp" name="acp" multiple data-live-search="true" data-style="btn-info" title="Please Select ...">
             <option value=""> </option>
@@ -60,8 +60,8 @@
             @foreach($programs as $rebmem)
             <tr>
                 <td>{{$rebmem->program}}</td>
-                <td><input id="{{"f".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("f".$rebmem->id) is-invalid @enderror" name="price" required></td>
-                <td><input id="{{"s".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("s".$rebmem->id) is-invalid @enderror" name="price" required></td>
+                <td><input id="{{"f".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("f".$rebmem->id) is-invalid @enderror" name="price" ></td>
+                <td><input id="{{"s".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("s".$rebmem->id) is-invalid @enderror" name="price" ></td>
 {{--                 <td><input id="{{"s".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("s".$rebmem->id) is-invalid @enderror" name="tprice" required></td> --}}
 
             </tr>
@@ -216,9 +216,12 @@ $("#ged_sem_total_enrollment").val(input.toFixed(2));
 $(document).ready(function() {
     $('#example').DataTable({
         responsive: true,
-                        paging: false,
-                info: false,
-                bFilter: false,
+        paging: false,
+        info: false,
+        bFilter: false,
+        columnDefs: [
+            { orderable: false, targets: _all }
+        ],
       });
 } );
 });

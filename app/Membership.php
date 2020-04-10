@@ -32,6 +32,9 @@ class Membership extends Model
     public function colmembership(){
         return $this->hasMany('App\ColMembership', 'content_id');
     }
+    public function gedmembership(){
+        return $this->hasMany('App\GedMembership', 'content_id');
+    }
     public function compute(){
         return $this->hasOne('App\Compute', 'content_id');
     }

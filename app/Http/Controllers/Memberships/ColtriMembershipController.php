@@ -73,16 +73,17 @@ class ColtriMembershipController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id,$content)
     {
         $memid = $id;
+        $contid = $content;
         $school = Members::find($id);
-        $membership = ColMembership::whereIn('member_id', [$id])->get();
+        $membership = ColMembership::whereIn('member_id', [$id])->where('content_id', $content)->get();
 
-        $compute = Compute::where('member_id', $id)->first();
+        $compute = Compute::whereIn('member_id', [$id])->where('content_id', $content)->get();
 
         // dd($school);
-        return view('admin.membershipfee.coltri.edit')->with('membership', $membership)->with('compute',$compute)->with('school',$school)->with('memid',$memid);
+        return view('admin.membershipfee.coltri.edit')->with('membership', $membership)->with('compute',$compute[0])->with('school',$school)->with('memid',$memid)->with('contid',$contid);
     }
 
     /**
@@ -95,7 +96,7 @@ class ColtriMembershipController extends Controller
     public function update(Request $request)
     {
 //updating contents ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        $membership = ColMembership::whereIn('member_id', [$request->input('id')])->get();
+        $membership = ColMembership::whereIn('member_id', [$request->input('id')])->where('content_id', $request->input('cid'))->get();
         foreach($membership as $pihsrebmem){
         $coltriupdate = ColMembership::find($pihsrebmem->id);
         $coltriupdate->content = $request->input($pihsrebmem->id);
@@ -105,7 +106,7 @@ class ColtriMembershipController extends Controller
         //updating calculated values~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         $activestat = $request->input('status');
         $cformula = Formula::where('formula_id','College Trimester')->first();
-        $cmembership = ColMembership::whereIn('member_id', [$request->input('id')])->get();
+        $cmembership = ColMembership::whereIn('member_id', [$request->input('id')])->where('content_id', $request->input('cid'))->get();
 
         $formulareplaced = $cformula->formula;
         $amfs;
@@ -119,13 +120,22 @@ class ColtriMembershipController extends Controller
         //finding AMF via schedule start and end values ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
         $scheduled = ScheduleMembership::all();
-        foreach ($scheduled as $deludehcs){
+        $last_key = count($scheduled);
+        $i = 0;
+        foreach ($scheduled as $key=>$deludehcs){
+        if(++$i === $last_key){
+        if($deludehcs->gtrs <= $computedgtr){
+            $amfs = $deludehcs->amf;        
+        }
+        break;
+        }
+//-----------------------------------------------        
         if($deludehcs->gtrs <= $computedgtr && $deludehcs->gtre >= $computedgtr){
             $amfs = $deludehcs->amf;
         }
         }
         // saving to compute~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        $cCompute = Compute::where('member_id', $request->input('id'))->update(['status' => $activestat,'gtr' => $computedgtr,'amf' => $amfs]);
+        $cCompute = Compute::where('member_id', $request->input('id'))->where('content_id', $request->input('cid'))->update(['status' => $activestat,'gtr' => $computedgtr,'amf' => $amfs]);
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 

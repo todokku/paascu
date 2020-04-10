@@ -16,6 +16,7 @@ use App\Compute;
 use App\ScheduleMembership;
 use App\AccreditedGraduateProgram;
 
+use App\Membership;
 class GedsemEnrollController extends Controller
 {
     /**
@@ -63,6 +64,11 @@ class GedsemEnrollController extends Controller
      */
     public function store(Request $request)
     {
+        $meme = new Membership();
+        $meme->member_id = $request->input('gedsemmember');
+        $meme->save();
+        $memeid = $meme->id;
+
        $formula = Formula::where('formula_id','Graduate Education Semester')->first();
         $gedsempieces = explode(" ", $formula->formula);
         $variabled = Variable::whereIn('code',$gedsempieces)->where('ed_type', 'Graduate Education Semester')->get();
@@ -78,6 +84,7 @@ class GedsemEnrollController extends Controller
 
         $gedsem->variable_id = $request->input("vari-".$delbairav->id);
         $gedsem->content = $request->input($delbairav->code);
+        $gedsem->content_id = $memeid;
         $gedsem->save();
         }
 
@@ -91,7 +98,16 @@ class GedsemEnrollController extends Controller
         //finding AMF via schedule start and end values ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
         $scheduled = ScheduleMembership::all();
-        foreach ($scheduled as $deludehcs){
+        $last_key = count($scheduled);
+        $i = 0;
+        foreach ($scheduled as $key=>$deludehcs){
+        if(++$i === $last_key){
+        if($deludehcs->gtrs <= $computedgtr){
+            $amfs = $deludehcs->amf;        
+        }
+        break;
+        }
+//-----------------------------------------------        
         if($deludehcs->gtrs <= $computedgtr && $deludehcs->gtre >= $computedgtr){
             $amfs = $deludehcs->amf;
         }
@@ -106,6 +122,7 @@ class GedsemEnrollController extends Controller
         $gedsemmcompute->gtr = $computedgtr;
         $gedsemmcompute->amf = $amfs;
         $gedsemmcompute->formula_id = "Graduate Education Semester";
+        $gedsemmcompute->content_id = $memeid;
         $gedsemmcompute->save();
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         $request->session()->flash('success', 'Graduate Education Semester Membership has been Added');

@@ -18,4 +18,7 @@ class GedMembership extends Model
     public function members(){
     	return $this->belongsTo('App\Members', 'member_id');
     }
+    public function membership(){
+        return $this->belongsTo('App\Membership', 'content_id');
+    }
 }

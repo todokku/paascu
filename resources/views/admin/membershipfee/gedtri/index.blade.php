@@ -26,6 +26,7 @@
   <thead>
     <tr>
       <th scope="col" >School</th>
+            <th scope="col" >Date Enrolled</th>
       @foreach($membershipids as $msi)
         <th scope="col">{{$msi->variables->title}}</th>
         @endforeach
@@ -35,30 +36,27 @@
       <th scope="col" >Edit</th>
     </tr>
   </thead>
-  <tbody>
+<tbody>
 
     @foreach($members as $srebmem)
+{{--     @php $i=1; @endphp --}}
     @if($srebmem->gedmembership->first())
     <tr>
+@foreach($srebmem->membership as $ggg)
+
         <td>{{$srebmem->school}} </td>
-
-@foreach($srebmem->gedmembership as $ggg)
-
-        <td>{{number_format($ggg->content,2)}}</td>
+        <td>{{$ggg->compute->created_at->format('M.Y')}} </td>
+{{--                 <td>{{$i++}} </td> --}}
+@foreach($ggg->gedmembership as $ggx)
+        <td>{{number_format($ggx->content,2)}}</td> 
 @endforeach
-
-
-
-<td>{{number_format($srebmem->compute->first()->gtr,2)}}</td>
-<td>{{number_format($srebmem->compute->first()->amf,2)}}</td>
-
-
-
-
+<td>{{number_format($ggg->compute->gtr,2)}}</td>
+<td>{{number_format($ggg->compute->amf,2)}}</td>
+{{-- <td>{{number_format($ggg->compute->amf,2)}}</td> --}}
               <td>
-@if ($srebmem->compute->first()->status == 'active')
+@if ($ggg->compute->status == 'active')
     <span class="badge badge-success">Active</span>
-@elseif ($srebmem->compute->first()->status == 'deactive')
+@elseif ($ggg->compute->status == 'deactive')
     <span class="badge badge-secondary">Deactive</span>
 @else
     <span class="badge badge-danger">Error</span>
@@ -66,9 +64,10 @@
 {{-- <span class="badge badge-success">Error</span> --}}
       </td>
       <td>
-<a href="{{route('gedtrienrollment.edit',['id'=>$srebmem->gedmembership->first()->member_id])}}"><button type="button" class="btn btn-outline-primary float-left">Edit</button></a>
+<a href="{{route('gedtrienrollment.edit',['id'=>$srebmem->gedmembership->first()->member_id, 'content' => $ggg->gedmembership->first()->content_id])}}"><button type="button" class="btn btn-outline-primary float-left">Edit</button></a>
       </td>
     </tr>
+    @endforeach
     @endif
     @endforeach
 

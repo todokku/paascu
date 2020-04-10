@@ -194,6 +194,8 @@ $membership = BedMembership::whereIn('member_id', [$ids])->where('content_id', $
     foreach ($membershipvariables as $mv){
     $replacedformula =   str_replace($mv->code,$mv->title,$replacedformula);
     }
+
+    $membership = ColMembership::whereIn('member_id', [$ids])->where('content_id', $mscid)->get();
     $data = [
         'id' => $compute->id,
         'date' => $date, 
@@ -201,7 +203,7 @@ $membership = BedMembership::whereIn('member_id', [$ids])->where('content_id', $
         'address' => $address,
         'membership_type' => $compute->formula_id,
         'member' => $school,
-        'membertype' => $school->colmembership,
+        'membertype' => $membership,
         'membershipids' => $membershipids,
         'gtr' => number_format($compute->gtr,2),
         'amf' => number_format($compute->amf,2),
@@ -218,6 +220,8 @@ $membership = BedMembership::whereIn('member_id', [$ids])->where('content_id', $
     foreach ($membershipvariables as $mv){
     $replacedformula =   str_replace($mv->code,$mv->title,$replacedformula);
     }
+
+$membership = ColMembership::whereIn('member_id', [$ids])->where('content_id', $mscid)->get();
     $data = [
         'id' => $compute->id,
         'date' => $date, 
@@ -225,7 +229,7 @@ $membership = BedMembership::whereIn('member_id', [$ids])->where('content_id', $
         'address' => $address,
         'membership_type' => $compute->formula_id,
         'member' => $school,
-        'membertype' => $school->colmembership,
+        'membertype' => $membership,
         'membershipids' => $membershipids,
         'gtr' => number_format($compute->gtr,2),
         'amf' => number_format($compute->amf,2),
@@ -242,6 +246,8 @@ $membership = BedMembership::whereIn('member_id', [$ids])->where('content_id', $
     foreach ($membershipvariables as $mv){
     $replacedformula =   str_replace($mv->code,$mv->title,$replacedformula);
     }
+
+    $membership = GedMembership::whereIn('member_id', [$ids])->where('content_id', $mscid)->get();
     $data = [
         'id' => $compute->id,
         'date' => $date, 
@@ -249,7 +255,7 @@ $membership = BedMembership::whereIn('member_id', [$ids])->where('content_id', $
         'address' => $address,
         'membership_type' => $compute->formula_id,
         'member' => $school,
-        'membertype' => $school->gedmembership,
+        'membertype' => $membership,
         'membershipids' => $membershipids,
         'gtr' => number_format($compute->gtr,2),
         'amf' => number_format($compute->amf,2),
@@ -266,6 +272,8 @@ $membership = BedMembership::whereIn('member_id', [$ids])->where('content_id', $
     foreach ($membershipvariables as $mv){
     $replacedformula =   str_replace($mv->code,$mv->title,$replacedformula);
     }
+
+$membership = GedMembership::whereIn('member_id', [$ids])->where('content_id', $mscid)->get();
     $data = [
         'id' => $compute->id,
         'date' => $date, 
@@ -273,7 +281,7 @@ $membership = BedMembership::whereIn('member_id', [$ids])->where('content_id', $
         'address' => $address,
         'membership_type' => $compute->formula_id,
         'member' => $school,
-        'membertype' => $school->gedmembership,
+        'membertype' => $membership,
         'membershipids' => $membershipids,
         'gtr' => number_format($compute->gtr,2),
         'amf' => number_format($compute->amf,2),
@@ -406,6 +414,8 @@ $membership = BedMembership::whereIn('member_id', [$ids])->where('content_id', $
     foreach ($membershipvariables as $mv){
     $replacedformula =   str_replace($mv->code,$mv->title,$replacedformula);
     }
+
+    $membership = ColMembership::whereIn('member_id', [$ids])->where('content_id', $mscid)->get();
     $data = [
         'id' => $compute->id,
         'date' => $date, 
@@ -413,7 +423,7 @@ $membership = BedMembership::whereIn('member_id', [$ids])->where('content_id', $
         'address' => $address,
         'membership_type' => $compute->formula_id,
         'member' => $school,
-        'membertype' => $school->colmembership,
+        'membertype' => $membership,
         'membershipids' => $membershipids,
         'gtr' => number_format($compute->gtr,2),
         'amf' => number_format($compute->amf,2),
@@ -430,6 +440,8 @@ $membership = BedMembership::whereIn('member_id', [$ids])->where('content_id', $
     foreach ($membershipvariables as $mv){
     $replacedformula =   str_replace($mv->code,$mv->title,$replacedformula);
     }
+
+$membership = ColMembership::whereIn('member_id', [$ids])->where('content_id', $mscid)->get();
     $data = [
         'id' => $compute->id,
         'date' => $date, 
@@ -437,7 +449,7 @@ $membership = BedMembership::whereIn('member_id', [$ids])->where('content_id', $
         'address' => $address,
         'membership_type' => $compute->formula_id,
         'member' => $school,
-        'membertype' => $school->colmembership,
+        'membertype' => $membership,
         'membershipids' => $membershipids,
         'gtr' => number_format($compute->gtr,2),
         'amf' => number_format($compute->amf,2),
@@ -454,6 +466,8 @@ $membership = BedMembership::whereIn('member_id', [$ids])->where('content_id', $
     foreach ($membershipvariables as $mv){
     $replacedformula =   str_replace($mv->code,$mv->title,$replacedformula);
     }
+
+    $membership = GedMembership::whereIn('member_id', [$ids])->where('content_id', $mscid)->get();
     $data = [
         'id' => $compute->id,
         'date' => $date, 
@@ -461,7 +475,7 @@ $membership = BedMembership::whereIn('member_id', [$ids])->where('content_id', $
         'address' => $address,
         'membership_type' => $compute->formula_id,
         'member' => $school,
-        'membertype' => $school->gedmembership,
+        'membertype' => $membership,
         'membershipids' => $membershipids,
         'gtr' => number_format($compute->gtr,2),
         'amf' => number_format($compute->amf,2),
@@ -478,6 +492,8 @@ $membership = BedMembership::whereIn('member_id', [$ids])->where('content_id', $
     foreach ($membershipvariables as $mv){
     $replacedformula =   str_replace($mv->code,$mv->title,$replacedformula);
     }
+
+$membership = GedMembership::whereIn('member_id', [$ids])->where('content_id', $mscid)->get();
     $data = [
         'id' => $compute->id,
         'date' => $date, 
@@ -485,7 +501,7 @@ $membership = BedMembership::whereIn('member_id', [$ids])->where('content_id', $
         'address' => $address,
         'membership_type' => $compute->formula_id,
         'member' => $school,
-        'membertype' => $school->gedmembership,
+        'membertype' => $membership,
         'membershipids' => $membershipids,
         'gtr' => number_format($compute->gtr,2),
         'amf' => number_format($compute->amf,2),

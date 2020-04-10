@@ -61,9 +61,9 @@
             @foreach($programs as $rebmem)
             <tr>
                 <td>{{$rebmem->program}}</td>
-                <td><input id="{{"f".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("f".$rebmem->id) is-invalid @enderror" name="price" required></td>
-                <td><input id="{{"s".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("s".$rebmem->id) is-invalid @enderror" name="price" required></td>
-                <td><input id="{{"t".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("t".$rebmem->id) is-invalid @enderror" name="price" required></td>
+                <td><input id="{{"f".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("f".$rebmem->id) is-invalid @enderror" name="price" ></td>
+                <td><input id="{{"s".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("s".$rebmem->id) is-invalid @enderror" name="price" ></td>
+                <td><input id="{{"t".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("t".$rebmem->id) is-invalid @enderror" name="price" ></td>
 {{--                 <td><input id="{{"s".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("s".$rebmem->id) is-invalid @enderror" name="tprice" required></td> --}}
 
             </tr>
@@ -218,9 +218,13 @@ $("#ged_tri_total_enrollment").val(input.toFixed(2));
 $(document).ready(function() {
     $('#example').DataTable({
         responsive: true,
-                        paging: false,
-                info: false,
-                bFilter: false,
+        paging: false,
+        info: false,
+        bFilter: false,
+        columnDefs: 
+        [
+            { orderable: false, targets: _all }
+        ],
       });
 } );
 });

@@ -46,7 +46,7 @@
 {{--        --}}
         <td>{{$srebmem->school}} </td>
 {{--        --}}
-        <td>{{$srebmem->created_at->format('M.Y')}} </td>
+        <td>{{$ggg->compute->created_at->format('M.Y')}} </td>
 {{--                 <td>{{$i++}} </td> --}}
 @foreach($ggg->hsmembership as $ggx)
         <td>{{number_format($ggx->content,2)}}</td> 
