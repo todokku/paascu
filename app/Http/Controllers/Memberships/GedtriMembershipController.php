@@ -6,11 +6,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Members;
-use App\MembershipFormula;
 use DB;
 use App\ScheduleMembership;
 
-use App\Membership;
+use App\GedMembership;
 use App\Variable;
 use App\Compute;
 use App\Formula;
@@ -27,18 +26,15 @@ class GedtriMembershipController extends Controller
         $members = Members::select('id','school')->whereHas('programs', function ($query) {
         $query->whereIn('ed_level', ['Graduate Education']);
         })
-        ->whereHas('membership', function ($query) {
+        ->whereHas('gedmembership', function ($query) {
         $query->whereIn('formula_id', ['Graduate Education Trimester']);
         })
         ->get();
 
-        $membership = Membership::all();
-        $variable = Variable::all();
-        $membershipids = Membership::select('variable_id')->groupBy('variable_id')->where('formula_id', 'Graduate Education Trimester')
+        $membershipids = GedMembership::select('variable_id')->groupBy('variable_id')->where('formula_id', 'Graduate Education Trimester')
         ->get();
-        $compute = Compute::all();
 
-        return view('admin.membershipfee.gedtri.index')->with('members',$members)->with('membership',$membership)->with('membershipids',$membershipids)->with('compute', $compute);
+        return view('admin.membershipfee.gedtri.index')->with('members',$members)->with('membershipids',$membershipids);
     }
 
     /**
@@ -83,7 +79,7 @@ class GedtriMembershipController extends Controller
     {
         $memid = $id;
         $school = Members::find($id);
-        $membership = Membership::whereIn('member_id', [$id])->get();
+        $membership = GedMembership::whereIn('member_id', [$id])->get();
 
         $compute = Compute::where('member_id', $id)->first();
 
@@ -101,9 +97,9 @@ class GedtriMembershipController extends Controller
     public function update(Request $request)
     {
 //updating contents ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        $membership = Membership::whereIn('member_id', [$request->input('id')])->get();
+        $membership = GedMembership::whereIn('member_id', [$request->input('id')])->get();
         foreach($membership as $pihsrebmem){
-        $gedtriupdate = Membership::find($pihsrebmem->id);
+        $gedtriupdate = GedMembership::find($pihsrebmem->id);
         $gedtriupdate->content = $request->input($pihsrebmem->id);
         $gedtriupdate->save();
         }
@@ -111,7 +107,7 @@ class GedtriMembershipController extends Controller
         //updating calculated values~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         $activestat = $request->input('status');
         $cformula = Formula::where('formula_id','Graduate Education Trimester')->first();
-        $cmembership = Membership::whereIn('member_id', [$request->input('id')])->get();
+        $cmembership = GedMembership::whereIn('member_id', [$request->input('id')])->get();
 
         $formulareplaced = $cformula->formula;
         $amfs;

@@ -38,19 +38,19 @@
   <tbody>
 
     @foreach($members as $srebmem)
-    @if($srebmem->membership->first())
+    @if($srebmem->gedmembership->first())
     <tr>
         <td>{{$srebmem->school}} </td>
 
-@foreach($srebmem->membership as $ggg)
+@foreach($srebmem->gedmembership as $ggg)
 
-        <td>{{$ggg->content}}</td>
+        <td>{{number_format($ggg->content,2)}}</td>
 @endforeach
 
 
 
-<td>{{$srebmem->compute->first()->gtr}}</td>
-<td>{{$srebmem->compute->first()->amf}}</td>
+<td>{{number_format($srebmem->compute->first()->gtr,2)}}</td>
+<td>{{number_format($srebmem->compute->first()->amf,2)}}</td>
 
 
 
@@ -66,7 +66,7 @@
 {{-- <span class="badge badge-success">Error</span> --}}
       </td>
       <td>
-<a href="{{route('gedsemenrollment.edit',['id'=>$srebmem->membership->first()->member_id])}}"><button type="button" class="btn btn-outline-primary float-left">Edit</button></a>
+<a href="{{route('gedsemenrollment.edit',['id'=>$srebmem->gedmembership->first()->member_id])}}"><button type="button" class="btn btn-outline-primary float-left">Edit</button></a>
       </td>
     </tr>
     @endif

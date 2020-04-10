@@ -20,7 +20,13 @@ class CreateComputesTable extends Migration
 
             $table->decimal('gtr', 13, 2);
             $table->decimal('amf', 13, 2);
+            $table->string('formula_id');
+  
             $table->string('status')->default("active");
+//testing ------------------------------------------------------
+            $table->unsignedBigInteger('content_id');
+            $table->foreign('content_id')->references('id')->on('Memberships');
+//testing ------------------------------------------------------
             $table->timestamps();
         });
     }

@@ -25,7 +25,9 @@
 <table id="example" class="display table table-hover table-sm" style="width:100%">
   <thead>
     <tr>
+
       <th scope="col" >School</th>
+            <th scope="col" >Date Enrolled</th>
       @foreach($membershipids as $msi)
         <th scope="col">{{$msi->variables->title}}</th>
         @endforeach
@@ -38,27 +40,24 @@
   <tbody>
 
     @foreach($members as $srebmem)
-    @if($srebmem->membership->first())
+{{--     @php $i=1; @endphp --}}
+    @if($srebmem->gsmembership->first())
     <tr>
-        <td>{{$srebmem->school}} </td>
-
 @foreach($srebmem->membership as $ggg)
 
-        <td>{{$ggg->content}}</td>
+        <td>{{$srebmem->school}} </td>
+        <td>{{$srebmem->created_at->format('M.Y')}} </td>
+{{--                 <td>{{$i++}} </td> --}}
+@foreach($ggg->gsmembership as $ggx)
+        <td>{{number_format($ggx->content,2)}}</td> 
 @endforeach
-
-
-
-<td>{{$srebmem->compute->first()->gtr}}</td>
-<td>{{$srebmem->compute->first()->amf}}</td>
-
-
-
-
+<td>{{number_format($ggg->compute->gtr,2)}}</td>
+<td>{{number_format($ggg->compute->amf,2)}}</td>
+{{-- <td>{{number_format($ggg->compute->amf,2)}}</td> --}}
               <td>
-@if ($srebmem->compute->first()->status == 'active')
+@if ($ggg->compute->status == 'active')
     <span class="badge badge-success">Active</span>
-@elseif ($srebmem->compute->first()->status == 'deactive')
+@elseif ($ggg->compute->status == 'deactive')
     <span class="badge badge-secondary">Deactive</span>
 @else
     <span class="badge badge-danger">Error</span>
@@ -66,9 +65,10 @@
 {{-- <span class="badge badge-success">Error</span> --}}
       </td>
       <td>
-<a href="{{route('gsenrollment.edit',['id'=>$srebmem->membership->first()->member_id])}}"><button type="button" class="btn btn-outline-primary float-left">Edit</button></a>
+<a href="{{route('gsenrollment.edit',['id'=>$srebmem->gsmembership->first()->member_id, 'content' => $ggg->gsmembership->first()->content_id])}}"><button type="button" class="btn btn-outline-primary float-left">Edit</button></a>
       </td>
     </tr>
+    @endforeach
     @endif
     @endforeach
 

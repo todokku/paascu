@@ -2,17 +2,14 @@
 
 namespace App\Http\Controllers\Memberships;
 
-use App\GsMembership;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Members;
-use App\MembershipFormula;
-// use App\BedMembership;
 use DB;
 use App\ScheduleMembership;
 
-use App\Membership;
+use App\ColMembership;
 use App\Variable;
 use App\Compute;
 use App\Formula;
@@ -29,20 +26,15 @@ class ColsemMembershipController extends Controller
         $members = Members::select('id','school')->whereHas('programs', function ($query) {
         $query->whereIn('ed_level', ['College']);
         })
-        ->whereHas('membership', function ($query) {
+        ->whereHas('colmembership', function ($query) {
         $query->whereIn('formula_id', ['College Semester']);
         })
         ->get();
-
-        $membership = Membership::all();
-        $variable = Variable::all();
-        $membershipids = Membership::select('variable_id')->groupBy('variable_id')->where('formula_id', 'College Semester')
-        ->get();
-        $compute = Compute::all();
-
-        return view('admin.membershipfee.colsem.index')->with('members',$members)->with('membership',$membership)->with('membershipids',$membershipids)->with('compute', $compute);
-
-
+        
+        $membershipids = ColMembership::select('variable_id')->groupBy('variable_id')->where('formula_id', 'College Semester')
+        ->get($membershipids);
+        dd();
+        // return view('admin.membershipfee.colsem.index')->with('members',$members)->with('membershipids',$membershipids);
     }
 
     /**
@@ -87,7 +79,7 @@ class ColsemMembershipController extends Controller
     {
         $memid = $id;
         $school = Members::find($id);
-        $membership = Membership::whereIn('member_id', [$id])->get();
+        $membership = ColMembership::whereIn('member_id', [$id])->get();
 
         $compute = Compute::where('member_id', $id)->first();
 
@@ -105,9 +97,9 @@ class ColsemMembershipController extends Controller
     public function update(Request $request)
     {
         //updating contents ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        $membership = Membership::whereIn('member_id', [$request->input('id')])->get();
+        $membership = ColMembership::whereIn('member_id', [$request->input('id')])->get();
         foreach($membership as $pihsrebmem){
-        $colsemupdate = Membership::find($pihsrebmem->id);
+        $colsemupdate = ColMembership::find($pihsrebmem->id);
         $colsemupdate->content = $request->input($pihsrebmem->id);
         $colsemupdate->save();
         }
@@ -115,7 +107,7 @@ class ColsemMembershipController extends Controller
         //updating calculated values~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         $activestat = $request->input('status');
         $cformula = Formula::where('formula_id','College Semester')->first();
-        $cmembership = Membership::whereIn('member_id', [$request->input('id')])->get();
+        $cmembership = ColMembership::whereIn('member_id', [$request->input('id')])->get();
 
         $formulareplaced = $cformula->formula;
         $amfs;

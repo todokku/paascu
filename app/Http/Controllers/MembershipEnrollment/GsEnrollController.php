@@ -11,9 +11,11 @@ use App\Formula;
 use App\Variable;
 use App\Programs;
 
-use App\Membership;
+use App\GsMembership;
 use App\Compute;
 use App\ScheduleMembership;
+
+use App\Membership;
 class GsEnrollController extends Controller
 {
     /**
@@ -23,8 +25,8 @@ class GsEnrollController extends Controller
      */
     public function index()
     {   
-        $members = Members::select('id','school')->whereHas('programs', function ($query) {
-        $query->whereIn('program', ['Grade School']);
+        $members = Members::whereHas('programs', function ($query) {
+        $query->whereIn('ed_level', ['Grade School']);
         })->get();
 
         $formula = Formula::where('formula_id','Grade School')->first();
@@ -51,6 +53,12 @@ class GsEnrollController extends Controller
      */
     public function store(Request $request)
     {
+//testing ------------------------------------------------------
+        $meme = new Membership();
+        $meme->member_id = $request->input('gsmember');
+        $meme->save();
+        $memeid = $meme->id;
+//testing ------------------------------------------------------
         $formula = Formula::where('formula_id','Grade School')->first();
         $gspieces = explode(" ", $formula->formula);
         $variabled = Variable::whereIn('code',$gspieces)->where('ed_type', 'Grade School')->get();
@@ -58,7 +66,7 @@ class GsEnrollController extends Controller
         $formulareplaced = $formula->formula; //$formula->formula = ( gs_total_enrollment * gs_annual_tuition_fee )
         $amfs;
         foreach ($variabled as $delbairav){
-        $gsm = new Membership();
+        $gsm = new GsMembership();
         $gsm->member_id = $request->input('gsmember');
         $gsm->formula_id = "Grade School";
 
@@ -66,6 +74,9 @@ class GsEnrollController extends Controller
 
         $gsm->variable_id = $request->input("vari-".$delbairav->id);
         $gsm->content = $request->input($delbairav->code);
+//testing ------------------------------------------------------
+        $gsm->content_id = $memeid;
+//testing ------------------------------------------------------
         $gsm->save();
         }
 
@@ -93,6 +104,10 @@ class GsEnrollController extends Controller
 
         $gsmcompute->gtr = $computedgtr;
         $gsmcompute->amf = $amfs;
+        $gsmcompute->formula_id = "Grade School";
+//testing ------------------------------------------------------
+        $gsmcompute->content_id = $memeid;
+//testing ------------------------------------------------------
         $gsmcompute->save();
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         $request->session()->flash('success', 'Grade School Membership has been Added');

@@ -125,7 +125,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:admi
  	Route::resource('/gsmembership','Memberships\GsMembershipController', ['except' =>['show', 'create', 'store']]);
 	Route::get('/gsmembership','Memberships\GsMembershipController@index')->name('gsmembership.index');
 	// Route::get('/gsmembership/getformula','Memberships\GsMembershipController@formulagroup')->name('gsmembership.getformula');
- 	Route::get('/gsenrollment/{id}/edit','Memberships\GsMembershipController@edit')->name('gsenrollment.edit');
+ 	Route::get('/gsenrollment/{id}/{content}/edit','Memberships\GsMembershipController@edit')->name('gsenrollment.edit');
  	Route::post('/gsenrollment/update','Memberships\GsMembershipController@update')->name('gsenrollment.update');
 
 //THIS IS THE MAANGE HS 
@@ -172,3 +172,11 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:admi
 	// Route::get('/bedmembership/getformula','Memberships\BedMembershipController@formulagroup')->name('bedmembership.getformula');
  	Route::get('/gedtrienrollment/{id}/edit','Memberships\GedtriMembershipController@edit')->name('gedtrienrollment.edit');
  	Route::post('/gedtrienrollment/update','Memberships\GedtriMembershipController@update')->name('gedtrienrollment.update');
+
+//BILLING
+Route::resource('/billing','BillingController', ['except' =>['show', 'create', 'store']]);
+Route::get('/billing', 'BillingController@index')->name('billing.index');
+
+Route::get('/billing/{ids}/{idc}/{mscid}/pdf','BillingController@export_pdf')->name('billing.pdf');
+
+Route::get('/billing/{ids}/{idc}/{mscid}/pdf/download','BillingController@download_pdf')->name('download.pdf');

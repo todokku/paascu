@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGsMembershipsTable extends Migration
+class CreateGedMemberships extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,17 @@ class CreateGsMembershipsTable extends Migration
      */
     public function up()
     {
-        Schema::create('gs_memberships', function (Blueprint $table) {
+        Schema::create('ged_memberships', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('member_id');
             $table->foreign('member_id')->references('id')->on('Members');
-            // $table->decimal('te', 13, 2);
-            // $table->decimal('atf', 13, 2);
-            $table->string('title');
+
+            $table->string('formula_id');
+            $table->foreign('formula_id')->references('formula_id')->on('formulas');
+
+            $table->unsignedBigInteger('variable_id');
+            $table->foreign('variable_id')->references('id')->on('variables');
             $table->decimal('content', 13, 2);
-            $table->integer('position');
-            $table->decimal('gtr', 13, 2);
             $table->timestamps();
         });
     }
@@ -34,6 +35,6 @@ class CreateGsMembershipsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gs_memberships');
+        Schema::dropIfExists('ged_memberships');
     }
 }

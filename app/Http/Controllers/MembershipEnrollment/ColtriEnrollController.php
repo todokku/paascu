@@ -11,7 +11,7 @@ use App\Formula;
 use App\Variable;
 use App\Programs;
 
-use App\Membership;
+use App\ColMembership;
 use App\Compute;
 use App\ScheduleMembership;
 use App\AccreditedCollegeProgram;
@@ -28,14 +28,8 @@ class ColtriEnrollController extends Controller
         $id = $request->input('coltriid');
  
         $members = Members::find($id);
-        // foreach ($members->programs as $qwe) {
-        // echo $qwe->program;
-        // }
-        $programs = Programs::where('member_id', $id)->whereIn('ed_level', ['College'])->get();
 
-        // $members = Members::select('id','school')->whereHas('programs', function ($query) {
-        // $query->whereIn('ed_level', ['College']);
-        // })->get();
+        $programs = Programs::where('member_id', $id)->whereIn('ed_level', ['College'])->get();
 
         $acp = AccreditedCollegeProgram::all();
 
@@ -71,7 +65,7 @@ class ColtriEnrollController extends Controller
         $formulareplaced = $formula->formula; //$formula->formula = ( gs_total_enrollment * gs_annual_tuition_fee )
         $amfs;
         foreach ($variabled as $delbairav){
-        $coltri = new Membership();
+        $coltri = new ColMembership();
         $coltri->member_id = $request->input('coltrimember');
         $coltri->formula_id = "College Trimester";
 
@@ -106,6 +100,7 @@ class ColtriEnrollController extends Controller
 
         $coltrimcompute->gtr = $computedgtr;
         $coltrimcompute->amf = $amfs;
+        $coltrimcompute->formula_id = "College Trimester";
         $coltrimcompute->save();
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         $request->session()->flash('success', 'College Trimester Membership has been Added');

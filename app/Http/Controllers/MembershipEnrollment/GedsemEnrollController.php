@@ -11,7 +11,7 @@ use App\Formula;
 use App\Variable;
 use App\Programs;
 
-use App\Membership;
+use App\GedMembership;
 use App\Compute;
 use App\ScheduleMembership;
 use App\AccreditedGraduateProgram;
@@ -26,21 +26,17 @@ class GedsemEnrollController extends Controller
     public function index(Request $request)
     {
         $id = $request->input('gedsemid');
+        
         $members = Members::find($id);
 
-        // $pros = Programs::whereIn('ed_level', ['Graduate Education'])->get();
-
-        // $members = Members::find($id)->whereHas('programs', function ($query) {
-        // $query->whereIn('ed_level', ['Graduate Education']);
-        // })->get();
-
         $programs = Programs::where('member_id', $id)->whereIn('ed_level', ['Graduate Education'])->get();
-        // $progamu = DB::table('pwbs')->whereIn('code',  $codeArray)->where('project_id', $id)
 
         $acp = AccreditedGraduateProgram::all();
+
         $formula = Formula::where('formula_id','Graduate Education Semester')->first();
         $gedsempieces = explode(" ", $formula->formula);
         $variabled = Variable::whereIn('code',$gedsempieces)->where('ed_type', 'Graduate Education Semester')->get();
+
         return view('admin.membershipenroll.gedsem.index')->with('members',$members)->with('formula',$formula)->with('gedsempieces',$gedsempieces)->with('variabled',$variabled)->with('acp',$acp)->with('programs',$programs);
 
 // foreach ($progamu as $cpa) {
@@ -74,7 +70,7 @@ class GedsemEnrollController extends Controller
         $formulareplaced = $formula->formula; //$formula->formula = ( gs_total_enrollment * gs_annual_tuition_fee )
         $amfs;
         foreach ($variabled as $delbairav){
-        $gedsem = new Membership();
+        $gedsem = new GedMembership();
         $gedsem->member_id = $request->input('gedsemmember');
         $gedsem->formula_id = "Graduate Education Semester";
 
@@ -109,6 +105,7 @@ class GedsemEnrollController extends Controller
 
         $gedsemmcompute->gtr = $computedgtr;
         $gedsemmcompute->amf = $amfs;
+        $gedsemmcompute->formula_id = "Graduate Education Semester";
         $gedsemmcompute->save();
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         $request->session()->flash('success', 'Graduate Education Semester Membership has been Added');

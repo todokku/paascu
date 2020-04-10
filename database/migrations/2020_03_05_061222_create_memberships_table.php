@@ -18,12 +18,12 @@ class CreateMembershipsTable extends Migration
             $table->unsignedBigInteger('member_id');
             $table->foreign('member_id')->references('id')->on('Members');
 
-            $table->string('formula_id');
-            $table->foreign('formula_id')->references('formula_id')->on('formulas');
+            // $table->string('formula_id');
+            // $table->foreign('formula_id')->references('formula_id')->on('formulas');
 
-            $table->unsignedBigInteger('variable_id');
-            $table->foreign('variable_id')->references('id')->on('variables');
-            $table->decimal('content', 13, 2);
+            // $table->unsignedBigInteger('variable_id');
+            // $table->foreign('variable_id')->references('id')->on('variables');
+            // $table->decimal('content', 13, 2);
             $table->timestamps();
         });
     }

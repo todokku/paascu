@@ -11,7 +11,7 @@ use App\Formula;
 use App\Variable;
 use App\Programs;
 
-use App\Membership;
+use App\GedMembership;
 use App\Compute;
 use App\ScheduleMembership;
 use App\AccreditedGraduateProgram;
@@ -26,12 +26,17 @@ class GedtriEnrollController extends Controller
     public function index(Request $request)
     {
         $id = $request->input('gedtriid');
+
         $members = Members::find($id);
+
         $programs = Programs::where('member_id', $id)->whereIn('ed_level', ['Graduate Education'])->get();
+
         $acp = AccreditedGraduateProgram::all();
+
         $formula = Formula::where('formula_id','Graduate Education Trimester')->first();
         $gedtripieces = explode(" ", $formula->formula);
         $variabled = Variable::whereIn('code',$gedtripieces)->where('ed_type', 'Graduate Education Trimester')->get();
+
         return view('admin.membershipenroll.gedtri.index')->with('members',$members)->with('formula',$formula)->with('gedtripieces',$gedtripieces)->with('variabled',$variabled)->with('acp',$acp)->with('programs',$programs);
     }
 
@@ -60,7 +65,7 @@ class GedtriEnrollController extends Controller
         $formulareplaced = $formula->formula; //$formula->formula = ( gs_total_enrollment * gs_annual_tuition_fee )
         $amfs;
         foreach ($variabled as $delbairav){
-        $gedtri = new Membership();
+        $gedtri = new GedMembership();
         $gedtri->member_id = $request->input('gedtrimember');
         $gedtri->formula_id = "Graduate Education Trimester";
 
@@ -95,6 +100,7 @@ class GedtriEnrollController extends Controller
 
         $gedtrimcompute->gtr = $computedgtr;
         $gedtrimcompute->amf = $amfs;
+        $gedtrimcompute->formula_id = "Graduate Education Trimester";
         $gedtrimcompute->save();
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         $request->session()->flash('success', 'Graduate Education Trimester Membership has been Added');

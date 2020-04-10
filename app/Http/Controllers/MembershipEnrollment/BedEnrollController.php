@@ -12,7 +12,7 @@ use App\Formula;
 use App\Variable;
 use App\Programs;
 
-use App\Membership;
+use App\BedMembership;
 use App\Compute;
 use App\ScheduleMembership;
 class BedEnrollController extends Controller
@@ -24,15 +24,26 @@ class BedEnrollController extends Controller
      */
     public function index()
     {
-        $members = Members::select('id','school')->whereHas('programs', function ($query) {
-        $query->whereIn('program', ['Basic Education']);
+        $members = Members::whereHas('programs', function ($query) {
+        $query->whereIn('ed_level', ['Basic Education']);
         })->get();
 
         $formula = Formula::where('formula_id','Basic Education')->first();
-        $gspieces = explode(" ", $formula->formula);
-        $variabled = Variable::whereIn('code',$gspieces)->where('ed_type', 'Basic Education')->get();
-        // return view('admin.membershipenroll.gs.index')->with('members',$members)->with('formula',$formula)->with('gspieces',$gspieces)->with('variabled',$variabled);
-        return view('admin.membershipenroll.bed.index')->with('members',$members)->with('formula',$formula)->with('gspieces',$gspieces)->with('variabled',$variabled);
+        $bedpieces = explode(" ", $formula->formula);
+        $variabled = Variable::whereIn('code',$bedpieces)->where('ed_type', 'Basic Education')->get();
+        return view('admin.membershipenroll.bed.index')->with('members',$members)->with('formula',$formula)->with('bedpieces',$bedpieces)->with('variabled',$variabled);
+
+
+
+
+        // $members = Members::select('id','school')->whereHas('programs', function ($query) {
+        // $query->whereIn('program', ['Basic Education']);
+        // })->get();
+
+        // $formula = Formula::where('formula_id','Basic Education')->first();
+        // $gspieces = explode(" ", $formula->formula);
+        // $variabled = Variable::whereIn('code',$gspieces)->where('ed_type', 'Basic Education')->get();
+        // return view('admin.membershipenroll.bed.index')->with('members',$members)->with('formula',$formula)->with('gspieces',$gspieces)->with('variabled',$variabled);
     }
 
     /**
@@ -60,7 +71,7 @@ class BedEnrollController extends Controller
         $formulareplaced = $formula->formula; //$formula->formula = ( gs_total_enrollment * gs_annual_tuition_fee )
         $amfs;
         foreach ($variabled as $delbairav){
-        $bedm = new Membership();
+        $bedm = new BedMembership();
         $bedm->member_id = $request->input('bedmember');
         $bedm->formula_id = "Basic Education";
 
@@ -92,7 +103,7 @@ class BedEnrollController extends Controller
         $bedmcompute->member_id = $request->input('bedmember');
 
         // $gsmcompute->fee_id = $request->input('gsmember');
-
+        $bedmcompute->formula_id = "Basic Education";
         $bedmcompute->gtr = $computedgtr;
         $bedmcompute->amf = $amfs;
         $bedmcompute->save();

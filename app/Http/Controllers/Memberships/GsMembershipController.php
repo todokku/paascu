@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 
 use App\Members;
 use App\MembershipFormula;
-// use App\BedMembership;
 use DB;
 use App\ScheduleMembership;
 
@@ -25,28 +24,16 @@ class GsMembershipController extends Controller
      */
     public function index()
     {
-        // $formula = MembershipFormula::where('ed_type','Grade School')->first();
-        // $membership = GsMembership::select('id', 'member_id', 'title', 'content', 'position', 'gtr')->groupBy('member_id')->get();
-        // $pieces = explode(" ", $formula->variable); 
-        // $sm = ScheduleMembership::all();
-        // return view('admin.membershipfee.gs.index')->with('membership', $membership)->with('formula', $formula)->with('pieces', $pieces)->with( 'sm' , $sm );
-
-        $members = Members::select('id','school')->whereHas('programs', function ($query) {
-        $query->whereIn('program', ['Grade School']);
+        $members = Members::whereHas('programs', function ($query) {
+        $query->whereIn('ed_level', ['Grade School']);
         })
-        ->whereHas('membership', function ($query) {
+        ->whereHas('gsmembership', function ($query) {
         $query->whereIn('formula_id', ['Grade School']);
         })
         ->get();
 
-        $membership = Membership::all();
-        $variable = Variable::all();
-        $membershipids = Membership::select('variable_id')->groupBy('variable_id')->where('formula_id', 'Grade School')
-        ->get();
-        $compute = Compute::all();
-
-        // dd($membershipids);
-        return view('admin.membershipfee.gs.index')->with('members',$members)->with('membership',$membership)->with('membershipids',$membershipids)->with('compute', $compute);
+        $membershipids = GsMembership::select('variable_id')->groupBy('variable_id')->get();
+        return view('admin.membershipfee.gs.index')->with('members',$members)->with('membershipids',$membershipids);
     }
 
     /**
@@ -54,10 +41,10 @@ class GsMembershipController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    // public function create()
+    // {
 
-    }
+    // }
 
     /**
      * Store a newly created resource in storage.
@@ -65,10 +52,10 @@ class GsMembershipController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
+    // public function store(Request $request)
+    // {
+    //     //
+    // }
 
     /**
      * Display the specified resource.
@@ -87,15 +74,18 @@ class GsMembershipController extends Controller
      * @param  \App\Gshsmembership  $gshsmembership
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, $content)
     {   $memid = $id;
+        $contid = $content;
         $school = Members::find($id);
-        $membership = Membership::whereIn('member_id', [$id])->get();
 
-        $compute = Compute::where('member_id', $id)->first();
 
-        // dd($school);
-        return view('admin.membershipfee.gs.edit')->with('membership', $membership)->with('compute',$compute)->with('school',$school)->with('memid',$memid);
+        $membership = GsMembership::whereIn('member_id', [$id])->where('content_id', $content)->get();
+
+        $compute = Compute::whereIn('member_id', [$id])->where('content_id', $content)->get();
+
+        // echo($compute[0]);
+        return view('admin.membershipfee.gs.edit')->with('membership', $membership)->with('compute',$compute[0])->with('school',$school)->with('memid',$memid)->with('contid',$contid);
     }
 
     /**
@@ -106,11 +96,11 @@ class GsMembershipController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request)
-    {
+    {   
         //updating contents ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        $membership = Membership::whereIn('member_id', [$request->input('id')])->get();
+        $membership = GsMembership::whereIn('member_id', [$request->input('id')])->where('content_id', $request->input('cid'))->get();
         foreach($membership as $pihsrebmem){
-        $gsupdate = Membership::find($pihsrebmem->id);
+        $gsupdate = GsMembership::find($pihsrebmem->id);
         $gsupdate->content = $request->input($pihsrebmem->id);
         $gsupdate->save();
         }
@@ -118,7 +108,7 @@ class GsMembershipController extends Controller
         //updating calculated values~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         $activestat = $request->input('status');
         $cformula = Formula::where('formula_id','Grade School')->first();
-        $cmembership = Membership::whereIn('member_id', [$request->input('id')])->get();
+        $cmembership = GsMembership::whereIn('member_id', [$request->input('id')])->where('content_id', $request->input('cid'))->get();
 
         $formulareplaced = $cformula->formula;
         $amfs;
@@ -138,7 +128,7 @@ class GsMembershipController extends Controller
         }
         }
         // saving to compute~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        $cCompute = Compute::where('member_id', $request->input('id'))->update(['status' => $activestat,'gtr' => $computedgtr,'amf' => $amfs]);
+        $cCompute = Compute::whereIn('member_id', [$request->input('id')])->where('content_id', $request->input('cid'))->update(['status' => $activestat,'gtr' => $computedgtr,'amf' => $amfs]);
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -160,16 +150,16 @@ class GsMembershipController extends Controller
      * @param  \App\Gshsmembership  $gshsmembership
      * @return \Illuminate\Http\Response
      */
-    public function destroy(GsMembership $gsmembership)
-    {
-        //
-    }
+    // public function destroy(GsMembership $gsmembership)
+    // {
+    //     //
+    // }
 
-    public function formulagroup(Request $request)
-    {
-        $id= $request->id;
-        $data = DB::table('gs_memberships')->whereIn('member_id', [$id])->get();
-        echo json_encode($data);
+    // public function formulagroup(Request $request)
+    // {
+        // $id= $request->id;
+        // $data = DB::table('gs_memberships')->whereIn('member_id', [$id])->get();
+        // echo json_encode($data);
 
-    }
+    // }
 }

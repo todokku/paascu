@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHsMembershipsTable extends Migration
+class CreateHsMemberships extends Migration
 {
     /**
      * Run the migrations.
@@ -17,19 +17,14 @@ class CreateHsMembershipsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('member_id');
             $table->foreign('member_id')->references('id')->on('Members');
-            $table->decimal('te', 13, 2);
-            $table->decimal('atf', 13, 2);
-            $table->decimal('gtr', 13, 2);
-            $table->timestamps();
 
-            // $table->bigIncrements('id');
-            // $table->unsignedBigInteger('member_id');
-            // $table->foreign('member_id')->references('id')->on('Members');
-            // $table->string('title');
-            // $table->decimal('content', 13, 2);
-            // $table->integer('position');
-            // $table->decimal('gtr', 13, 2);
-            // $table->timestamps();
+            $table->string('formula_id');
+            $table->foreign('formula_id')->references('formula_id')->on('formulas');
+
+            $table->unsignedBigInteger('variable_id');
+            $table->foreign('variable_id')->references('id')->on('variables');
+            $table->decimal('content', 13, 2);
+            $table->timestamps();
         });
     }
 

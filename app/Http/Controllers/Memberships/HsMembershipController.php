@@ -25,23 +25,35 @@ class HsMembershipController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   //old
-
-        $members = Members::select('id','school')->whereHas('programs', function ($query) {
-        $query->whereIn('program', ['High School']);
+    {   
+        $members = Members::whereHas('programs', function ($query) {
+        $query->whereIn('ed_level', ['High School']);
         })
-        ->whereHas('membership', function ($query) {
+        ->whereHas('hsmembership', function ($query) {
         $query->whereIn('formula_id', ['High School']);
         })
         ->get();
 
-        $membership = Membership::all();
-        $variable = Variable::all();
-        $membershipids = Membership::select('variable_id')->groupBy('variable_id')->where('formula_id', 'High School')->with('variables')->get();
-        $compute = Compute::all();
+        $membershipids = HsMembership::select('variable_id')->groupBy('variable_id')->get();
+        return view('admin.membershipfee.hs.index')->with('members',$members)->with('membershipids',$membershipids);
 
-        // dd($membershipids);
-        return view('admin.membershipfee.hs.index')->with('members',$members)->with('membership',$membership)->with('membershipids',$membershipids)->with('compute', $compute);
+
+
+        // $members = Members::select('id','school')->whereHas('programs', function ($query) {
+        // $query->whereIn('program', ['High School']);
+        // })
+        // ->whereHas('membership', function ($query) {
+        // $query->whereIn('formula_id', ['High School']);
+        // })
+        // ->get();
+
+        // $membership = Membership::all();
+        // $variable = Variable::all();
+        // $membershipids = Membership::select('variable_id')->groupBy('variable_id')->where('formula_id', 'High School')->with('variables')->get();
+        // $compute = Compute::all();
+
+        // // dd($membershipids);
+        // return view('admin.membershipfee.hs.index')->with('members',$members)->with('membership',$membership)->with('membershipids',$membershipids)->with('compute', $compute);
     }
 
     /**
@@ -86,7 +98,7 @@ class HsMembershipController extends Controller
     {
         $memid = $id;
         $school = Members::find($id);
-        $membership = Membership::whereIn('member_id', [$id])->get();
+        $membership = HsMembership::whereIn('member_id', [$id])->get();
 
         $compute = Compute::where('member_id', $id)->first();
 
@@ -104,9 +116,9 @@ class HsMembershipController extends Controller
     public function update(Request $request)
     {
 //updating contents ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        $membership = Membership::whereIn('member_id', [$request->input('id')])->get();
+        $membership = HsMembership::whereIn('member_id', [$request->input('id')])->get();
         foreach($membership as $pihsrebmem){
-        $hsupdate = Membership::find($pihsrebmem->id);
+        $hsupdate = HsMembership::find($pihsrebmem->id);
         $hsupdate->content = $request->input($pihsrebmem->id);
         $hsupdate->save();
         }
@@ -114,7 +126,7 @@ class HsMembershipController extends Controller
         //updating calculated values~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         $activestat = $request->input('status');
         $cformula = Formula::where('formula_id','High School')->first();
-        $cmembership = Membership::whereIn('member_id', [$request->input('id')])->get();
+        $cmembership = HsMembership::whereIn('member_id', [$request->input('id')])->get();
 
         $formulareplaced = $cformula->formula;
         $amfs;

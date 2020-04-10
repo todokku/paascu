@@ -123,7 +123,7 @@
 
         <a href="{{ route('admin.membershipformula.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/formula.png') }}">  Manage Membership Formulas</a>
 
-        <a href="#" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/billing.png') }}">  Manage Billing</a>
+        <a href="{{ route('billing.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/billing.png') }}">  Manage Membership Billing</a>
 
 
 {{--         <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown list-group-item list-group-item-action bg-light"><img src="{{ asset('img/formula.png') }}">  Manage Membership Formula <img src="{{ asset('img/arrowdown.png') }}" class="float-right"></a>

@@ -6,13 +6,21 @@ use Illuminate\Database\Eloquent\Model;
 
 class GsMembership extends Model
 {
-	// protected $table = 'gs_memberships';
-    protected $fillable = [
-        'id', 'member_id', 'title', 'content', 'position', 'gtr'
+	protected $fillable = [
+        'id', 'member_id', 'formula_id', 'variable_id', 'content',
     ];
-
-        public function members(){
+    public function variables(){
+    	return $this->belongsTo('App\Variable', 'variable_id');
+    }
+    public function formula(){
+    	return $this->belongsTo('App\Formula', 'formula_id');
+    }
+    public function members(){
     	return $this->belongsTo('App\Members', 'member_id');
     }
-
+//testing ------------------------------------------------------
+    public function membership(){
+        return $this->belongsTo('App\Membership', 'content_id');
+    }
+//testing ------------------------------------------------------
 }
