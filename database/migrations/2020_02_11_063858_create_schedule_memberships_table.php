@@ -16,7 +16,7 @@ class CreateScheduleMembershipsTable extends Migration
         Schema::create('schedule_memberships', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('gtrs');
-            $table->bigInteger('gtre');
+            $table->bigInteger('gtre')->nullable();
             $table->float('amf');
             // $table->string('scu');
             $table->string('status');

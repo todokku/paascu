@@ -94,16 +94,18 @@ class HsMembershipController extends Controller
      * @param  \App\HsMembership  $hsMembership
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, $content)
     {
         $memid = $id;
+        $contid = $content;
         $school = Members::find($id);
-        $membership = HsMembership::whereIn('member_id', [$id])->get();
 
-        $compute = Compute::where('member_id', $id)->first();
+        $membership = HsMembership::whereIn('member_id', [$id])->where('content_id', $content)->get();
+
+        $compute = Compute::whereIn('member_id', [$id])->where('content_id', $content)->get();
 
         // dd($school);
-        return view('admin.membershipfee.hs.edit')->with('membership', $membership)->with('compute',$compute)->with('school',$school)->with('memid',$memid);
+        return view('admin.membershipfee.hs.edit')->with('membership', $membership)->with('compute',$compute[0])->with('school',$school)->with('memid',$memid)->with('contid',$contid);
     }
 
     /**
@@ -116,7 +118,7 @@ class HsMembershipController extends Controller
     public function update(Request $request)
     {
 //updating contents ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        $membership = HsMembership::whereIn('member_id', [$request->input('id')])->get();
+        $membership = HsMembership::whereIn('member_id', [$request->input('id')])->where('content_id', $request->input('cid'))->get();
         foreach($membership as $pihsrebmem){
         $hsupdate = HsMembership::find($pihsrebmem->id);
         $hsupdate->content = $request->input($pihsrebmem->id);
@@ -126,7 +128,7 @@ class HsMembershipController extends Controller
         //updating calculated values~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         $activestat = $request->input('status');
         $cformula = Formula::where('formula_id','High School')->first();
-        $cmembership = HsMembership::whereIn('member_id', [$request->input('id')])->get();
+        $cmembership = HsMembership::whereIn('member_id', [$request->input('id')])->where('content_id', $request->input('cid'))->get();
 
         $formulareplaced = $cformula->formula;
         $amfs;
@@ -140,13 +142,22 @@ class HsMembershipController extends Controller
         //finding AMF via schedule start and end values ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
         $scheduled = ScheduleMembership::all();
-        foreach ($scheduled as $deludehcs){
+        $last_key = count($scheduled);
+        $i = 0;
+        foreach ($scheduled as $key=>$deludehcs){
+        if(++$i === $last_key){
+        if($deludehcs->gtrs <= $computedgtr){
+            $amfs = $deludehcs->amf;        
+        }
+        break;
+        }
+//-----------------------------------------------        
         if($deludehcs->gtrs <= $computedgtr && $deludehcs->gtre >= $computedgtr){
             $amfs = $deludehcs->amf;
         }
         }
         // saving to compute~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        $cCompute = Compute::where('member_id', $request->input('id'))->update(['status' => $activestat,'gtr' => $computedgtr,'amf' => $amfs]);
+        $cCompute = Compute::where('member_id', $request->input('id'))->where('content_id', $request->input('cid'))->update(['status' => $activestat,'gtr' => $computedgtr,'amf' => $amfs]);
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         // dd($formulareplaced);
 

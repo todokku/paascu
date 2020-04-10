@@ -75,17 +75,22 @@ class GsMembershipController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id, $content)
-    {   $memid = $id;
+    {   
+        $memid = $id;
+//----------------------------------------
         $contid = $content;
+//----------------------------------------
         $school = Members::find($id);
 
 
         $membership = GsMembership::whereIn('member_id', [$id])->where('content_id', $content)->get();
-
+//----------------------------------------
         $compute = Compute::whereIn('member_id', [$id])->where('content_id', $content)->get();
-
+//----------------------------------------
         // echo($compute[0]);
+//----------------------------------------        
         return view('admin.membershipfee.gs.edit')->with('membership', $membership)->with('compute',$compute[0])->with('school',$school)->with('memid',$memid)->with('contid',$contid);
+//----------------------------------------
     }
 
     /**
@@ -122,7 +127,17 @@ class GsMembershipController extends Controller
         //finding AMF via schedule start and end values ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
         $scheduled = ScheduleMembership::all();
-        foreach ($scheduled as $deludehcs){
+        
+        $last_key = count($scheduled);
+        $i = 0;
+        foreach ($scheduled as $key=>$deludehcs){
+        if(++$i === $last_key){
+        if($deludehcs->gtrs <= $computedgtr){
+            $amfs = $deludehcs->amf;        
+        }
+        break;
+        }
+//-----------------------------------------------        
         if($deludehcs->gtrs <= $computedgtr && $deludehcs->gtre >= $computedgtr){
             $amfs = $deludehcs->amf;
         }

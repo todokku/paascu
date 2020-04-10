@@ -15,6 +15,7 @@ use App\HsMembership;
 use App\Compute;
 use App\ScheduleMembership;
 
+use App\Membership;
 class HsEnrollController extends Controller
 {
     /**
@@ -61,7 +62,12 @@ class HsEnrollController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
+        $meme = new Membership();
+        $meme->member_id = $request->input('hsmember');
+        $meme->save();
+        $memeid = $meme->id;
+
         $formula = Formula::where('formula_id','High School')->first();
         $hspieces = explode(" ", $formula->formula);
         $variabled = Variable::whereIn('code',$hspieces)->where('ed_type', 'High School')->get();
@@ -77,6 +83,7 @@ class HsEnrollController extends Controller
 
         $hsm->variable_id = $request->input("vari-".$delbairav->id);
         $hsm->content = $request->input($delbairav->code);
+        $hsm->content_id = $memeid;
         $hsm->save();
         }
 
@@ -90,11 +97,20 @@ class HsEnrollController extends Controller
         //finding AMF via schedule start and end values ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
         $scheduled = ScheduleMembership::all();
-        foreach ($scheduled as $deludehcs){
+        $last_key = count($scheduled);
+        $i = 0;
+        foreach ($scheduled as $key=>$deludehcs){
+        if(++$i === $last_key){
+        if($deludehcs->gtrs <= $computedgtr){
+            $amfs = $deludehcs->amf;        
+        }
+        break;
+        }
+//-----------------------------------------------        
         if($deludehcs->gtrs <= $computedgtr && $deludehcs->gtre >= $computedgtr){
             $amfs = $deludehcs->amf;
         }
-        }
+        }   
         // saving to compute~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
         $hsmcompute = new Compute();
@@ -104,6 +120,7 @@ class HsEnrollController extends Controller
         $hsmcompute->formula_id = "High School";
         $hsmcompute->gtr = $computedgtr;
         $hsmcompute->amf = $amfs;
+        $hsmcompute->content_id = $memeid;
         $hsmcompute->save();
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         $request->session()->flash('success', 'High School Membership has been Added');

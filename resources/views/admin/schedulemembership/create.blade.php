@@ -31,7 +31,7 @@
                             <label for="gtre" class="col-md-2 col-form-label text-md-right">Gtre</label>
 
                             <div class="col-md-10">
-                                <input id="gtre" type="number" step=".01" min="0" class="form-control @error('gtre') is-invalid @enderror" name="gtre" value="" required autofocus>
+                                <input id="gtre" type="number" step=".01" min="0" class="form-control @error('gtre') is-invalid @enderror" name="gtre" value=""  autofocus>
 
                                 @error('gtre')
                                     <span class="invalid-feedback" role="alert">

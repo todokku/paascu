@@ -15,6 +15,8 @@ use App\Programs;
 use App\BedMembership;
 use App\Compute;
 use App\ScheduleMembership;
+
+use App\Membership;
 class BedEnrollController extends Controller
 {
     /**
@@ -64,6 +66,11 @@ class BedEnrollController extends Controller
      */
     public function store(Request $request)
     {
+        $meme = new Membership();
+        $meme->member_id = $request->input('bedmember');
+        $meme->save();
+        $memeid = $meme->id;
+
         $formula = Formula::where('formula_id','Basic Education')->first();
         $bedpieces = explode(" ", $formula->formula);
         $variabled = Variable::whereIn('code',$bedpieces)->where('ed_type', 'Basic Education')->get();
@@ -79,6 +86,7 @@ class BedEnrollController extends Controller
 
         $bedm->variable_id = $request->input("vari-".$delbairav->id);
         $bedm->content = $request->input($delbairav->code);
+        $bedm->content_id = $memeid;
         $bedm->save();
         }
 
@@ -92,7 +100,16 @@ class BedEnrollController extends Controller
         //finding AMF via schedule start and end values ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
         $scheduled = ScheduleMembership::all();
-        foreach ($scheduled as $deludehcs){
+        $last_key = count($scheduled);
+        $i = 0;
+        foreach ($scheduled as $key=>$deludehcs){
+        if(++$i === $last_key){
+        if($deludehcs->gtrs <= $computedgtr){
+            $amfs = $deludehcs->amf;        
+        }
+        break;
+        }
+//-----------------------------------------------        
         if($deludehcs->gtrs <= $computedgtr && $deludehcs->gtre >= $computedgtr){
             $amfs = $deludehcs->amf;
         }
@@ -106,6 +123,7 @@ class BedEnrollController extends Controller
         $bedmcompute->formula_id = "Basic Education";
         $bedmcompute->gtr = $computedgtr;
         $bedmcompute->amf = $amfs;
+        $bedmcompute->content_id = $memeid;
         $bedmcompute->save();
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         $request->session()->flash('success', 'Basic Education Membership has been Added');

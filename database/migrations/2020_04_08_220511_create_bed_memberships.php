@@ -24,6 +24,10 @@ class CreateBedMemberships extends Migration
             $table->unsignedBigInteger('variable_id');
             $table->foreign('variable_id')->references('id')->on('variables');
             $table->decimal('content', 13, 2);
+
+            $table->unsignedBigInteger('content_id');
+            $table->foreign('content_id')->references('id')->on('memberships');
+            
             $table->timestamps();
         });
     }

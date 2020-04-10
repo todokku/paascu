@@ -23,6 +23,15 @@ class Membership extends Model
     public function gsmembership(){
         return $this->hasMany('App\GsMembership', 'content_id');
     }
+    public function hsmembership(){
+        return $this->hasMany('App\HsMembership', 'content_id');
+    }
+    public function bedmembership(){
+        return $this->hasMany('App\BedMembership', 'content_id');
+    }
+    public function colmembership(){
+        return $this->hasMany('App\ColMembership', 'content_id');
+    }
     public function compute(){
         return $this->hasOne('App\Compute', 'content_id');
     }

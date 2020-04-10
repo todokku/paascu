@@ -125,21 +125,25 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:admi
  	Route::resource('/gsmembership','Memberships\GsMembershipController', ['except' =>['show', 'create', 'store']]);
 	Route::get('/gsmembership','Memberships\GsMembershipController@index')->name('gsmembership.index');
 	// Route::get('/gsmembership/getformula','Memberships\GsMembershipController@formulagroup')->name('gsmembership.getformula');
+//---------------------------------------------------------------------------------------------------------------------
  	Route::get('/gsenrollment/{id}/{content}/edit','Memberships\GsMembershipController@edit')->name('gsenrollment.edit');
+//---------------------------------------------------------------------------------------------------------------------
  	Route::post('/gsenrollment/update','Memberships\GsMembershipController@update')->name('gsenrollment.update');
 
 //THIS IS THE MAANGE HS 
  	Route::resource('/hsmembership','Memberships\HsMembershipController', ['except' =>['show', 'create', 'store']]);
 	Route::get('/hsmembership','Memberships\HsMembershipController@index')->name('hsmembership.index');
 	// Route::get('/hsmembership/getformula','Memberships\HsMembershipController@formulagroup')->name('hsmembership.getformula');
- 	Route::get('/hsenrollment/{id}/edit','Memberships\HsMembershipController@edit')->name('hsenrollment.edit');
+
+ 	Route::get('/hsenrollment/{id}/{content}/edit','Memberships\HsMembershipController@edit')->name('hsenrollment.edit');
+
  	Route::post('/hsenrollment/update','Memberships\HsMembershipController@update')->name('hsenrollment.update');
 
 //THIS IS THE MAANGE BED 
  	Route::resource('/bedmembership','Memberships\BedMembershipController', ['except' =>['show', 'create', 'store']]);
 	Route::get('/bedmembership','Memberships\BedMembershipController@index')->name('bedmembership.index');
 	// Route::get('/bedmembership/getformula','Memberships\BedMembershipController@formulagroup')->name('bedmembership.getformula');
- 	Route::get('/bedenrollment/{id}/edit','Memberships\BedMembershipController@edit')->name('bedenrollment.edit');
+ 	Route::get('/bedenrollment/{id}/{content}/edit','Memberships\BedMembershipController@edit')->name('bedenrollment.edit');
  	Route::post('/bedenrollment/update','Memberships\BedMembershipController@update')->name('bedenrollment.update');
 
 //THIS IS THE MAANGE COL SEM

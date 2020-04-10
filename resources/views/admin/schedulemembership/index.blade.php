@@ -42,8 +42,13 @@
   <tbody>
         @foreach($smf as $fms)  
     <tr>
+      @if($loop->last)
+        <td> {{number_format($fms->gtrs, 0, '.', ',')}} and above</td>
+        <td>{{number_format($fms->amf, 2, '.', ',')}}</td>
+        @else
         <td>{{number_format($fms->gtrs, 0, '.', ',')}} to {{number_format($fms->gtre, 0, '.', ',')}}</td>
         <td>{{number_format($fms->amf, 2, '.', ',')}}</td>
+              @endif
 {{--               <td>
 @if ($fms->status == 'active')
     <span class="badge badge-success">Active</span>

@@ -26,7 +26,9 @@
 <form action="{{ route('gsenrollment.update')}}" method="POST">
     <div class="form-group row">
         <input type="hidden" name="id" value = "{{$memid}}">
+{{--                                                            --}}
         <input type="hidden" name="cid" value = "{{$contid}}">
+{{--                                                            --}}
     </div>
 <div class="form-group row">
     <div class="col-md-6 offset-sm-2">
