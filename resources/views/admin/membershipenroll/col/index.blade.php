@@ -11,7 +11,7 @@
                 <h4 class="card-header bg-white">Enroll College Membership</h4>
             <br>
 <form>
-<div class="form-group row">
+{{-- <div class="form-group row">
 	<label for="school" class="col-md-2 col-form-label text-md-right">School</label>
     	<div class="col-md-8">
 		<select class="form-control selectpicker" id="school" name="school" data-live-search="true" data-style="btn-info" title="Select School...">
@@ -22,7 +22,50 @@
 				@endforeach
 		</select>
 	</div>
+</div> --}}
+
+<div class="form-group row">
+    <label for="school" class="col-md-2 col-form-label text-md-right">School</label>
+        <div class="col-md-8">
+{{--     country --}}
+    <select name="school" id="school" class="selectpicker form-control input-lg dynamic" data-dependent="program" data-live-search="true" title="Select School" >
+                @foreach($members as $srebmem)
+            <option value="{{$srebmem->id}}" >{{$srebmem->school}}</option>
+
+                @endforeach
+    </select>
+        </div>
 </div>
+   <br />
+<div class="form-group row">
+    <label for="acp" class="col-md-2 col-form-label text-md-right">Accredited College Programs</label>
+        <div class="col-md-8">
+{{--     country --}}
+    <select name="acp[]" id="acp" class="selectpicker form-control input-lg " multiple data-live-search="true" title="Check All Accredited College Programs">
+                @foreach($acp as $pca)
+            <option value="{{$pca->id}}" >{{$pca->program}}</option>
+                @endforeach
+    </select>
+        </div>
+</div>
+
+<div class="form-group row">
+    <label for="program" class="col-md-2 col-form-label text-md-right">Programs</label>
+        <div class="col-md-8">
+{{--     state --}}
+    <select name="program[]" id="program" class="selectpicker form-control input-lg " multiple data-dependent="city" title="Check All Programs">
+    </select>
+   </div>
+      </div>
+   <br />
+{{--    <div class="form-group"> --}}
+{{--    city --}}
+{{--     <select name="city" id="city" class="form-control input-lg">
+     <option value="">Select City</option>
+                 <option value="21" >22</option>
+    </select>
+   </div> --}}
+   {{ csrf_field() }}
 
                 <div class="form-group row">
                 <div class="col-md-6 offset-sm-2">
@@ -42,8 +85,14 @@
 </form>
 
 <div class="col-md-8 offset-sm-2">
+{{-- placeholder button --}}
+   <br />
+<button id="pholder" name="pholder" type="button" class="btn btn-primary btn-block" disabled>Submit</button>
+
 <form style="display:none" id="formCOL" name="formCOL" action="{{ route('colsemenrollment.index')}}" method="POST">
 <input type="hidden" id="colsemid" name="colsemid">
+<input type="hidden" id="colsemacp" name="colsemacp">
+<input type="hidden" id="colsemprogram" name="colsemprogram">
 @csrf
 <button id="submitCOL" name="submitCOL" type="submit" class="btn btn-primary btn-block">Submit</button>
 
@@ -51,6 +100,8 @@
 {{-- make as tri --}}
 <form style="display:none" id="formTRI" name="formTRI" action="{{ route('coltrienrollment.index')}}" method="POST">
 <input type="hidden" id="coltriid" name="coltriid">
+<input type="hidden" id="coltriacp" name="coltriacp">
+<input type="hidden" id="coltriprograms" name="coltriprograms">
 @csrf
 <button id="submitTRI" name="submitTRI" type="submit" class="btn btn-primary btn-block">Submit</button>
 </form>
@@ -66,31 +117,77 @@
 </div>
 <script>
 $(document).ready(function() {
+  //clearing the slate just from backing to previous page
+      $('#school').val('');
+        $('#acp').val('');
+          $('#program').val('');
+$('input[name="status"]').prop('checked', false);
 //this checks if anything selected and shows the submit
     if($('#colsemester').prop("checked")) {
+        $("#pholder").hide();
         $("#formTRI").hide();
         $("#formCOL").show(); 
     }
-    if($('#coltrimester').prop("checked")) {
+    else if($('#coltrimester').prop("checked")) {
+        $("#pholder").hide();
         $("#formCOL").hide();
         $("#formTRI").show();
     }
-//sending ids based on selection of school
-    console.log('ready');
+//on school dropdown change
     $("#school").change(function() {
         $('#colsemid').val($('#school').val());
         $('#coltriid').val($('#school').val());
+  if($(this).val() != '')
+  {
+   var select = $(this).attr("id");
+
+   var value = $(this).val();
+
+   var dependent = $(this).data('dependent');
+
+   var _token = $('input[name="_token"]').val();
+
+   $.ajax({
+    url:"{{ route('colenrollment.fetch') }}",
+    method:"POST",
+    data:{select:select, value:value, _token:_token, dependent:dependent},
+    success:function(result)
+    {
+     $('#'+dependent).html(result);
+     $('#'+dependent).selectpicker('refresh');
+    }
+
+   })
+  }
+        $("#acp").val('').selectpicker("refresh");
+  $('#program').val('');
+
     });
+
+
+//on acp dropdown change
+$("#acp").change(function() {   
+   $('#colsemacp').val($('#acp').val());
+   $('#coltriacp').val($('#acp').val());
+});
+//on program dropdown change
+$("#program").change(function() {   
+   $('#colsemprogram').val($('#program').val());
+   $('#coltriprogram').val($('#program').val());
+});
+
 //radio button on change
 $('#colsemester, #coltrimester').change(function(){
     switch($(this).val()) {
     case 'Semester':
+    $("#pholder").hide();
     $("#formTRI").hide();
     $("#formCOL").show();
 
 
     break;
     case 'Trimester':
+    $("#pholder").hide();
     $("#formCOL").hide();
     $("#formTRI").show();
 
@@ -99,12 +196,10 @@ $('#colsemester, #coltrimester').change(function(){
     default:
         $("#formCOL").hide();
         $("#formTRI").hide();
+        $("#pholder").hide();
       alert("error");
   }  
   })
-
-
-
 });
 </script>
 

@@ -29,14 +29,15 @@ class ColEnrollController extends Controller
         $query->whereIn('ed_level', ['College']);
         })->get();
 
-        // $acp = AccreditedCollegeProgram::all();
+        $acp = AccreditedCollegeProgram::all();
 
-        // $formula = Formula::where('formula_id','College Semester')->first();
-        // $colsempieces = explode(" ", $formula->formula);
-        // $variabled = Variable::whereIn('code',$colsempieces)->where('ed_type', 'College Semester')->get();
+     return view('admin.membershipenroll.col.index')->with('members',$members)->with('acp',$acp);
+     // $data = Members::find(4)->programs;
+     // foreach($data as $row)
+     // {
+     //   echo $row->program;
+     // }
 
-        return view('admin.membershipenroll.col.index')->with('members',$members);
-        // ->with('formula',$formula)->with('colsempieces',$colsempieces)->with('variabled',$variabled)->with('acp',$acp);
     }
 
     /**
@@ -118,4 +119,21 @@ class ColEnrollController extends Controller
 
     //     return view('admin.membershipenroll.colsem.index')->with('members',$members)->with('formula',$formula)->with('colsempieces',$colsempieces)->with('variabled',$variabled)->with('acp',$acp);
     // }
+
+        function fetch(Request $request)
+{
+    // =======================================================
+     $select = $request->get('select');//ID OF FORM?
+     $value = $request->get('value');//VALUE OF dropdown ID
+     $dependent = $request->get('dependent');//next id of FORM depended on
+
+     $data = Programs::whereIn('member_id', [$value])->where('ed_level', 'College')->get();
+     $output = "";
+     foreach($data as $row)
+     {
+      $output .= '<option value="'.$row->id.'">'.$row->$dependent.'</option>';
+     }
+     echo $output;
+    }
+    // =======================================================
 }

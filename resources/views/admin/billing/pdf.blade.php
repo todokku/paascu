@@ -115,6 +115,74 @@ Billing Date: {{$date}}
 <div class="invoice">
     <h3>{{$membership_type}} Membership Fee</h3>
     <h5>Transaction Reference No. #{{$id}}</h5>
+
+
+
+
+
+
+
+
+
+@isset($programs)
+<h4>
+{{$ap_type}} :<u>
+@foreach($acpagp as $pgapca)
+{{$pgapca->program.','}}
+@endforeach
+</u>
+</h4>
+<table width="100%">
+        <thead>
+        <tr>
+            <th style="text-align: left;width: 25%; height: 30px;">Programs</th>
+            <th style="text-align: right;width: 25%; height: 30px">1ST SEM</th>
+            <th style="text-align: right;width: 25%; height: 30px">2ND SEM</th>
+            @if(!empty($programs->first()->semthree))
+            <th style="text-align: left;width: 25%; height: 30px">3RD SEM</th>
+            @else
+            <th style="text-align: left;width: 25%; height: 30px"></th>
+            @endif
+        </tr>
+        </thead>
+        <tbody>
+                    @foreach($programs as $pro)
+        <tr>
+
+        <td style="text-align: left;height: 30px;width: 25%;">{{$pro->program}}</td>
+        <td style="text-align: right;height: 30px;width: 25%;">P {{number_format($pro->semone,2)}}</td>
+        <td style="text-align: right;height: 30px;width: 25%;">P {{number_format($pro->semtwo,2)}}</td>
+            @if(!empty($programs->first()->semthree))
+        <td style="text-align: right;height: 30px;width: 25%;">P {{number_format($pro->semthree,2)}}</td>
+            @else
+        <td style="text-align: right;height: 30px;width: 25%;"> </td>
+            @endif
+                </tr>
+                        @endforeach
+        </tbody>
+
+        <tfoot>
+{{--         <tr>
+            <td colspan="{{$i}}"></td>
+            <td align="center"><h2>Total Payment Due:</h2></td>
+            <td align="center" class="gray"><u><h2>P {{$amf}}</h2></u></td>
+        </tr> --}}
+        </tfoot>
+    </table>
+
+@endisset
+
+<br/>
+
+
+
+
+
+
+
+
+
+
     <table width="100%">
         <thead>
         <tr>

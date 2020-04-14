@@ -33,8 +33,10 @@
 @csrf
 
 <input type="hidden" id="colsemmember" name="colsemmember" value="{{$members->id}}">
+<input type="hidden" id="colsemacp" name="colsemacp" value="{{$selectedacps}}">
+<input type="hidden" id="colsemprogram" name="colsemprogram" value="{{$selectedprograms}}">
 
-<div class="form-group row">
+{{-- <div class="form-group row">
     <label for="acp" class="col-md-2 col-form-label text-md-right">Accredited College Programs</label>
         <div class="col-md-8">
         <select class="form-control selectpicker" id="acp" name="acp" multiple data-live-search="true" data-style="btn-info" title="Please Select ...">
@@ -44,7 +46,7 @@
                 @endforeach
         </select>
     </div>
-</div>
+</div> --}}
 
 <div class="col-md-8 offset-sm-2">
 <table id="example" class="display table table-hover table-sm" style="width:100%">
@@ -60,8 +62,8 @@
             @foreach($programs as $rebmem)
             <tr>
                 <td>{{$rebmem->program}}</td>
-                <td><input id="{{"f".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("f".$rebmem->id) is-invalid @enderror" name="price" ></td>
-                <td><input id="{{"s".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("s".$rebmem->id) is-invalid @enderror" name="price" ></td>
+                <td><input id="{{"f".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("f".$rebmem->id) is-invalid @enderror price" name="{{"f".$rebmem->id}}" ></td>
+                <td><input id="{{"s".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("s".$rebmem->id) is-invalid @enderror price" name="{{"s".$rebmem->id}}" ></td>
 {{--                 <td><input id="{{"s".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("s".$rebmem->id) is-invalid @enderror" name="tprice" required></td> --}}
 
             </tr>
@@ -173,10 +175,10 @@ $(document).ready(function() {
  
 
 
-$('form#formCOLSEM :input[name=price]').change(function(){
+$('form#formCOLSEM :input.price').change(function(){
 var input = 0.00;
 //  console.log(val);
-$("form#formCOLSEM :input[name=price]").each(function(){
+$("form#formCOLSEM :input.price").each(function(){
 
  input = Number($(this).val()) + input; // This is the jquery object of the input, do what you will
 

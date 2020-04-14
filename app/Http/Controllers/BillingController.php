@@ -12,6 +12,8 @@ use App\HsMembership;
 use App\BedMembership;
 use App\ColMembership;
 use App\GedMembership;
+use App\EnrolledAcpagps;
+use App\EnrolledProgram;
 class BillingController extends Controller
 {
     /**
@@ -196,6 +198,10 @@ $membership = BedMembership::whereIn('member_id', [$ids])->where('content_id', $
     }
 
     $membership = ColMembership::whereIn('member_id', [$ids])->where('content_id', $mscid)->get();
+
+    $enrolledacp = EnrolledAcpagps::whereIn('compute_id', [$idc])->get();
+    $enrolledpro = EnrolledProgram::whereIn('compute_id', [$idc])->get();
+
     $data = [
         'id' => $compute->id,
         'date' => $date, 
@@ -210,6 +216,9 @@ $membership = BedMembership::whereIn('member_id', [$ids])->where('content_id', $
         'addyear' => $year,
         'formula' => $replacedformula,
         'boxes' => $membershipvariables,
+        'programs'=> $enrolledpro,
+        'acpagp' => $enrolledacp,
+        'ap_type' => "Accredited College Programs",
     ];
     }
     elseif(strcmp($compute->formula_id , "College Trimester") == 0){

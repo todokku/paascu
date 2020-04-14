@@ -15,4 +15,12 @@ class Compute extends Model
             public function membership(){
     	return $this->belongsTo('App\Membership', 'id');
     }
+
+
+        public function enrolledprogram(){
+        return $this->hasMany('App\EnrolledProgram', 'compute_id');
+    }
+        public function enrolledacpagps(){
+        return $this->hasMany('App\EnrolledAcpagps', 'compute_id');
+    }
 }

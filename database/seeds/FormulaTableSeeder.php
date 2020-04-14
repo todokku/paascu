@@ -23,7 +23,7 @@ class FormulaTableSeeder extends Seeder
 
          Formula::create([
         'formula_id'=> 'Basic Education',
-        'formula'=> '( bed_gs_total_enrollment + bed_hs_total_enrollment ) * bed_annual_tuition_fee',
+        'formula'=> 'bed_gs_total_enrollment + bed_hs_total_enrollment * bed_annual_tuition_fee',
         ]);
 
         Formula::create([

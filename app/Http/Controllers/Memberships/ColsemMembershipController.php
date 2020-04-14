@@ -14,6 +14,10 @@ use App\Variable;
 use App\Compute;
 use App\Formula;
 
+use App\EnrolledProgram;
+use App\EnrolledAcpagps;
+use App\AccreditedCollegeProgram;
+
 class ColsemMembershipController extends Controller
 {
     /**
@@ -87,8 +91,20 @@ class ColsemMembershipController extends Controller
 
         $compute = Compute::whereIn('member_id', [$id])->where('content_id', $content)->get();
 
-        // dd($school);
-        return view('admin.membershipfee.colsem.edit')->with('membership', $membership)->with('compute',$compute[0])->with('school',$school)->with('memid',$memid)->with('contid',$contid);
+        $program = EnrolledProgram::whereIn('compute_id', [$content])->get();
+        $acpall = AccreditedCollegeProgram::all();
+        $acp = EnrolledAcpagps::whereIn('compute_id', [$content])->get();
+        $acparrayx = array();
+        foreach($acp as $arr){
+        array_push($acparrayx, $arr->program);
+        }
+        $acpx = AccreditedCollegeProgram::whereIn('program', $acparrayx)->get();
+        $acparray = array();
+        foreach($acpx as $arr){
+        array_push($acparray, $arr->id);
+        }
+        // dd($acpx);
+        return view('admin.membershipfee.colsem.edit')->with('membership', $membership)->with('compute',$compute[0])->with('school',$school)->with('memid',$memid)->with('contid',$contid)->with('program',$program)->with('acpall',$acpall)->with('acparray',$acparray);
     }
 
     /**
@@ -99,7 +115,30 @@ class ColsemMembershipController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request)
-    {
+    {   
+        $programs = EnrolledProgram::whereIn('compute_id', [$request->input('cid')])->get();
+
+        foreach($programs as $smargorp){
+        $smargorp->semone = $request->input("f".$smargorp->id);
+        $smargorp->semtwo = $request->input("s".$smargorp->id);
+        // $semthree = $request->input("t".$smargorp->id);
+        $smargorp->update();
+        }
+
+        $acp = EnrolledAcpagps::whereIn('compute_id', [$request->input('cid')])->delete();
+        $selectedacps = $request->input('acpx');
+        $exacp = explode(',', $selectedacps);
+        $acpname = AccreditedCollegeProgram::whereIn('id', $exacp )->get();
+        foreach($acpname as $acpnamex){
+        $colsemacpagps = new EnrolledAcpagps();
+        $colsemacpagps->compute_id = $request->input('cid');
+        $colsemacpagps->program = $acpnamex->program;
+        $colsemacpagps->ap_type = "acp";
+        $colsemacpagps->save();
+        }
+// dd( $acpname);
+
+
         //updating contents ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         $membership = ColMembership::whereIn('member_id', [$request->input('id')])->where('content_id', $request->input('cid'))->get();
         foreach($membership as $pihsrebmem){
@@ -142,15 +181,6 @@ class ColsemMembershipController extends Controller
         // saving to compute~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         $cCompute = Compute::where('member_id', $request->input('id'))->where('content_id', $request->input('cid'))->update(['status' => $activestat,'gtr' => $computedgtr,'amf' => $amfs]);
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-
-
-
-
-        // dd($formulareplaced);
-
         $request->session()->flash('success', 'College Semester Membership has been Updated');
         
         return redirect()->route('colsemmembership.index');

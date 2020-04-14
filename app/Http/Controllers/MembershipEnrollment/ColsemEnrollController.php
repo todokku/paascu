@@ -17,6 +17,9 @@ use App\ScheduleMembership;
 use App\AccreditedCollegeProgram;
 
 use App\Membership;
+
+use App\EnrolledProgram;
+use App\EnrolledAcpagps;
 class ColsemEnrollController extends Controller
 {
     /**
@@ -25,20 +28,40 @@ class ColsemEnrollController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
-    {
+    {   // =======================================================
         $id = $request->input('colsemid');
- 
         $members = Members::find($id);
 
-        $programs = Programs::where('member_id', $id)->whereIn('ed_level', ['College'])->get();
+        $selectedacps = $request->input('colsemacp');
+        $exacp = explode(',', $selectedacps);
+        $acp = AccreditedCollegeProgram::whereIn('id', $exacp)->get();
 
-        $acp = AccreditedCollegeProgram::all();
+        $selectedprograms = $request->input('colsemprogram');
+        $expro = explode(',', $selectedprograms);
+        $programs = Programs::whereIn('id', $expro)->get();
 
         $formula = Formula::where('formula_id','College Semester')->first();
         $colsempieces = explode(" ", $formula->formula);
         $variabled = Variable::whereIn('code',$colsempieces)->where('ed_type', 'College Semester')->get();
 
-        return view('admin.membershipenroll.colsem.index')->with('members',$members)->with('formula',$formula)->with('colsempieces',$colsempieces)->with('variabled',$variabled)->with('acp',$acp)->with('programs',$programs);
+        return view('admin.membershipenroll.colsem.index')->with('members',$members)->with('formula',$formula)->with('colsempieces',$colsempieces)->with('variabled',$variabled)->with('acp',$acp)->with('programs',$programs)->with('selectedacps',$selectedacps)->with('selectedprograms',$selectedprograms);
+
+        // =======================================================
+
+
+        // $id = $request->input('colsemid');
+ 
+        // $members = Members::find($id);
+
+        // $programs = Programs::where('member_id', $id)->whereIn('ed_level', ['College'])->get();
+
+        // $acp = AccreditedCollegeProgram::all();
+
+        // $formula = Formula::where('formula_id','College Semester')->first();
+        // $colsempieces = explode(" ", $formula->formula);
+        // $variabled = Variable::whereIn('code',$colsempieces)->where('ed_type', 'College Semester')->get();
+
+        // return view('admin.membershipenroll.colsem.index')->with('members',$members)->with('formula',$formula)->with('colsempieces',$colsempieces)->with('variabled',$variabled)->with('acp',$acp)->with('programs',$programs);
     }
 
     /**
@@ -58,7 +81,19 @@ class ColsemEnrollController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
+        // =======================================================
+        $selectedacps = $request->input('colsemacp');
+        $exacp = explode(',', $selectedacps);
+        $acp = AccreditedCollegeProgram::whereIn('id', $exacp)->get();
+
+        $selectedprograms = $request->input('colsemprogram');
+        $expro = explode(',', $selectedprograms);
+        $programs = Programs::whereIn('id', $expro)->get();
+
+        //make table make one to many make id of created compute input in column
+
+        // =======================================================
 
         $meme = new Membership();
         $meme->member_id = $request->input('colsemmember');
@@ -121,8 +156,31 @@ class ColsemEnrollController extends Controller
         $colsemmcompute->content_id = $memeid;
         $colsemmcompute->save();
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+        // =======================================================
+        $computeid = $colsemmcompute->id;
+        foreach($programs as $smargorp){
+        $colsemep = new EnrolledProgram();
+        $colsemep->compute_id = $computeid;
+        $colsemep->program = $smargorp->program;
+        $colsemep->semone = $request->input("f".$smargorp->id);
+        $colsemep->semtwo = $request->input("s".$smargorp->id);
+        // $semthree = $request->input("t".$smargorp->id);
+        $colsemep->save();
+        }
+        foreach($acp as $pca){
+        $colsemacpagps = new EnrolledAcpagps();
+        $colsemacpagps->compute_id = $computeid;
+        $colsemacpagps->program = $pca->program;
+        $colsemacpagps->ap_type = "acp";
+        $colsemacpagps->save();
+        }
+
+        // =======================================================
+
         $request->session()->flash('success', 'College Semester Membership has been Added');
         return redirect()->route('colenrollment.index');
+
     }
 
     /**
