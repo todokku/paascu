@@ -36,4 +36,5 @@ class Members extends Model
         public function gedmembership(){
         return $this->hasMany('App\GedMembership', 'member_id');
     }
+    
 }

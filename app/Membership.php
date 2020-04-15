@@ -39,4 +39,16 @@ class Membership extends Model
         return $this->hasOne('App\Compute', 'content_id');
     }
 //testing ------------------------------------------------------
+    public function colsemmembership(){
+        return $this->hasMany('App\ColMembership', 'content_id')->where('formula_id', "College Semester");
+    }
+    public function coltrimembership(){
+        return $this->hasMany('App\ColMembership', 'content_id')->where('formula_id', "College Trimester");
+    }
+    public function gedsemmembership(){
+        return $this->hasMany('App\GedMembership', 'content_id')->where('formula_id', "Graduate Education Semester");
+    }
+    public function gedtrimembership(){
+        return $this->hasMany('App\GedMembership', 'content_id')->where('formula_id', "Graduate Education Trimester");
+    }
 }

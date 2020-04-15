@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card border-light mb-3 shadow">
-                <h4 class="card-header bg-white">College Semester Edit Membership</h4>
+                <h4 class="card-header bg-white">College Semester Edit Membership<a href="{{ route('colsemmembership.index') }}"><button type="button" class="btn btn-outline-success float-right">View College Semester Memberships</button></a></h4>
             <br>
 
 
@@ -83,7 +83,7 @@
 <div class="form-group row">
     <label for="{{$pihsrebmem->id}}" class="col-md-2 col-form-label text-md-right">{{$pihsrebmem->variables->title}}</label>
         <div class="col-md-8">
-            <input id="{{$pihsrebmem->variables->code}}" type="text" class="form-control @error('{{$pihsrebmem->id}}') is-invalid @enderror" name="{{$pihsrebmem->id}}" value="{{$pihsrebmem->content}}" required autocomplete="program" autofocus>
+            <input id="{{$pihsrebmem->variables->code}}" type="text" class="form-control @error('{{$pihsrebmem->variables->code}}') is-invalid @enderror" name="{{$pihsrebmem->id}}" value="{{$pihsrebmem->content}}" required autocomplete="program" autofocus>
 
                 @error('{{$pihsrebmem->id}}')
                     <span class="invalid-feedback" role="alert">
@@ -96,8 +96,8 @@
 
     @csrf
 {{--     {{ method_field('PUT')}}     --}}   
-        <div class="col-md-10">  
-    <button type="submit" class="btn btn-success float-right">update</button>
+        <div class="col-md-12">  
+    <button type="submit" style="width: 100px;" class="btn btn-primary float-right">update</button>
 </div>
 </form>
 

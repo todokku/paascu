@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card border-light mb-3 shadow">
-                <h4 class="card-header bg-white">Basic Education Membership{{-- <a href="#"><button type="button" class="btn btn-outline-success float-right">+ Add Formula</button></a> --}}</h4>
+                <h4 class="card-header bg-white">Basic Education Membership<a href="{{ route('bedenrollment.index') }}"><button type="button" class="btn btn-outline-success float-right">+ Add Basic Education Membership</button></a></h4>
 {{--             <br> --}}
 {{-- <form>
     <div class="form-group row">
@@ -43,7 +43,7 @@
     @if($srebmem->bedmembership->first())
     <tr>
 @foreach($srebmem->membership as $ggg)
-
+        @if($ggg->bedmembership->first())
         <td>{{$srebmem->school}} </td>
         <td>{{$ggg->compute->created_at->format('M.Y')}} </td>
 {{--                 <td>{{$i++}} </td> --}}
@@ -67,6 +67,7 @@
 <a href="{{route('bedenrollment.edit',['id'=>$srebmem->bedmembership->first()->member_id, 'content' => $ggg->bedmembership->first()->content_id])}}"><button type="button" class="btn btn-outline-primary float-left">Edit</button></a>
       </td>
     </tr>
+     @endif
     @endforeach
     @endif
     @endforeach

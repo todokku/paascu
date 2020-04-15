@@ -8,13 +8,13 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card border-light mb-3 shadow">
-                <h4 class="card-header bg-white">Enroll Basic Education Membership</h4>
+                <h4 class="card-header bg-white">Enroll Basic Education Membership<a href="{{ route('bedmembership.index') }}"><button type="button" class="btn btn-outline-success float-right">View Basic Education Memberships</button></a></h4>
             <br>
 <form>
 <div class="form-group row">
 	<label for="school" class="col-md-2 col-form-label text-md-right">School</label>
     	<div class="col-md-8">
-		<select class="form-control selectpicker" id="school" name="school" data-live-search="true" data-style="btn-info" title="Select School...">
+		<select class="form-control selectpicker" id="school" name="school" data-live-search="true" title="Select School...">
 			<option value=""> </option>
 				@foreach($members as $srebmem)
 			<option value="{{$srebmem->id}}">{{$srebmem->school}}</option>
@@ -52,8 +52,8 @@
 @endforeach
 
 
-<div class="col-md-8 offset-sm-2">
-  <button id="submitBED" name="submitBED" type="submit" class="btn btn-primary btn-block">Submit</button>
+    <div class="col-md-12">
+  <button id="submitBED" style="width: 100px;" name="submitBED" type="submit" class="btn btn-success float-right">Submit</button>
 </div>
 </form>
             <br>

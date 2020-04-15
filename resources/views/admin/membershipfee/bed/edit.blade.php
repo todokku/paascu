@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card border-light mb-3 shadow">
-                <h4 class="card-header bg-white">Basic Education Edit Membership</h4>
+                <h4 class="card-header bg-white">Edit Basic Education Membership<a href="{{ route('gsmembership.index') }}"><button type="button" class="btn btn-outline-success float-right">View Basic Education Memberships</button></a></h4>
             <br>
 
 
@@ -15,7 +15,7 @@
 
                                                 <div class="form-group row">
                             <label for="school" class="col-md-2 col-form-label text-md-right">School</label>
-                            <div class="col-md-10">
+                            <div class="col-md-8">
                             <select class="form-control" id="school" name="school" readonly>
                             <option value="{{$school->id}}" readonly>{{$school->school}}</option>
                             </select>
@@ -44,7 +44,7 @@
 @foreach($membership as $pihsrebmem)
 <div class="form-group row">
     <label for="{{$pihsrebmem->id}}" class="col-md-2 col-form-label text-md-right">{{$pihsrebmem->variables->title}}</label>
-        <div class="col-md-10">
+        <div class="col-md-8">
             <input id="{{$pihsrebmem->id}}" type="text" class="form-control @error('{{$pihsrebmem->id}}') is-invalid @enderror" name="{{$pihsrebmem->id}}" value="{{$pihsrebmem->content}}" required autocomplete="program" autofocus>
 
                 @error('{{$pihsrebmem->id}}')
@@ -58,7 +58,7 @@
 
     @csrf
 {{--     {{ method_field('PUT')}}     --}}     
-    <button type="submit" class="btn btn-success float-right">update</button>
+    <button type="submit" style="width: 100px;" class="btn btn-primary float-right">update</button>
 </form>
 
 

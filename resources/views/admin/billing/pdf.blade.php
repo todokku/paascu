@@ -136,12 +136,12 @@ Billing Date: {{$date}}
         <thead>
         <tr>
             <th style="text-align: left;width: 25%; height: 30px;">Programs</th>
-            <th style="text-align: right;width: 25%; height: 30px">1ST SEM</th>
-            <th style="text-align: right;width: 25%; height: 30px">2ND SEM</th>
+            <th style="text-align: right;width: 25%; height: 30px">1st Semester</th>
+            <th style="text-align: right;width: 25%; height: 30px">2nd Semester</th>
             @if(!empty($programs->first()->semthree))
-            <th style="text-align: left;width: 25%; height: 30px">3RD SEM</th>
+            <th style="text-align: right;width: 25%; height: 30px">3rd Semester</th>
             @else
-            <th style="text-align: left;width: 25%; height: 30px"></th>
+            <th style="text-align: right;width: 25%; height: 30px"></th>
             @endif
         </tr>
         </thead>

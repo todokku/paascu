@@ -17,6 +17,9 @@ use App\ScheduleMembership;
 use App\AccreditedCollegeProgram;
 
 use App\Membership;
+
+use App\EnrolledProgram;
+use App\EnrolledAcpagps;
 class ColtriEnrollController extends Controller
 {
     /**
@@ -27,18 +30,21 @@ class ColtriEnrollController extends Controller
     public function index(Request $request)
     {
         $id = $request->input('coltriid');
- 
         $members = Members::find($id);
 
-        $programs = Programs::where('member_id', $id)->whereIn('ed_level', ['College'])->get();
+        $selectedacps = $request->input('coltriacp');
+        $exacp = explode(',', $selectedacps);
+        $acp = AccreditedCollegeProgram::whereIn('id', $exacp)->get();
 
-        $acp = AccreditedCollegeProgram::all();
+        $selectedprograms = $request->input('coltriprogram');
+        $expro = explode(',', $selectedprograms);
+        $programs = Programs::whereIn('id', $expro)->get();
 
         $formula = Formula::where('formula_id','College Trimester')->first();
         $coltripieces = explode(" ", $formula->formula);
         $variabled = Variable::whereIn('code',$coltripieces)->where('ed_type', 'College Trimester')->get();
 
-        return view('admin.membershipenroll.coltri.index')->with('members',$members)->with('formula',$formula)->with('coltripieces',$coltripieces)->with('variabled',$variabled)->with('acp',$acp)->with('programs',$programs);
+        return view('admin.membershipenroll.coltri.index')->with('members',$members)->with('formula',$formula)->with('coltripieces',$coltripieces)->with('variabled',$variabled)->with('acp',$acp)->with('programs',$programs)->with('selectedacps',$selectedacps)->with('selectedprograms',$selectedprograms);
     }
 
     /**
@@ -59,6 +65,13 @@ class ColtriEnrollController extends Controller
      */
     public function store(Request $request)
     {
+        $selectedacps = $request->input('coltriacp');
+        $exacp = explode(',', $selectedacps);
+        $acp = AccreditedCollegeProgram::whereIn('id', $exacp)->get();
+
+        $selectedprograms = $request->input('coltriprogram');
+        $expro = explode(',', $selectedprograms);
+        $programs = Programs::whereIn('id', $expro)->get();
 
         $meme = new Membership();
         $meme->member_id = $request->input('coltrimember');
@@ -121,6 +134,25 @@ class ColtriEnrollController extends Controller
         $coltrimcompute->content_id = $memeid;
         $coltrimcompute->save();
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+        $computeid = $coltrimcompute->id;
+        foreach($programs as $smargorp){
+        $coltriep = new EnrolledProgram();
+        $coltriep->compute_id = $computeid;
+        $coltriep->program = $smargorp->program;
+        $coltriep->semone = $request->input("f".$smargorp->id);
+        $coltriep->semtwo = $request->input("s".$smargorp->id);
+        $coltriep->semthree = $request->input("t".$smargorp->id);
+        $coltriep->save();
+        }
+        foreach($acp as $pca){
+        $coltriacpagps = new EnrolledAcpagps();
+        $coltriacpagps->compute_id = $computeid;
+        $coltriacpagps->program = $pca->program;
+        $coltriacpagps->ap_type = "acp";
+        $coltriacpagps->save();
+        }
+
         $request->session()->flash('success', 'College Trimester Membership has been Added');
         return redirect()->route('colenrollment.index');
     }

@@ -27,6 +27,8 @@ class CreateComputesTable extends Migration
             $table->unsignedBigInteger('content_id');
             $table->foreign('content_id')->references('id')->on('Memberships');
 //testing ------------------------------------------------------
+            $table->string('verified')->default('pending');
+            $table->string('receipt')->default("default.png");
             $table->timestamps();
         });
     }

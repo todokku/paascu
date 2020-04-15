@@ -28,7 +28,10 @@ class GedEnrollController extends Controller
         $members = Members::select('id','school')->whereHas('programs', function ($query) {
         $query->whereIn('ed_level', ['Graduate Education']);
         })->get();
-        return view('admin.membershipenroll.ged.index')->with('members',$members);
+
+        $agp = AccreditedGraduateProgram::all();
+
+        return view('admin.membershipenroll.ged.index')->with('members',$members)->with('agp',$agp);
     }
 
     /**
@@ -95,5 +98,19 @@ class GedEnrollController extends Controller
     public function destroy($id)
     {
         //
+    }
+        function fetch(Request $request)
+{
+     $select = $request->get('select');//ID OF FORM?
+     $value = $request->get('value');//VALUE OF dropdown ID
+     $dependent = $request->get('dependent');//next id of FORM depended on
+
+     $data = Programs::whereIn('member_id', [$value])->where('ed_level', 'Graduate Education')->get();
+     $output = "";
+     foreach($data as $row)
+     {
+      $output .= '<option value="'.$row->id.'">'.$row->$dependent.'</option>';
+     }
+     echo $output;
     }
 }

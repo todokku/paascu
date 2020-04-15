@@ -154,7 +154,7 @@ second sem
 </div>
 <script>
 $(document).ready(function() {
-    console.log('ready');
+$("#col_sem_total_enrollment").attr('readonly', true);
     $("#school").change(function() {
         $('#colsemmember').val($('#school').val());
     });

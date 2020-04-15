@@ -17,6 +17,9 @@ use App\ScheduleMembership;
 use App\AccreditedGraduateProgram;
 
 use App\Membership;
+
+use App\EnrolledProgram;
+use App\EnrolledAcpagps;
 class GedsemEnrollController extends Controller
 {
     /**
@@ -30,20 +33,19 @@ class GedsemEnrollController extends Controller
         
         $members = Members::find($id);
 
-        $programs = Programs::where('member_id', $id)->whereIn('ed_level', ['Graduate Education'])->get();
+        $selectedagps = $request->input('gedsemagp');
+        $exagp = explode(',', $selectedagps);
+        $agp = AccreditedGraduateProgram::whereIn('id', $exagp)->get();
 
-        $acp = AccreditedGraduateProgram::all();
+        $selectedprograms = $request->input('gedsemprogram');
+        $expro = explode(',', $selectedprograms);
+        $programs = Programs::whereIn('id', $expro)->get();
 
         $formula = Formula::where('formula_id','Graduate Education Semester')->first();
         $gedsempieces = explode(" ", $formula->formula);
         $variabled = Variable::whereIn('code',$gedsempieces)->where('ed_type', 'Graduate Education Semester')->get();
 
-        return view('admin.membershipenroll.gedsem.index')->with('members',$members)->with('formula',$formula)->with('gedsempieces',$gedsempieces)->with('variabled',$variabled)->with('acp',$acp)->with('programs',$programs);
-
-// foreach ($progamu as $cpa) {
-// echo $cpa->program;
-// }
-        // dd($progamu);
+        return view('admin.membershipenroll.gedsem.index')->with('members',$members)->with('formula',$formula)->with('gedsempieces',$gedsempieces)->with('variabled',$variabled)->with('agp',$agp)->with('programs',$programs)->with('selectedagps',$selectedagps)->with('selectedprograms',$selectedprograms);
     }
 
     /**
@@ -64,6 +66,14 @@ class GedsemEnrollController extends Controller
      */
     public function store(Request $request)
     {
+        $selectedagps = $request->input('gedsemagp');
+        $exagp = explode(',', $selectedagps);
+        $agp = AccreditedGraduateProgram::whereIn('id', $exagp)->get();
+
+        $selectedprograms = $request->input('gedsemprogram');
+        $expro = explode(',', $selectedprograms);
+        $programs = Programs::whereIn('id', $expro)->get();
+
         $meme = new Membership();
         $meme->member_id = $request->input('gedsemmember');
         $meme->save();
@@ -125,6 +135,25 @@ class GedsemEnrollController extends Controller
         $gedsemmcompute->content_id = $memeid;
         $gedsemmcompute->save();
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+        $computeid = $gedsemmcompute->id;
+        foreach($programs as $smargorp){
+        $gedsemep = new EnrolledProgram();
+        $gedsemep->compute_id = $computeid;
+        $gedsemep->program = $smargorp->program;
+        $gedsemep->semone = $request->input("f".$smargorp->id);
+        $gedsemep->semtwo = $request->input("s".$smargorp->id);
+        // $semthree = $request->input("t".$smargorp->id);
+        $gedsemep->save();
+        }
+        foreach($agp as $pca){
+        $gedsemagpagps = new EnrolledAcpagps();
+        $gedsemagpagps->compute_id = $computeid;
+        $gedsemagpagps->program = $pca->program;
+        $gedsemagpagps->ap_type = "agp";
+        $gedsemagpagps->save();
+        }
+
         $request->session()->flash('success', 'Graduate Education Semester Membership has been Added');
         return redirect()->route('gedenrollment.index');
     }

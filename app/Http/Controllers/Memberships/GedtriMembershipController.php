@@ -14,6 +14,9 @@ use App\Variable;
 use App\Compute;
 use App\Formula;
 
+use App\EnrolledProgram;
+use App\EnrolledAcpagps;
+use App\AccreditedGraduateProgram;
 class GedtriMembershipController extends Controller
 {
     /**
@@ -85,8 +88,21 @@ class GedtriMembershipController extends Controller
 
         $compute = Compute::whereIn('member_id', [$id])->where('content_id', $content)->get();
 
+        $program = EnrolledProgram::whereIn('compute_id', [$content])->get();
+        $agpall = AccreditedGraduateProgram::all();
+        $agp = EnrolledAcpagps::whereIn('compute_id', [$content])->get();
+        $agparrayx = array();
+        foreach($agp as $arr){
+        array_push($agparrayx, $arr->program);
+        }
+        $agpx = AccreditedGraduateProgram::whereIn('program', $agparrayx)->get();
+        $agparray = array();
+        foreach($agpx as $arr){
+        array_push($agparray, $arr->id);
+        }
+
         // dd($school);
-        return view('admin.membershipfee.gedtri.edit')->with('membership', $membership)->with('compute',$compute[0])->with('school',$school)->with('memid',$memid)->with('contid',$contid);
+        return view('admin.membershipfee.gedtri.edit')->with('membership', $membership)->with('compute',$compute[0])->with('school',$school)->with('memid',$memid)->with('contid',$contid)->with('program',$program)->with('agpall',$agpall)->with('agparray',$agparray);
     }
 
     /**
@@ -98,6 +114,28 @@ class GedtriMembershipController extends Controller
      */
     public function update(Request $request)
     {
+
+        $programs = EnrolledProgram::whereIn('compute_id', [$request->input('cid')])->get();
+
+        foreach($programs as $smargorp){
+        $smargorp->semone = $request->input("f".$smargorp->id);
+        $smargorp->semtwo = $request->input("s".$smargorp->id);
+        $smargorp->semthree = $request->input("t".$smargorp->id);
+        $smargorp->update();
+        }
+
+        $agp = EnrolledAcpagps::whereIn('compute_id', [$request->input('cid')])->delete();
+        $selectedagps = $request->input('agpx');
+        $exagp = explode(',', $selectedagps);
+        $agpname = AccreditedGraduateProgram::whereIn('id', $exagp )->get();
+        foreach($agpname as $agpnamex){
+        $gedsemagpagps = new EnrolledAcpagps();
+        $gedsemagpagps->compute_id = $request->input('cid');
+        $gedsemagpagps->program = $agpnamex->program;
+        $gedsemagpagps->ap_type = "agp";
+        $gedsemagpagps->save();
+        }
+
 //updating contents ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         $membership = GedMembership::whereIn('member_id', [$request->input('id')])->where('content_id', $request->input('cid'))->get();
         foreach($membership as $pihsrebmem){

@@ -17,6 +17,9 @@ use App\ScheduleMembership;
 use App\AccreditedGraduateProgram;
 
 use App\Membership;
+
+use App\EnrolledProgram;
+use App\EnrolledAcpagps;
 class GedtriEnrollController extends Controller
 {
     /**
@@ -30,15 +33,19 @@ class GedtriEnrollController extends Controller
 
         $members = Members::find($id);
 
-        $programs = Programs::where('member_id', $id)->whereIn('ed_level', ['Graduate Education'])->get();
+        $selectedagps = $request->input('gedtriagp');
+        $exagp = explode(',', $selectedagps);
+        $agp = AccreditedGraduateProgram::whereIn('id', $exagp)->get();
 
-        $acp = AccreditedGraduateProgram::all();
+        $selectedprograms = $request->input('gedtriprogram');
+        $expro = explode(',', $selectedprograms);
+        $programs = Programs::whereIn('id', $expro)->get();
 
         $formula = Formula::where('formula_id','Graduate Education Trimester')->first();
         $gedtripieces = explode(" ", $formula->formula);
         $variabled = Variable::whereIn('code',$gedtripieces)->where('ed_type', 'Graduate Education Trimester')->get();
 
-        return view('admin.membershipenroll.gedtri.index')->with('members',$members)->with('formula',$formula)->with('gedtripieces',$gedtripieces)->with('variabled',$variabled)->with('acp',$acp)->with('programs',$programs);
+        return view('admin.membershipenroll.gedtri.index')->with('members',$members)->with('formula',$formula)->with('gedtripieces',$gedtripieces)->with('variabled',$variabled)->with('agp',$agp)->with('programs',$programs)->with('selectedagps',$selectedagps)->with('selectedprograms',$selectedprograms);
     }
 
     /**
@@ -59,6 +66,14 @@ class GedtriEnrollController extends Controller
      */
     public function store(Request $request)
     {
+        $selectedagps = $request->input('gedtriagp');
+        $exagp = explode(',', $selectedagps);
+        $agp = AccreditedGraduateProgram::whereIn('id', $exagp)->get();
+
+        $selectedprograms = $request->input('gedtriprogram');
+        $expro = explode(',', $selectedprograms);
+        $programs = Programs::whereIn('id', $expro)->get();
+
         $meme = new Membership();
         $meme->member_id = $request->input('gedtrimember');
         $meme->save();
@@ -120,6 +135,25 @@ class GedtriEnrollController extends Controller
         $gedtrimcompute->content_id = $memeid;
         $gedtrimcompute->save();
         //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+        $computeid = $gedtrimcompute->id;
+        foreach($programs as $smargorp){
+        $gedtriep = new EnrolledProgram();
+        $gedtriep->compute_id = $computeid;
+        $gedtriep->program = $smargorp->program;
+        $gedtriep->semone = $request->input("f".$smargorp->id);
+        $gedtriep->semtwo = $request->input("s".$smargorp->id);
+        $gedtriep->semthree = $request->input("t".$smargorp->id);
+        $gedtriep->save();
+        }
+        foreach($agp as $pca){
+        $gedtriagpagps = new EnrolledAcpagps();
+        $gedtriagpagps->compute_id = $computeid;
+        $gedtriagpagps->program = $pca->program;
+        $gedtriagpagps->ap_type = "agp";
+        $gedtriagpagps->save();
+        }
+
         $request->session()->flash('success', 'Graduate Education Trimester Membership has been Added');
         return redirect()->route('gedenrollment.index');
     }

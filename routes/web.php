@@ -111,6 +111,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:admi
 
  //ged enroll
  	Route::get('/gedenrollment','MembershipEnrollment\GedEnrollController@index')->name('gedenrollment.index');
+ 	Route::post('/gedenrollment/fetch', 'MembershipEnrollment\GedEnrollController@fetch')->name('gedenrollment.fetch');
  	// Route::post('/colenrollment','MembershipEnrollment\ColEnrollController@store')->name('colenrollment.store');
  	// Route::get('/colenrollment/semester/{id}','Memberships\ColEnrollController@semester')->name('colenrollment.semester');
  //ged sem enroll
@@ -189,3 +190,6 @@ Route::get('/billing/{ids}/{idc}/{mscid}/pdf/download','BillingController@downlo
 //ORIGINAL RECEIPTS
 Route::resource('/receipts','ReceiptsController', ['except' =>['show', 'create', 'store']]);
 Route::get('/receipts', 'ReceiptsController@index')->name('receipts.index');
+
+Route::get('/receipts/{ids}/{idc}/{mscid}/verify', 'ReceiptsController@edit')->name('receipts.verify');
+Route::post('/receipts/verify/upload', 'ReceiptsController@update')->name('receipts.upload');

@@ -231,6 +231,10 @@ $membership = BedMembership::whereIn('member_id', [$ids])->where('content_id', $
     }
 
 $membership = ColMembership::whereIn('member_id', [$ids])->where('content_id', $mscid)->get();
+
+    $enrolledacp = EnrolledAcpagps::whereIn('compute_id', [$idc])->get();
+    $enrolledpro = EnrolledProgram::whereIn('compute_id', [$idc])->get();
+
     $data = [
         'id' => $compute->id,
         'date' => $date, 
@@ -245,6 +249,9 @@ $membership = ColMembership::whereIn('member_id', [$ids])->where('content_id', $
         'addyear' => $year,
         'formula' => $replacedformula,
         'boxes' => $membershipvariables,
+        'programs'=> $enrolledpro,
+        'acpagp' => $enrolledacp,
+        'ap_type' => "Accredited College Programs",
     ];
     }
     elseif(strcmp($compute->formula_id , "Graduate Education Semester") == 0){
@@ -257,6 +264,10 @@ $membership = ColMembership::whereIn('member_id', [$ids])->where('content_id', $
     }
 
     $membership = GedMembership::whereIn('member_id', [$ids])->where('content_id', $mscid)->get();
+
+    $enrolledagp = EnrolledAcpagps::whereIn('compute_id', [$idc])->get();
+    $enrolledpro = EnrolledProgram::whereIn('compute_id', [$idc])->get();
+
     $data = [
         'id' => $compute->id,
         'date' => $date, 
@@ -271,6 +282,9 @@ $membership = ColMembership::whereIn('member_id', [$ids])->where('content_id', $
         'addyear' => $year,
         'formula' => $replacedformula,
         'boxes' => $membershipvariables,
+        'programs'=> $enrolledpro,
+        'acpagp' => $enrolledagp,
+        'ap_type' => "Accredited Graduate Programs",
     ];
     }
     elseif(strcmp($compute->formula_id , "Graduate Education Trimester") == 0){
@@ -283,6 +297,10 @@ $membership = ColMembership::whereIn('member_id', [$ids])->where('content_id', $
     }
 
 $membership = GedMembership::whereIn('member_id', [$ids])->where('content_id', $mscid)->get();
+
+    $enrolledagp = EnrolledAcpagps::whereIn('compute_id', [$idc])->get();
+    $enrolledpro = EnrolledProgram::whereIn('compute_id', [$idc])->get();
+
     $data = [
         'id' => $compute->id,
         'date' => $date, 
@@ -297,6 +315,9 @@ $membership = GedMembership::whereIn('member_id', [$ids])->where('content_id', $
         'addyear' => $year,
         'formula' => $replacedformula,
         'boxes' => $membershipvariables,
+        'programs'=> $enrolledpro,
+        'acpagp' => $enrolledagp,
+        'ap_type' => "Accredited Graduate Programs",
     ];
     }
     // Send data to the view using loadView function of PDF facade
@@ -322,7 +343,7 @@ $membership = GedMembership::whereIn('member_id', [$ids])->where('content_id', $
 
       public function download_pdf($ids, $idc, $mscid)
   {
-    $school = Members::find($ids);
+        $school = Members::find($ids);
     $schoolname = $school->school;
     $fulladdress = $school->address;
     $address = str_replace(",","\n",$fulladdress);
@@ -425,6 +446,10 @@ $membership = BedMembership::whereIn('member_id', [$ids])->where('content_id', $
     }
 
     $membership = ColMembership::whereIn('member_id', [$ids])->where('content_id', $mscid)->get();
+
+    $enrolledacp = EnrolledAcpagps::whereIn('compute_id', [$idc])->get();
+    $enrolledpro = EnrolledProgram::whereIn('compute_id', [$idc])->get();
+
     $data = [
         'id' => $compute->id,
         'date' => $date, 
@@ -439,6 +464,9 @@ $membership = BedMembership::whereIn('member_id', [$ids])->where('content_id', $
         'addyear' => $year,
         'formula' => $replacedformula,
         'boxes' => $membershipvariables,
+        'programs'=> $enrolledpro,
+        'acpagp' => $enrolledacp,
+        'ap_type' => "Accredited College Programs",
     ];
     }
     elseif(strcmp($compute->formula_id , "College Trimester") == 0){
@@ -451,6 +479,10 @@ $membership = BedMembership::whereIn('member_id', [$ids])->where('content_id', $
     }
 
 $membership = ColMembership::whereIn('member_id', [$ids])->where('content_id', $mscid)->get();
+
+    $enrolledacp = EnrolledAcpagps::whereIn('compute_id', [$idc])->get();
+    $enrolledpro = EnrolledProgram::whereIn('compute_id', [$idc])->get();
+
     $data = [
         'id' => $compute->id,
         'date' => $date, 
@@ -465,6 +497,9 @@ $membership = ColMembership::whereIn('member_id', [$ids])->where('content_id', $
         'addyear' => $year,
         'formula' => $replacedformula,
         'boxes' => $membershipvariables,
+        'programs'=> $enrolledpro,
+        'acpagp' => $enrolledacp,
+        'ap_type' => "Accredited College Programs",
     ];
     }
     elseif(strcmp($compute->formula_id , "Graduate Education Semester") == 0){
@@ -477,6 +512,10 @@ $membership = ColMembership::whereIn('member_id', [$ids])->where('content_id', $
     }
 
     $membership = GedMembership::whereIn('member_id', [$ids])->where('content_id', $mscid)->get();
+
+    $enrolledagp = EnrolledAcpagps::whereIn('compute_id', [$idc])->get();
+    $enrolledpro = EnrolledProgram::whereIn('compute_id', [$idc])->get();
+
     $data = [
         'id' => $compute->id,
         'date' => $date, 
@@ -491,6 +530,9 @@ $membership = ColMembership::whereIn('member_id', [$ids])->where('content_id', $
         'addyear' => $year,
         'formula' => $replacedformula,
         'boxes' => $membershipvariables,
+        'programs'=> $enrolledpro,
+        'acpagp' => $enrolledagp,
+        'ap_type' => "Accredited Graduate Programs",
     ];
     }
     elseif(strcmp($compute->formula_id , "Graduate Education Trimester") == 0){
@@ -503,6 +545,10 @@ $membership = ColMembership::whereIn('member_id', [$ids])->where('content_id', $
     }
 
 $membership = GedMembership::whereIn('member_id', [$ids])->where('content_id', $mscid)->get();
+
+    $enrolledagp = EnrolledAcpagps::whereIn('compute_id', [$idc])->get();
+    $enrolledpro = EnrolledProgram::whereIn('compute_id', [$idc])->get();
+
     $data = [
         'id' => $compute->id,
         'date' => $date, 
@@ -517,6 +563,9 @@ $membership = GedMembership::whereIn('member_id', [$ids])->where('content_id', $
         'addyear' => $year,
         'formula' => $replacedformula,
         'boxes' => $membershipvariables,
+        'programs'=> $enrolledpro,
+        'acpagp' => $enrolledagp,
+        'ap_type' => "Accredited Graduate Programs",
     ];
     }
     // Send data to the view using loadView function of PDF facade

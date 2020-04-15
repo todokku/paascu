@@ -8,7 +8,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card border-light mb-3 shadow">
-                <h4 class="card-header bg-white">Enroll College Membership</h4>
+                <h4 class="card-header bg-white">Enroll College Membership<a href="{{ route('coltrimembership.index') }}"><button type="button" class="btn btn-outline-success float-right">View Trimester Memberships</button><a href="{{ route('colsemmembership.index') }}"><button type="button" class="btn btn-outline-success float-right mr-2">View Semester Memberships</button></a></h4>
             <br>
 <form>
 {{-- <div class="form-group row">
@@ -84,26 +84,26 @@
 
 </form>
 
-<div class="col-md-8 offset-sm-2">
+    <div class="col-md-12">
 {{-- placeholder button --}}
    <br />
-<button id="pholder" name="pholder" type="button" class="btn btn-primary btn-block" disabled>Submit</button>
+<button id="pholder" style="width: 100px;" name="pholder" type="button" class="btn btn-success float-right" disabled>Submit</button>
 
 <form style="display:none" id="formCOL" name="formCOL" action="{{ route('colsemenrollment.index')}}" method="POST">
 <input type="hidden" id="colsemid" name="colsemid">
 <input type="hidden" id="colsemacp" name="colsemacp">
 <input type="hidden" id="colsemprogram" name="colsemprogram">
 @csrf
-<button id="submitCOL" name="submitCOL" type="submit" class="btn btn-primary btn-block">Submit</button>
+<button id="submitCOL" style="width: 100px;" name="submitCOL" type="submit" class="btn btn-success float-right">Submit</button>
 
 </form>
 {{-- make as tri --}}
 <form style="display:none" id="formTRI" name="formTRI" action="{{ route('coltrienrollment.index')}}" method="POST">
 <input type="hidden" id="coltriid" name="coltriid">
 <input type="hidden" id="coltriacp" name="coltriacp">
-<input type="hidden" id="coltriprograms" name="coltriprograms">
+<input type="hidden" id="coltriprogram" name="coltriprogram">
 @csrf
-<button id="submitTRI" name="submitTRI" type="submit" class="btn btn-primary btn-block">Submit</button>
+<button id="submitTRI" style="width: 100px;" name="submitTRI" type="submit" class="btn btn-success float-right">Submit</button>
 </form>
 
 </div>

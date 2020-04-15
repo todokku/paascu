@@ -33,8 +33,10 @@
 @csrf
 
 <input type="hidden" id="coltrimember" name="coltrimember" value="{{$members->id}}">
+<input type="hidden" id="coltriacp" name="coltriacp" value="{{$selectedacps}}">
+<input type="hidden" id="coltriprogram" name="coltriprogram" value="{{$selectedprograms}}">
 
-<div class="form-group row">
+{{-- <div class="form-group row">
     <label for="acp" class="col-md-2 col-form-label text-md-right">Accredited College Programs</label>
         <div class="col-md-8">
         <select class="form-control selectpicker" id="acp" name="acp" multiple data-live-search="true" data-style="btn-info" title="Please Select ...">
@@ -44,7 +46,7 @@
                 @endforeach
         </select>
     </div>
-</div>
+</div> --}}
 
 <div class="col-md-8 offset-sm-2">
 <table id="example" class="display table table-hover table-sm" style="width:100%">
@@ -61,9 +63,9 @@
             @foreach($programs as $rebmem)
             <tr>
                 <td>{{$rebmem->program}}</td>
-                <td><input id="{{"f".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("f".$rebmem->id) is-invalid @enderror" name="price" ></td>
-                <td><input id="{{"s".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("s".$rebmem->id) is-invalid @enderror" name="price" ></td>
-                <td><input id="{{"t".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("t".$rebmem->id) is-invalid @enderror" name="price" ></td>
+                <td><input id="{{"f".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("f".$rebmem->id) is-invalid @enderror price" name="{{"f".$rebmem->id}}" ></td>
+                <td><input id="{{"s".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("s".$rebmem->id) is-invalid @enderror price" name="{{"s".$rebmem->id}}" ></td>
+                <td><input id="{{"t".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("t".$rebmem->id) is-invalid @enderror price" name="{{"t".$rebmem->id}}" ></td>
 {{--                 <td><input id="{{"s".$rebmem->id}}" type="number" step=".01" min="0" class="form-control @error("s".$rebmem->id) is-invalid @enderror" name="tprice" required></td> --}}
 
             </tr>
@@ -154,7 +156,7 @@ second sem
 </div>
 <script>
 $(document).ready(function() {
-    console.log('ready');
+$("#col_tri_total_enrollment").attr('readonly', true); 
     $("#school").change(function() {
         $('#coltrimember').val($('#school').val());
     });
@@ -175,10 +177,10 @@ $(document).ready(function() {
  
 
 
-$('form#formCOLTRI :input[name=price]').change(function(){
+$('form#formCOLTRI :input.price').change(function(){
 var input = 0.00;
 //  console.log(val);
-$("form#formCOLTRI :input[name=price]").each(function(){
+$("form#formCOLTRI :input.price").each(function(){
 
  input = Number($(this).val()) + input; // This is the jquery object of the input, do what you will
 
