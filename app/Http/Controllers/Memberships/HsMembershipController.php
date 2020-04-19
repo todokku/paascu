@@ -35,25 +35,7 @@ class HsMembershipController extends Controller
         ->get();
 
         $membershipids = HsMembership::select('variable_id')->groupBy('variable_id')->get();
-        return view('admin.membershipfee.hs.index')->with('members',$members)->with('membershipids',$membershipids);
-
-
-
-        // $members = Members::select('id','school')->whereHas('programs', function ($query) {
-        // $query->whereIn('program', ['High School']);
-        // })
-        // ->whereHas('membership', function ($query) {
-        // $query->whereIn('formula_id', ['High School']);
-        // })
-        // ->get();
-
-        // $membership = Membership::all();
-        // $variable = Variable::all();
-        // $membershipids = Membership::select('variable_id')->groupBy('variable_id')->where('formula_id', 'High School')->with('variables')->get();
-        // $compute = Compute::all();
-
-        // // dd($membershipids);
-        // return view('admin.membershipfee.hs.index')->with('members',$members)->with('membership',$membership)->with('membershipids',$membershipids)->with('compute', $compute);
+        return view('main.membershipfee.hs.index')->with('members',$members)->with('membershipids',$membershipids);
     }
 
     /**
@@ -105,7 +87,7 @@ class HsMembershipController extends Controller
         $compute = Compute::whereIn('member_id', [$id])->where('content_id', $content)->get();
 
         // dd($school);
-        return view('admin.membershipfee.hs.edit')->with('membership', $membership)->with('compute',$compute[0])->with('school',$school)->with('memid',$memid)->with('contid',$contid);
+        return view('main.membershipfee.hs.edit')->with('membership', $membership)->with('compute',$compute[0])->with('school',$school)->with('memid',$memid)->with('contid',$contid);
     }
 
     /**

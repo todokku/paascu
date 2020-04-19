@@ -29,6 +29,16 @@ class GedsemEnrollController extends Controller
      */
     public function index(Request $request)
     {
+            $request->validate([
+                'gedsemid' => 'required',
+                'gedsemagp' => 'required',
+                'gedsemprogram' => 'required'
+            ], [
+                'gedsemid.required' => 'School is required',
+                'gedsemagp.required' => 'Accredited College Program is required',
+                'gedsemprogram.required' => 'Programs is required'
+            ]);
+
         $id = $request->input('gedsemid');
         
         $members = Members::find($id);
@@ -45,7 +55,7 @@ class GedsemEnrollController extends Controller
         $gedsempieces = explode(" ", $formula->formula);
         $variabled = Variable::whereIn('code',$gedsempieces)->where('ed_type', 'Graduate Education Semester')->get();
 
-        return view('admin.membershipenroll.gedsem.index')->with('members',$members)->with('formula',$formula)->with('gedsempieces',$gedsempieces)->with('variabled',$variabled)->with('agp',$agp)->with('programs',$programs)->with('selectedagps',$selectedagps)->with('selectedprograms',$selectedprograms);
+        return view('main.membershipenroll.gedsem.index')->with('members',$members)->with('formula',$formula)->with('gedsempieces',$gedsempieces)->with('variabled',$variabled)->with('agp',$agp)->with('programs',$programs)->with('selectedagps',$selectedagps)->with('selectedprograms',$selectedprograms);
     }
 
     /**

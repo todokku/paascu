@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class GedMembership extends Model
 {
 	protected $fillable = [
-        'id', 'member_id', 'formula_id', 'variable_id', 'content',
+        'id', 'member_id', 'formula_id', 'variable_id', 'content','content_id',
     ];
     public function variables(){
     	return $this->belongsTo('App\Variable', 'variable_id');

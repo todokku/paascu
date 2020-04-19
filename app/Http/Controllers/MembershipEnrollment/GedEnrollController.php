@@ -31,7 +31,7 @@ class GedEnrollController extends Controller
 
         $agp = AccreditedGraduateProgram::all();
 
-        return view('admin.membershipenroll.ged.index')->with('members',$members)->with('agp',$agp);
+        return view('main.membershipenroll.ged.index')->with('members',$members)->with('agp',$agp);
     }
 
     /**

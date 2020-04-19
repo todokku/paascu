@@ -33,7 +33,7 @@ class GsMembershipController extends Controller
         ->get();
 
         $membershipids = GsMembership::select('variable_id')->groupBy('variable_id')->get();
-        return view('admin.membershipfee.gs.index')->with('members',$members)->with('membershipids',$membershipids);
+        return view('main.membershipfee.gs.index')->with('members',$members)->with('membershipids',$membershipids);
     }
 
     /**
@@ -89,7 +89,7 @@ class GsMembershipController extends Controller
 //----------------------------------------
         // echo($compute[0]);
 //----------------------------------------        
-        return view('admin.membershipfee.gs.edit')->with('membership', $membership)->with('compute',$compute[0])->with('school',$school)->with('memid',$memid)->with('contid',$contid);
+        return view('main.membershipfee.gs.edit')->with('membership', $membership)->with('compute',$compute[0])->with('school',$school)->with('memid',$memid)->with('contid',$contid);
 //----------------------------------------
     }
 

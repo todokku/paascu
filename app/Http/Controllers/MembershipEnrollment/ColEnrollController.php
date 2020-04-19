@@ -31,7 +31,7 @@ class ColEnrollController extends Controller
 
         $acp = AccreditedCollegeProgram::all();
 
-     return view('admin.membershipenroll.col.index')->with('members',$members)->with('acp',$acp);
+     return view('main.membershipenroll.col.index')->with('members',$members)->with('acp',$acp);
      // $data = Members::find(4)->programs;
      // foreach($data as $row)
      // {
@@ -105,20 +105,6 @@ class ColEnrollController extends Controller
     {
         //
     }
-
-    // public function semester($id){
-    //     $members = Members::select('id','school')->whereHas('programs', function ($query) {
-    //     $query->whereIn('ed_level', ['College']);
-    //     })->get();
-
-    //     $acp = AccreditedCollegeProgram::all();
-
-    //     $formula = Formula::where('formula_id','College Semester')->first();
-    //     $colsempieces = explode(" ", $formula->formula);
-    //     $variabled = Variable::whereIn('code',$colsempieces)->where('ed_type', 'College Semester')->get();
-
-    //     return view('admin.membershipenroll.colsem.index')->with('members',$members)->with('formula',$formula)->with('colsempieces',$colsempieces)->with('variabled',$variabled)->with('acp',$acp);
-    // }
 
         function fetch(Request $request)
 {

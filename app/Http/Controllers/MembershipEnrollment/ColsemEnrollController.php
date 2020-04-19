@@ -29,6 +29,16 @@ class ColsemEnrollController extends Controller
      */
     public function index(Request $request)
     {   // =======================================================
+           $request->validate([
+                'colsemid' => 'required',
+                'colsemacp' => 'required',
+                'colsemprogram' => 'required'
+            ], [
+                'colsemid.required' => 'School is required',
+                'colsemacp.required' => 'Accredited College Program is required',
+                'colsemprogram.required' => 'Programs is required'
+            ]);
+
         $id = $request->input('colsemid');
         $members = Members::find($id);
 
@@ -44,24 +54,7 @@ class ColsemEnrollController extends Controller
         $colsempieces = explode(" ", $formula->formula);
         $variabled = Variable::whereIn('code',$colsempieces)->where('ed_type', 'College Semester')->get();
 
-        return view('admin.membershipenroll.colsem.index')->with('members',$members)->with('formula',$formula)->with('colsempieces',$colsempieces)->with('variabled',$variabled)->with('acp',$acp)->with('programs',$programs)->with('selectedacps',$selectedacps)->with('selectedprograms',$selectedprograms);
-
-        // =======================================================
-
-
-        // $id = $request->input('colsemid');
- 
-        // $members = Members::find($id);
-
-        // $programs = Programs::where('member_id', $id)->whereIn('ed_level', ['College'])->get();
-
-        // $acp = AccreditedCollegeProgram::all();
-
-        // $formula = Formula::where('formula_id','College Semester')->first();
-        // $colsempieces = explode(" ", $formula->formula);
-        // $variabled = Variable::whereIn('code',$colsempieces)->where('ed_type', 'College Semester')->get();
-
-        // return view('admin.membershipenroll.colsem.index')->with('members',$members)->with('formula',$formula)->with('colsempieces',$colsempieces)->with('variabled',$variabled)->with('acp',$acp)->with('programs',$programs);
+        return view('main.membershipenroll.colsem.index')->with('members',$members)->with('formula',$formula)->with('colsempieces',$colsempieces)->with('variabled',$variabled)->with('acp',$acp)->with('programs',$programs)->with('selectedacps',$selectedacps)->with('selectedprograms',$selectedprograms);
     }
 
     /**

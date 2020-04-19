@@ -38,7 +38,7 @@ class GedsemMembershipController extends Controller
         $membershipids = GedMembership::select('variable_id')->groupBy('variable_id')->where('formula_id', 'Graduate Education Semester')
         ->get();
 
-        return view('admin.membershipfee.gedsem.index')->with('members',$members)->with('membershipids',$membershipids);
+        return view('main.membershipfee.gedsem.index')->with('members',$members)->with('membershipids',$membershipids);
     }
 
     /**
@@ -101,7 +101,7 @@ class GedsemMembershipController extends Controller
         array_push($agparray, $arr->id);
         }
         // dd($school);
-        return view('admin.membershipfee.gedsem.edit')->with('membership', $membership)->with('compute',$compute[0])->with('school',$school)->with('memid',$memid)->with('contid',$contid)->with('program',$program)->with('agpall',$agpall)->with('agparray',$agparray);
+        return view('main.membershipfee.gedsem.edit')->with('membership', $membership)->with('compute',$compute[0])->with('school',$school)->with('memid',$memid)->with('contid',$contid)->with('program',$program)->with('agpall',$agpall)->with('agparray',$agparray);
     }
 
     /**

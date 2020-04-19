@@ -26,7 +26,7 @@ class UsersTableSeeder extends Seeder
         	'email' => 'admin@admin.com',
         	'password' => Hash::make('adminadmin'),
             'status' => 'active',
-
+            'email_verified_at' => '2020-04-19 22:30:36',
         ]);
         // $author = User::create([
         // 	'name' => 'Author User',
@@ -39,6 +39,7 @@ class UsersTableSeeder extends Seeder
         	'email' => 'user@user.com',
         	'password' => Hash::make('useruser'),
             'status' => 'active',
+            'email_verified_at' => '2020-04-19 22:30:36',
 
         ]);
 

@@ -24,7 +24,7 @@ class BillingController extends Controller
     public function index()
     {
         $compute = Compute::all();
-        return view('admin.billing.index')->with('compute', $compute);
+        return view('main.billing.index')->with('compute', $compute);
     }
 
     /**
@@ -321,7 +321,7 @@ $membership = GedMembership::whereIn('member_id', [$ids])->where('content_id', $
     ];
     }
     // Send data to the view using loadView function of PDF facade
-    $pdf = \PDF::loadView('admin.billing.pdf', $data);
+    $pdf = \PDF::loadView('main.billing.pdf', $data);
     // If you want to store the generated pdf to the server then you can use the store function
     // $pdf->save(storage_path().'_filename.pdf');
     // Finally, you can download the file using download function
@@ -343,7 +343,7 @@ $membership = GedMembership::whereIn('member_id', [$ids])->where('content_id', $
 
       public function download_pdf($ids, $idc, $mscid)
   {
-        $school = Members::find($ids);
+    $school = Members::find($ids);
     $schoolname = $school->school;
     $fulladdress = $school->address;
     $address = str_replace(",","\n",$fulladdress);
@@ -569,9 +569,16 @@ $membership = GedMembership::whereIn('member_id', [$ids])->where('content_id', $
     ];
     }
     // Send data to the view using loadView function of PDF facade
-    $pdf = \PDF::loadView('admin.billing.pdf', $data);
+    $pdf = \PDF::loadView('main.billing.pdf', $data);
     // If you want to store the generated pdf to the server then you can use the store function
-    $pdf->save(public_path().'\\pdf\\'.time().'.pdf');
+    $pedef = public_path().'\\pdf\\'.time().'.pdf';
+    $pedefArray = explode('\\',$pedef);
+    $lastElement = end($pedefArray);
+    $computebill = Compute::find($idc);
+    $computebill->bill = $lastElement;
+    $computebill->save();
+
+    $pdf->save($pedef);
     // Finally, you can download the file using download function
     return $pdf->download($schoolname.' '.$date.'.pdf');
     // return $pdf->stream($schoolname.' '.$date.'.pdf');

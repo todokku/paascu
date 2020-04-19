@@ -33,19 +33,7 @@ class BedEnrollController extends Controller
         $formula = Formula::where('formula_id','Basic Education')->first();
         $bedpieces = explode(" ", $formula->formula);
         $variabled = Variable::whereIn('code',$bedpieces)->where('ed_type', 'Basic Education')->get();
-        return view('admin.membershipenroll.bed.index')->with('members',$members)->with('formula',$formula)->with('bedpieces',$bedpieces)->with('variabled',$variabled);
-
-
-
-
-        // $members = Members::select('id','school')->whereHas('programs', function ($query) {
-        // $query->whereIn('program', ['Basic Education']);
-        // })->get();
-
-        // $formula = Formula::where('formula_id','Basic Education')->first();
-        // $gspieces = explode(" ", $formula->formula);
-        // $variabled = Variable::whereIn('code',$gspieces)->where('ed_type', 'Basic Education')->get();
-        // return view('admin.membershipenroll.bed.index')->with('members',$members)->with('formula',$formula)->with('gspieces',$gspieces)->with('variabled',$variabled);
+        return view('main.membershipenroll.bed.index')->with('members',$members)->with('formula',$formula)->with('bedpieces',$bedpieces)->with('variabled',$variabled);
     }
 
     /**

@@ -35,13 +35,10 @@ class ColsemMembershipController extends Controller
         })
         ->get();
         
-        // $membershipids = ColMembership::select('variable_id')->groupBy('variable_id')->where('formula_id', 'College Semester')->get($membershipids);
-
-        // return view('admin.membershipfee.colsem.index')->with('members',$members)->with('membershipids',$membershipids);
         $membershipids = ColMembership::select('variable_id')->groupBy('variable_id')->where('formula_id', 'College Semester')
         ->get();
 
-        return view('admin.membershipfee.colsem.index')->with('members',$members)->with('membershipids',$membershipids);
+        return view('main.membershipfee.colsem.index')->with('members',$members)->with('membershipids',$membershipids);
     }
 
     /**
@@ -104,7 +101,7 @@ class ColsemMembershipController extends Controller
         array_push($acparray, $arr->id);
         }
         // dd($acpx);
-        return view('admin.membershipfee.colsem.edit')->with('membership', $membership)->with('compute',$compute[0])->with('school',$school)->with('memid',$memid)->with('contid',$contid)->with('program',$program)->with('acpall',$acpall)->with('acparray',$acparray);
+        return view('main.membershipfee.colsem.edit')->with('membership', $membership)->with('compute',$compute[0])->with('school',$school)->with('memid',$memid)->with('contid',$contid)->with('program',$program)->with('acpall',$acpall)->with('acparray',$acparray);
     }
 
     /**

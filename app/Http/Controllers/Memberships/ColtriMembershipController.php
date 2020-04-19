@@ -36,7 +36,7 @@ class ColtriMembershipController extends Controller
         $membershipids = ColMembership::select('variable_id')->groupBy('variable_id')->where('formula_id', 'College Trimester')
         ->get();
 
-        return view('admin.membershipfee.coltri.index')->with('members',$members)->with('membershipids',$membershipids);
+        return view('main.membershipfee.coltri.index')->with('members',$members)->with('membershipids',$membershipids);
     }
 
     /**
@@ -99,7 +99,7 @@ class ColtriMembershipController extends Controller
         array_push($acparray, $arr->id);
         }
         // dd($school);
-        return view('admin.membershipfee.coltri.edit')->with('membership', $membership)->with('compute',$compute[0])->with('school',$school)->with('memid',$memid)->with('contid',$contid)->with('program',$program)->with('acpall',$acpall)->with('acparray',$acparray);
+        return view('main.membershipfee.coltri.edit')->with('membership', $membership)->with('compute',$compute[0])->with('school',$school)->with('memid',$memid)->with('contid',$contid)->with('program',$program)->with('acpall',$acpall)->with('acparray',$acparray);
     }
 
     /**

@@ -28,7 +28,15 @@ class ColtriEnrollController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
-    {
+    {           $request->validate([
+                'coltriid' => 'required',
+                'coltriacp' => 'required',
+                'coltriprogram' => 'required'
+            ], [
+                'coltriid.required' => 'School is required',
+                'coltriacp.required' => 'Accredited College Program is required',
+                'coltriprogram.required' => 'Programs is required'
+            ]);
         $id = $request->input('coltriid');
         $members = Members::find($id);
 
@@ -44,7 +52,7 @@ class ColtriEnrollController extends Controller
         $coltripieces = explode(" ", $formula->formula);
         $variabled = Variable::whereIn('code',$coltripieces)->where('ed_type', 'College Trimester')->get();
 
-        return view('admin.membershipenroll.coltri.index')->with('members',$members)->with('formula',$formula)->with('coltripieces',$coltripieces)->with('variabled',$variabled)->with('acp',$acp)->with('programs',$programs)->with('selectedacps',$selectedacps)->with('selectedprograms',$selectedprograms);
+        return view('main.membershipenroll.coltri.index')->with('members',$members)->with('formula',$formula)->with('coltripieces',$coltripieces)->with('variabled',$variabled)->with('acp',$acp)->with('programs',$programs)->with('selectedacps',$selectedacps)->with('selectedprograms',$selectedprograms);
     }
 
     /**

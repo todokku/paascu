@@ -29,6 +29,7 @@ class CreateComputesTable extends Migration
 //testing ------------------------------------------------------
             $table->string('verified')->default('pending');
             $table->string('receipt')->default("default.png");
+            $table->string('bill')->default(null);
             $table->timestamps();
         });
     }

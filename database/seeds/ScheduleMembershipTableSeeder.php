@@ -46,7 +46,7 @@ class ScheduleMembershipTableSeeder extends Seeder
          ScheduleMembership::create(['gtrs'=>200000001,'gtre'=>250000000,'amf' =>50600.00]);
          ScheduleMembership::create(['gtrs'=>250000001,'gtre'=>320000000,'amf' =>55000.00]);
          ScheduleMembership::create(['gtrs'=>320000001,'gtre'=>400000000,'amf' =>59950.00]);
-         ScheduleMembership::create(['gtrs'=>400000001,'gtre'=>9999999999999,'amf' =>66000.00]);
+         ScheduleMembership::create(['gtrs'=>400000001,'gtre'=>null,'amf' =>66000.00]);
     }
 }
 

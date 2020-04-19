@@ -28,7 +28,15 @@ class GedtriEnrollController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
-    {
+    {       $request->validate([
+                'gedtriid' => 'required',
+                'gedtriagp' => 'required',
+                'gedtriprogram' => 'required'
+            ], [
+                'gedtriid.required' => 'School is required',
+                'gedtriagp.required' => 'Accredited College Program is required',
+                'gedtriprogram.required' => 'Programs is required'
+            ]);
         $id = $request->input('gedtriid');
 
         $members = Members::find($id);
@@ -45,7 +53,7 @@ class GedtriEnrollController extends Controller
         $gedtripieces = explode(" ", $formula->formula);
         $variabled = Variable::whereIn('code',$gedtripieces)->where('ed_type', 'Graduate Education Trimester')->get();
 
-        return view('admin.membershipenroll.gedtri.index')->with('members',$members)->with('formula',$formula)->with('gedtripieces',$gedtripieces)->with('variabled',$variabled)->with('agp',$agp)->with('programs',$programs)->with('selectedagps',$selectedagps)->with('selectedprograms',$selectedprograms);
+        return view('main.membershipenroll.gedtri.index')->with('members',$members)->with('formula',$formula)->with('gedtripieces',$gedtripieces)->with('variabled',$variabled)->with('agp',$agp)->with('programs',$programs)->with('selectedagps',$selectedagps)->with('selectedprograms',$selectedprograms);
     }
 
     /**

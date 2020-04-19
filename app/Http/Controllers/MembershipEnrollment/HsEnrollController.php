@@ -31,18 +31,7 @@ class HsEnrollController extends Controller
         $formula = Formula::where('formula_id','High School')->first();
         $hspieces = explode(" ", $formula->formula);
         $variabled = Variable::whereIn('code',$hspieces)->where('ed_type', 'High School')->get();
-        return view('admin.membershipenroll.hs.index')->with('members',$members)->with('formula',$formula)->with('hspieces',$hspieces)->with('variabled',$variabled);
-
-
-
-        // $members = Members::select('id','school')->whereHas('programs', function ($query) {
-        // $query->whereIn('program', ['High School']);
-        // })->get();
-
-        // $formula = Formula::where('formula_id','High School')->first();
-        // $gspieces = explode(" ", $formula->formula);
-        // $variabled = Variable::whereIn('code',$gspieces)->where('ed_type', 'High School')->get();
-        // return view('admin.membershipenroll.hs.index')->with('members',$members)->with('formula',$formula)->with('gspieces',$gspieces)->with('variabled',$variabled);
+        return view('main.membershipenroll.hs.index')->with('members',$members)->with('formula',$formula)->with('hspieces',$hspieces)->with('variabled',$variabled);
     }
 
     /**

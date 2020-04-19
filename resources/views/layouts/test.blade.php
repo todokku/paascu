@@ -34,36 +34,37 @@
       <div class="sidebar-heading"><img src="{{ asset('img/paasculogo.png') }}"> Paascu Accounting System</div>
       <div class="list-group list-group-flush">
         <a href="{{ route('home') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/home.png') }}">  Dashboard</a>
-
-        <a href="{{ route('admin.users.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/account.png') }}">  User Accounts</a>
-
-        <a href="{{ route('admin.members.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/member.png') }}">  Manage Members</a>
-
-        <a href="{{ route('admin.programs.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/program.png') }}">  Manage Programs</a>
-
-        <a href="{{ route('admin.schedulemembership.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/table.png') }}">  Manage Schedule Membership</a>
-{{-- 
-        <a href="{{ route('enrollmembership.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/enroll.png') }}">  Enroll Membership Fee</a> --}}
-
+@can('admin')
+        <a href="{{ route('users.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/account.png') }}">  User Accounts</a>
+@endcan
+@can('admin')
+        <a href="{{ route('members.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/member.png') }}">  Manage Members</a>
+@endcan
+@can('admin')
+        <a href="{{ route('programs.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/program.png') }}">  Manage Programs</a>
+@endcan
+@can('admin')
+        <a href="{{ route('schedulemembership.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/table.png') }}">  Manage Schedule Membership</a>
+@endcan
         <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown list-group-item list-group-item-action bg-light"><img src="{{ asset('img/enroll.png') }}">  Enroll Membership Fee <img src="{{ asset('img/arrowdown.png') }}" class="float-right"></a>
                 <ul class="collapse list-unstyled" id="pageSubmenu2">
                     <li>
-                                <a href="{{ route('gsenrollment.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/enroll.png') }}">  Grade School Membership Fee</a>
+                                <a href="{{ route('gsenrollment.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/enroll.png') }}">  Grade School</a>
                     </li>
 
                     <li>
-                                <a href="{{ route('hsenrollment.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/enroll.png') }}">  High School Membership Fee</a>
+                                <a href="{{ route('hsenrollment.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/enroll.png') }}">  High School</a>
                     </li>
 
                     <li>
-                                <a href="{{ route('bedenrollment.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/enroll.png') }}">  Basic Education Membership Fee</a>
+                                <a href="{{ route('bedenrollment.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/enroll.png') }}">  Basic Education</a>
                     </li>
 
                     <li>
-                                <a href="{{ route('colenrollment.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/enroll.png') }}">  College Membership Fee</a>
+                                <a href="{{ route('colenrollment.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/enroll.png') }}">  College</a>
                     </li>
                     <li>
-                                <a href="{{ route('gedenrollment.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/enroll.png') }}">  Graduate Education Membership Fee</a>
+                                <a href="{{ route('gedenrollment.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/enroll.png') }}">  Graduate Education</a>
                     </li>
 {{--                     <li>
                                 <a href="{{ route('hsmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  HS Membership Fee</a>
@@ -86,25 +87,25 @@
         <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown list-group-item list-group-item-action bg-light"><img src="{{ asset('img/money.png') }}">  Manage Membership Fee <img src="{{ asset('img/arrowdown.png') }}" class="float-right"></a>
                 <ul class="collapse list-unstyled" id="pageSubmenu">
                     <li>
-                                <a href="{{ route('gsmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  Grade School Membership Fee</a>
+                                <a href="{{ route('gsmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  Grade School</a>
                     </li>
                     <li>
-                                <a href="{{ route('hsmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  High School Membership Fee</a>
+                                <a href="{{ route('hsmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  High School</a>
                     </li>
                     <li>
-                                <a href="{{ route('bedmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  Basic Education Membership Fee</a>
+                                <a href="{{ route('bedmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  Basic Education</a>
                     </li>
                     <li>
-                                <a href="{{ route('colsemmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  College Semester Membership Fee</a>
+                                <a href="{{ route('colsemmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  College Semester</a>
                     </li>
                     <li>
-                                <a href="{{ route('coltrimembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  College Trimester Membership Fee</a>
+                                <a href="{{ route('coltrimembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  College Trimester</a>
                     </li>
                     <li>
-                                <a href="{{ route('gedsemmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  Graduate Education Semester Membership Fee</a>
+                                <a href="{{ route('gedsemmembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  Graduate Education Semester</a>
                     </li>
                     <li>
-                                <a href="{{ route('gedtrimembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  Graduate Education Trimester Membership Fee</a>
+                                <a href="{{ route('gedtrimembership.index') }}" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  Graduate Education Trimester</a>
                     </li>
                     
 {{--                     <li>
@@ -120,9 +121,9 @@
                                 <a href="#" class="list-group-item list-group-item-action bg-light">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{{ asset('img/program.png') }}">  GED Membership Fee</a>
                     </li> --}}
                 </ul>
-
-        <a href="{{ route('admin.membershipformula.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/formula.png') }}">  Manage Membership Formulas</a>
-
+@can('admin')
+        <a href="{{ route('membershipformula.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/formula.png') }}">  Manage Membership Formulas</a>
+@endcan
         <a href="{{ route('billing.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/billing.png') }}">  Manage Membership Billing</a>
 
         <a href="{{ route('receipts.index') }}" class="list-group-item list-group-item-action bg-light"><img src="{{ asset('img/or.png') }}">  Manage Original Receipts</a>

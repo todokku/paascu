@@ -40,7 +40,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('can:admin-user');
+        $this->middleware('can:admin');
 
     }
 

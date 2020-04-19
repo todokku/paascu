@@ -17,7 +17,7 @@ class ReceiptsController extends Controller
     public function index()
     {
         $compute = Compute::all();
-        return view('admin.receipts.index')->with('compute',$compute);
+        return view('main.receipts.index')->with('compute',$compute);
     }
 
     /**
@@ -115,7 +115,7 @@ class ReceiptsController extends Controller
 
         }
 
-        return view('admin.receipts.verify')->with('member',$member)->with('compute',$compute)->with('progdata',$progdata)->with('idp',$idp)->with('idc',$idc);
+        return view('main.receipts.verify')->with('member',$member)->with('compute',$compute)->with('progdata',$progdata)->with('idp',$idp)->with('idc',$idc);
 
     }
 
